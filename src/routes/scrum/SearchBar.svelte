@@ -1,20 +1,20 @@
 <script lang="ts">
-	import Country from './Country.svelte';
+	import AutocompleteItem from './AutocompleteItem.svelte';
 	import { tags_store } from './store';
 
-	/* FILTERING countres DATA BASED ON INPUT */
-	let filteredCountries: string[] = [];
+	/* FILTERING items DATA BASED ON INPUT */
+	let filteredItems: string[] = [];
 
-	const filterCountries = () => {
+	const filterItems = () => {
 		let storageArr: string[] = [];
 		if (inputValue) {
-			$tags_store.forEach((country) => {
-				if (country.toLowerCase().includes(inputValue.toLowerCase())) {
-					storageArr = [...storageArr, makeMatchBold(country)];
+			$tags_store.forEach((item) => {
+				if (item.toLowerCase().includes(inputValue.toLowerCase())) {
+					storageArr = [...storageArr, makeMatchBold(item)];
 				}
 			});
 		}
-		filteredCountries = storageArr;
+		filteredItems = storageArr;
 	};
 
 	/* HANDLING THE INPUT */
@@ -22,24 +22,24 @@
 	export let inputValue = '';
 
 	$: if (!inputValue) {
-		filteredCountries = [];
+		filteredItems = [];
 		hiLiteIndex = null;
 	}
 
-	const clearInput = () => {
+	/*const clearInput = () => {
 		inputValue = '';
 		searchInput.focus();
-	};
+	};*/
 
-	const setInputVal = (countryName: string) => {
-		inputValue = removeBold(countryName);
-		filteredCountries = [];
+	const setInputVal = (itemName: string) => {
+		inputValue = removeBold(itemName);
+		filteredItems = [];
 		hiLiteIndex = null;
-		(document?.querySelector('#country-input') as HTMLInputElement).focus();
+		(document?.querySelector('#item-input') as HTMLInputElement).focus();
 	};
 
 	const makeMatchBold = (str: string): string => {
-		// replace part of (country name === inputValue) with strong tags
+		// replace part of (item name === inputValue) with strong tags
 		let matched = str.substring(0, inputValue.length);
 		let makeBold = `<strong>${matched}</strong>`;
 		let boldedMatch = str.replace(matched, makeBold);
@@ -52,23 +52,20 @@
 		// return str.replace(/<(strong)>/g, "").replace(/<\/(strong)>/g, "");
 	};
 
-	/* NAVIGATING OVER THE LIST OF COUNTRIES W HIGHLIGHTING */
+	/* NAVIGATING OVER THE LIST OF ITEMS W HIGHLIGHTING */
 	let hiLiteIndex: number | null = null;
-	$: hiLitedCountry = hiLiteIndex != null ? filteredCountries[hiLiteIndex] : '';
+	$: hiLitedItem = hiLiteIndex != null ? filteredItems[hiLiteIndex] : '';
 
 	const navigateList = (e: KeyboardEvent) => {
-		if (
-			e.key === 'ArrowDown' &&
-			(hiLiteIndex == null || hiLiteIndex <= filteredCountries.length - 1)
-		) {
+		if (e.key === 'ArrowDown' && (hiLiteIndex == null || hiLiteIndex <= filteredItems.length - 1)) {
 			hiLiteIndex === null ? (hiLiteIndex = 0) : (hiLiteIndex += 1);
 		} else if (e.key === 'ArrowUp' && hiLiteIndex !== null) {
-			hiLiteIndex === 0 ? (hiLiteIndex = filteredCountries.length - 1) : (hiLiteIndex -= 1);
+			hiLiteIndex === 0 ? (hiLiteIndex = filteredItems.length - 1) : (hiLiteIndex -= 1);
 		} else if (e.key === 'Enter') {
 			if (hiLiteIndex === null) {
 				setInputVal(inputValue);
 			} else {
-				setInputVal(filteredCountries[hiLiteIndex]);
+				setInputVal(filteredItems[hiLiteIndex]);
 			}
 		} else {
 			return;
@@ -81,23 +78,23 @@
 <form autocomplete="off">
 	<div class="autocomplete">
 		<input
-			id="country-input"
+			id="item-input"
 			type="text"
 			placeholder="Search Scrum Terms"
 			bind:this={searchInput}
 			bind:value={inputValue}
-			on:input={filterCountries}
+			on:input={filterItems}
 		/>
 	</div>
 
-	<!-- FILTERED LIST OF COUNTRIES -->
-	{#if filteredCountries.length > 0}
+	<!-- FILTERED LIST OF ITEMS -->
+	{#if filteredItems.length > 0}
 		<ul id="autocomplete-items-list">
-			{#each filteredCountries as country, i}
-				<Country
-					itemLabel={country}
+			{#each filteredItems as item, i}
+				<AutocompleteItem
+					itemLabel={item}
 					highlighted={i === hiLiteIndex}
-					on:click={() => setInputVal(country)}
+					on:click={() => setInputVal(item)}
 				/>
 			{/each}
 		</ul>

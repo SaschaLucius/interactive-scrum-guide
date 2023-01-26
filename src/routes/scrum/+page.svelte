@@ -3,7 +3,7 @@
 	import SearchBar from './SearchBar.svelte';
 	import TextBlock from './TextBlock.svelte';
 
-	let filter: string = '';
+	let filter = '';
 
 	let textBlocks: string[] = guide.split('\n');
 </script>

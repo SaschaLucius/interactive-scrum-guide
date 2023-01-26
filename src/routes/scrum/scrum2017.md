@@ -28,7 +28,7 @@ Scrum was initially developed for managing and developing products. Starting in 
 2. Develop products and enhancements;
 3. Release products and enhancements, as frequently as many times per day;
 4. Develop and sustain Cloud (online, secure, on-demand) and other operational
-environments for product use; and,
+   environments for product use; and,
 5. Sustain and renew products.
 
 Scrum has been used to develop software, hardware, embedded software, networks of interacting function, autonomous vehicles, schools, government, marketing, managing the operation of organizations and almost everything we use in our daily lives, as individuals and societies.
@@ -55,7 +55,7 @@ For example
 
 - A common language referring to the process must be shared by all participants; and,
 - Those performing the work and those inspecting the resulting increment must share a
-common definition of “Done”.
+  common definition of “Done”.
 
 # Inspection
 
@@ -85,6 +85,7 @@ The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Ma
 Scrum Teams deliver products iteratively and incrementally, maximizing opportunities for feedback. Incremental deliveries of “Done” product ensure a potentially useful version of working product is always available.
 
 ## The Product Owner
+
 The Product Owner is responsible for maximizing the value of the product resulting from work of the Development Team. How this is done may vary widely across organizations, Scrum Teams, and individuals.
 
 The Product Owner is the sole person responsible for managing the Product Backlog. Product Backlog management includes:
@@ -188,11 +189,6 @@ A Sprint would be cancelled if the Sprint Goal becomes obsolete. This might occu
 When a Sprint is cancelled, any completed and “Done” Product Backlog items are reviewed. If part of the work is potentially releasable, the Product Owner typically accepts it. All incomplete Product Backlog Items are re-estimated and put back on the Product Backlog. The work done on them depreciates quickly and must be frequently re-estimated.
 
 Sprint cancellations consume resources, since everyone regroups in another Sprint Planning to start another Sprint. Sprint cancellations are often traumatic to the Scrum Team, and are very uncommon.
-
-
-
-
-
 
 Sprint Planning
 The work to be performed in the Sprint is planned at the Sprint Planning. This plan is created by the collaborative work of the entire Scrum Team.

@@ -5,8 +5,8 @@
 
 	// https://svelte.dev/tutorial/keyed-each-blocks
 	var pages = [
-		{ path: '/scrum', name: 'Interactive Scrum Guide' },
-		{ path: '/about', name: 'About me' }
+		{ path: '/interactive', name: 'Interactive Scrum Guide' },
+		{ path: '/about', name: 'About' }
 	];
 </script>
 
@@ -34,7 +34,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/SaschaLucius/sveltekit-demo">
+		<a href="https://github.com/SaschaLucius/interactive-scrum-guide/">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>

@@ -11,7 +11,11 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>
+			Thank you for trying out my page, issues and improvement request can be submitted <a
+				href="https://github.com/SaschaLucius/interactive-scrum-guide/issues">here</a
+			>
+		</p>
 	</footer>
 </div>
 

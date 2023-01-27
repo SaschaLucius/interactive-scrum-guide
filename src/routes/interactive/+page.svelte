@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>Interactive Scrum Guide</title>
-	<meta name="description" content="Forms" />
+	<meta name="description" content="Interactive Scrum Guide" />
 </svelte:head>
 
 <h1>Interactive Scrum Guide</h1>

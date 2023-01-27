@@ -1,21 +1,26 @@
 <svelte:head>
 	<title>About</title>
-	<meta name="description" content="About this app" />
+	<meta name="description" content="About this page" />
 </svelte:head>
 
+<h1>About this page</h1>
+
 <div class="text-column">
-	<h1>About this app</h1>
-
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+		This is a side project I have implemented during learning for my Scrum Master certification. The
+		idea is founded on the prior work of different people:
 	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
+	<ul>
+		<li><a href="https://scrumguides.org/scrum-guide.html">Official Scrum Guide</a></li>
+		<li>
+			<a href="https://age-of-product.com/scrum-guide-reordered/"
+				>Scrum Guide Reordered by Stefan Wolpers</a
+			>
+		</li>
+		<li>
+			<a href="https://www.michaelvizdos.com/interactive-scrum-guide"
+				>Interactive Scrum Guide by Michael Vizdos</a
+			>
+		</li>
+	</ul>
 </div>

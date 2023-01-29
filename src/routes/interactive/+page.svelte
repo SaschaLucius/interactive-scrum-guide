@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { guide } from './scrum2020';
+	import { guide } from './generated/scrum2020';
 	import SearchBar from './SearchBar.svelte';
 	import TextBlock from './TextBlock.svelte';
 

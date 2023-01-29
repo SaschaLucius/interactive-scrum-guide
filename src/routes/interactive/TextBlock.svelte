@@ -18,7 +18,10 @@
 		if (temp != null) {
 			tags = temp;
 			tags.forEach((tag) => {
-				$tags_store = $tags_store.add(tag.substring(1, tag.length - 1));
+				tag
+					.substring(1, tag.length - 1)
+					.split(',')
+					.forEach((a) => ($tags_store = $tags_store.add(a)));
 			});
 		}
 	});

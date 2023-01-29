@@ -7,8 +7,9 @@
 
 <div class="text-column">
 	<p>
-		This is a side project I have implemented during learning for my Scrum Master certification. The
-		idea is founded on the prior work of different people:
+		This is a side project I (<a href="https://github.com/SaschaLucius">Sascha Lucius</a>) have
+		implemented during learning for my Scrum Master certification. The idea is founded on the prior
+		work of different people:
 	</p>
 	<ul>
 		<li><a href="https://scrumguides.org/scrum-guide.html">Official Scrum Guide</a></li>
@@ -21,6 +22,9 @@
 			<a href="https://www.michaelvizdos.com/interactive-scrum-guide"
 				>Interactive Scrum Guide by Michael Vizdos</a
 			>
+		</li>
+		<li>
+			<a href="https://svelte.dev/">Made with Svelte</a>
 		</li>
 	</ul>
 </div>

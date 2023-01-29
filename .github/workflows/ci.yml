@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Run generate script
+        run: ./generate.sh
+        shell: bash
       - name: 'Setup Node.js 18 LTS'
         uses: actions/setup-node@v3
         with:

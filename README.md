@@ -25,6 +25,11 @@ While learning for [PSM1 Certification](https://www.scrum.org/assessments/profes
 - https://age-of-product.com/scrum-guide-reordered/
 - https://www.mateuszzeromski.pl/wp-content/uploads/2021/04/Age-of-Product-com-Scrum-Guide-2020-Reordered-v103.pdf
 
+#### Exam Preparation
+
+- https://www.scrum.org/open-assessments/scrum-open
+- https://www.scrum.org/open-assessments/product-owner-open
+
 ### Custom Domain
 
 - https://medium.com/@chflick/how-to-setup-a-github-pages-custom-domain-with-netcup-1da1ef10eb52

@@ -9,5 +9,4 @@ for i in docs/*.md; do
     echo "export const $name = \`" >> $newFileName
     cat "$i" >> $newFileName
     echo "\`;" >> $newFileName
-    echo "" >> $newFileName
 done

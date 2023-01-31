@@ -2,6 +2,7 @@
 	import * as guides from './generated/guides';
 	import SearchBar from './SearchBar.svelte';
 	import TextBlock from './TextBlock.svelte';
+	import { tags_store } from './store';
 
 	let filter = '';
 	let selectedGuide = 'Scrum_Guide_2020';
@@ -16,6 +17,11 @@
 		}
 		return '# No matching Guide found';
 	}
+
+	const onChange = () => {
+		$tags_store = new Set();
+		filter = '';
+	};
 </script>
 
 <svelte:head>
@@ -27,7 +33,7 @@
 
 <SearchBar bind:inputValue={filter} />
 
-<select bind:value={selectedGuide}>
+<select bind:value={selectedGuide} on:change={onChange}>
 	{#each Object.keys(guides) as option}
 		<option value={option}>{option.replaceAll('_', ' ')}</option>
 	{/each}

@@ -80,7 +80,7 @@
 		<input
 			id="item-input"
 			type="text"
-			placeholder="Search Scrum Terms"
+			placeholder="Search Terms"
 			bind:this={searchInput}
 			bind:value={inputValue}
 			on:input={filterItems}

@@ -5,7 +5,7 @@
 
 	// https://svelte.dev/tutorial/keyed-each-blocks
 	var pages = [
-		{ path: '/interactive', name: 'Interactive Scrum Guide' },
+		{ path: '/interactive', name: 'Interactive Guides' },
 		{ path: '/about', name: 'About' }
 	];
 </script>

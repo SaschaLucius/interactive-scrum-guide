@@ -1,9 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	import { tags_store } from './store';
+	import { tags_store } from '$lib/search/store';
 	import { onMount } from 'svelte';
-	import ParagraphComponent from './ParagraphComponent.svelte';
-	import TextComponent from './TextComponent.svelte';
+	import ComponentWithoutFormatting from './ComponentWithoutFormatting.svelte';
 
 	export let text: string;
 	export let filter: string;
@@ -21,7 +20,7 @@
 				tag
 					.substring(1, tag.length - 1)
 					.split(',')
-					.forEach((a) => ($tags_store = $tags_store.add(a)));
+					.forEach((a) => tags_store.add(a));
 			});
 		}
 	});
@@ -38,7 +37,7 @@
 	{:else}
 		<SvelteMarkdown
 			source={text.replace(/(\[[A-Za-z:,]+\])/g, '') + ' '}
-			renderers={{ paragraph: ParagraphComponent, text: TextComponent }}
+			renderers={{ paragraph: ComponentWithoutFormatting, text: ComponentWithoutFormatting }}
 		/>
 	{/if}
 {/if}

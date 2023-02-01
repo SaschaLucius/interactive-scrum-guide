@@ -2,75 +2,69 @@
 	import AutocompleteItem from './AutocompleteItem.svelte';
 	import { tags_store } from './store';
 
+	/* HANDLING THE INPUT */
+	export let searchTerm = '';
+	let searchInput: HTMLInputElement; // use with bind:this to focus element
+
 	/* FILTERING items DATA BASED ON INPUT */
 	let filteredItems: string[] = [];
 
-	const filterItems = () => {
+	/* NAVIGATING OVER THE LIST OF ITEMS W HIGHLIGHTING */
+	let hiLiteIndex: number | null = null;
+
+	$: if (!searchTerm) {
+		filteredItems = [];
+		hiLiteIndex = null;
+	}
+
+	function filterItems() {
 		let storageArr: string[] = [];
-		if (inputValue) {
+		if (searchTerm) {
 			$tags_store.forEach((item) => {
-				if (item.toLowerCase().includes(inputValue.toLowerCase())) {
+				if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
 					storageArr = [...storageArr, makeMatchBold(item)];
 				}
 			});
 		}
 		filteredItems = storageArr;
-	};
-
-	/* HANDLING THE INPUT */
-	let searchInput: HTMLInputElement; // use with bind:this to focus element
-	export let inputValue = '';
-
-	$: if (!inputValue) {
-		filteredItems = [];
-		hiLiteIndex = null;
 	}
 
-	/*const clearInput = () => {
-		inputValue = '';
-		searchInput.focus();
-	};*/
-
-	const setInputVal = (itemName: string) => {
-		inputValue = removeBold(itemName);
+	function setInputVal(itemName: string) {
+		searchTerm = removeBold(itemName);
 		filteredItems = [];
 		hiLiteIndex = null;
 		(document?.querySelector('#item-input') as HTMLInputElement).focus();
-	};
+	}
 
-	const makeMatchBold = (str: string): string => {
+	function makeMatchBold(str: string): string {
 		// replace part of (item name === inputValue) with strong tags
-		let matched = str.substring(0, inputValue.length);
+		let matched = str.substring(0, searchTerm.length);
 		let makeBold = `<strong>${matched}</strong>`;
 		let boldedMatch = str.replace(matched, makeBold);
 		return boldedMatch;
-	};
+	}
 
-	const removeBold = (str: string): string => {
+	function removeBold(str: string): string {
 		//replace < and > all characters between
 		return str.replace(/<(.)*?>/g, '');
 		// return str.replace(/<(strong)>/g, "").replace(/<\/(strong)>/g, "");
-	};
+	}
 
-	/* NAVIGATING OVER THE LIST OF ITEMS W HIGHLIGHTING */
-	let hiLiteIndex: number | null = null;
-	$: hiLitedItem = hiLiteIndex != null ? filteredItems[hiLiteIndex] : '';
-
-	const navigateList = (e: KeyboardEvent) => {
+	function navigateList(e: KeyboardEvent) {
 		if (e.key === 'ArrowDown' && (hiLiteIndex == null || hiLiteIndex <= filteredItems.length - 1)) {
 			hiLiteIndex === null ? (hiLiteIndex = 0) : (hiLiteIndex += 1);
 		} else if (e.key === 'ArrowUp' && hiLiteIndex !== null) {
 			hiLiteIndex === 0 ? (hiLiteIndex = filteredItems.length - 1) : (hiLiteIndex -= 1);
 		} else if (e.key === 'Enter') {
 			if (hiLiteIndex === null) {
-				setInputVal(inputValue);
+				setInputVal(searchTerm);
 			} else {
 				setInputVal(filteredItems[hiLiteIndex]);
 			}
 		} else {
 			return;
 		}
-	};
+	}
 </script>
 
 <svelte:window on:keydown={navigateList} />
@@ -82,7 +76,7 @@
 			type="text"
 			placeholder="Search Terms"
 			bind:this={searchInput}
-			bind:value={inputValue}
+			bind:value={searchTerm}
 			on:input={filterItems}
 		/>
 	</div>

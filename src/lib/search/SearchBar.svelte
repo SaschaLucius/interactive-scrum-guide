@@ -22,7 +22,7 @@
 		if (searchTerm) {
 			$tags_store.forEach((item) => {
 				if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
-					storageArr = [...storageArr, makeMatchBold(item)];
+					storageArr = [...storageArr, makeMatchBold(item, searchTerm)];
 				}
 			});
 		}
@@ -36,18 +36,17 @@
 		(document?.querySelector('#item-input') as HTMLInputElement).focus();
 	}
 
-	function makeMatchBold(str: string): string {
-		// replace part of (item name === inputValue) with strong tags
-		let matched = str.substring(0, searchTerm.length);
+	function makeMatchBold(str: string, term: string): string {
+		let startIndex = str.toLowerCase().indexOf(term.toLowerCase());
+		let matched = str.substring(startIndex, startIndex + term.length);
 		let makeBold = `<strong>${matched}</strong>`;
-		let boldedMatch = str.replace(matched, makeBold);
+		let boldedMatch = str.replaceAll(matched, makeBold);
 		return boldedMatch;
 	}
 
 	function removeBold(str: string): string {
 		//replace < and > all characters between
-		return str.replace(/<(.)*?>/g, '');
-		// return str.replace(/<(strong)>/g, "").replace(/<\/(strong)>/g, "");
+		return str.replaceAll(/<(.)*?>/g, '');
 	}
 
 	function navigateList(e: KeyboardEvent) {

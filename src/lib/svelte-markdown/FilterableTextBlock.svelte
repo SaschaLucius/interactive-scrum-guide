@@ -10,21 +10,22 @@
 
 	let tags: string[][] = [];
 	let lines: string[] = [];
-	let filteredText = '';
-
-	$: isHeadline = block.trim().startsWith('#');
-	$: rawLines = block.split('\n');
+	let filteredText: string;
+	let isHeadline: boolean;
+	let rawLines: string[];
 
 	$: {
+		isHeadline = block.trim().startsWith('#');
+		rawLines = block.split('\n');
+
 		for (let i = 0; i < rawLines.length; i++) {
 			const line = rawLines[i];
 			tags[i] = getTags(line);
 			tags[i].forEach((tag) => tags_store.add(tag));
 			lines[i] = line.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
 		}
+		filteredText = getFilteredText(filter);
 	}
-
-	$: filteredText = getFilteredText(filter);
 
 	function getFilteredText(filter: string): string {
 		let tmp = '';
@@ -54,6 +55,6 @@
 	}
 </script>
 
-{#if filteredText?.trim().length != 0}
+{#if filteredText.trim().length != 0}
 	<SvelteMarkdown source={filteredText + ' '} />
 {/if}

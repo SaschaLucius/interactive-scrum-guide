@@ -5,6 +5,6 @@
 	export let textBlocks: string[];
 </script>
 
-{#each textBlocks as text}
-	<FilterableTextBlock bind:filter={searchTerm} block={text} />
+{#each textBlocks as block}
+	<FilterableTextBlock filter={searchTerm} {block} />
 {/each}

@@ -55,7 +55,7 @@ Nexus extends Scrum in the following ways:
 - Events: Events are appended to, placed around, or replace regular Scrum events to augment them. As modified, they serve both the overall effort of all Scrum Teams[ScrumTeams] in the Nexus, and each individual team. A Nexus Sprint Goal is the objective for the Sprint.
 - Artifacts: All Scrum Team[ScrumTeams] use the same, single Product Backlog. As the Product Backlog items are refined and made ready, indicators of which team will most likely do the work inside a Sprint are made transparent. A Nexus Sprint Backlog exists to assist with transparency during the Sprint. The Integrated Increment represents the current sum of all integrated work completed by a Nexus.
 
-Figure 1: The Nexus Framework
+![Figure 1: The Nexus Framework](Nexus_Guide_2021.Figure1.png)
 
 # Accountabilities in Nexus[Accountable]
 

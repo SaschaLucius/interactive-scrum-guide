@@ -50,7 +50,7 @@ Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars:Adaption].
 
 ## Adaptation[ScrumPillars:Adaption]
 
-If any aspects of a process deviate outside acceptable limits or if the resulting product is unacceptable[DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars:Adaption].
+If any aspects of a process deviate outside acceptable limits or if the resulting product is unacceptable[ScrumArtefact:Increment:Commitment:DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars:Adaption].
 The adjustment[ScrumPillars:Adaption] must be made as soon as possible to minimize further deviation.
 
 Adaptation[ScrumPillars:Adaption] becomes more difficult when the people involved are not empowered or self-managing[#SelfManagement].
@@ -289,7 +289,7 @@ Each artifact[ScrumArtifacts] contains a commitment[ScrumValues:Commitment] to e
 - For the Sprint Backlog it is the Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal].
 - For the Increment[ScrumArtifacts] it is the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
 
-These commitments[ScrumValues:Commitment,Commitments:ProductGoal,Commitments:SprintGoal,DefinitionOfDone] exist to reinforce empiricism[#Empiricism] and the Scrum values[ScrumValues] for the Scrum Team and their stakeholders[#Stakeholder].
+These commitments[ScrumValues:Commitment,Commitments:ProductGoal,Commitments:SprintGoal,ScrumArtefact:Increment:Commitment:DefinitionOfDone] exist to reinforce empiricism[#Empiricism] and the Scrum values[ScrumValues] for the Scrum Team and their stakeholders[#Stakeholder].
 
 ## Product Backlog[ScrumArtefact:ProductBacklog]
 

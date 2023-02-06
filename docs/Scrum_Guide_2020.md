@@ -70,7 +70,7 @@ The Scrum Team[ScrumTeam] members have the courage[ScrumValues:Courage] to do th
 These values[ScrumValues] give direction to the Scrum Team[ScrumTeam] with regard to their work, actions, and behavior.
 The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].
 The Scrum Team[ScrumTeam] members learn and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
-When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[#?] work with, the empirical[#Empiricism] Scrum pillars of transparency[ScrumPillars:Transparency], inspection[ScrumPillars:Inspection], and adaptation[ScrumPillars:Adaption] come to life building trust.
+When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[#externalPeople?] work with, the empirical[#Empiricism] Scrum pillars of transparency[ScrumPillars:Transparency], inspection[ScrumPillars:Inspection], and adaptation[ScrumPillars:Adaption] come to life building trust.
 
 # Scrum Team[ScrumTeam]
 
@@ -172,7 +172,7 @@ Optimally, all events[ScrumEvents] are held at the same time and place to reduce
 Sprints[ScumEvents:Sprint] are the heartbeat[#cadence] of Scrum, where ideas are turned into value.
 
 They[ScumEvents:Sprint] are fixed length[#timebox] events[ScumEvents:Sprint] of one month[#timebox] or less to create consistency[#ReduceComplexity].
-A new Sprint[ScumEvents:Sprint] starts immediately after the conclusion of the previous Sprint[[ScrumEvents:#order,ScumEvents:Sprint].
+A new Sprint[ScumEvents:Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents:#order,ScumEvents:Sprint].
 
 All the work[#PBI] necessary to achieve the Product Goal[ScrumArtefact:ProductBacklog:Commitment:ProductGoal], including Sprint Planning[ScumEvents:SprintPlanning], Daily Scrums[ScumEvents:DailyScrum], Sprint Review[ScrumEvents:SprintReview], and Sprint Retrospective[ScrumEvents:SprintRetrospective], happen within Sprints[ScumEvents:Sprint].
 
@@ -271,7 +271,7 @@ The Scrum Team[ScrumTeam] discusses what went well during the Sprint[ScumEvents:
 
 The Scrum Team[ScrumTeam] identifies[ScrumPillars:Inspection] the most helpful changes to improve[ScrumPillars:Adaption] its effectiveness.
 The most impactful improvements[ScrumPillars:Adaption] are addressed as soon as possible.
-They[#?mostImpactfulImprovements] may even be added to the Sprint Backlog for the next Sprint[ScumEvents:Sprint].
+They[#mostImpactfulImprovements?] may even be added to the Sprint Backlog for the next Sprint[ScumEvents:Sprint].
 
 The Sprint Retrospective[ScrumEvents:SprintRetrospective] concludes[ScrumEvents:#order] the Sprint[ScumEvents:Sprint].
 It[ScrumEvents:SprintRetrospective] is timeboxed[#timebox] to a maximum of three hours[#timebox] for a onemonth Sprint[ScumEvents:Sprint].

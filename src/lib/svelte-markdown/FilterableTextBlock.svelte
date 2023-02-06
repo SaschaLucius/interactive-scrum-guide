@@ -6,7 +6,7 @@
 	export let filter: string;
 	export let keepHeadlines = true;
 
-	const regexpBrackets = /\[[#A-Za-z:,]+\]/gi;
+	const regexpBrackets = /\[[#A-Za-z:,?-]+\]/gi;
 
 	let tags: string[][] = [];
 	let lines: string[] = [];
@@ -20,7 +20,7 @@
 			const line = rawLines[i];
 			tags[i] = getTags(line);
 			tags[i].forEach((tag) => tags_store.add(tag));
-			lines[i] = line.replace(/(\[[#A-Za-z:,]+\])/g, '');
+			lines[i] = line.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
 		}
 	}
 

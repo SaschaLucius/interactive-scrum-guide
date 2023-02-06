@@ -62,16 +62,16 @@ _At minimum_, members must create their DoW using all of the following elements:
 
 - A definition of the individual units of value that are moving through the workflow. These units of value are referred to as work items (or items).
 - A definition for when work items are started and finished within the workflow. Your workflow may have more than one started or finished points depending on the work item.
-- One or more defined states that the work items flow through from started to finished. Any work items between a started point and a finished point are considered work in progress (WIP).
-- A definition of how WIP will be controlled from started to finished.
+- One or more defined states that the work items flow through from started to finished. Any work items between a started point and a finished point are considered work in progress (WIP)[WorkInProgress].
+- A definition of how WIP[WorkInProgress] will be controlled from started to finished.
 - Explicit policies about how work items can flow through each state from started to finished.
 - A service level expectation (SLE), which is a forecast of how long it should take a work item to flow from started to finished.
 
 Kanban system members often require additional DoW elements such as values, principles, and working agreements depending on the team’s circumstances.
 The options vary, and there are resources beyond this guide that can help with deciding which ones to incorporate.
 
-The visualization of the DoW is called a Kanban board.
-Making at least the minimum elements of DoW transparent on the Kanban board is essential to processing knowledge that informs optimal workflow operation and facilitates continuous process improvement.
+The visualization of the DoW is called a Kanban board[KanbanBoard].
+Making at least the minimum elements of DoW transparent on the Kanban board[KanbanBoard] is essential to processing knowledge that informs optimal workflow operation and facilitates continuous process improvement.
 
 There are no specific guidelines for how a visualization should look as long as it encompasses the shared understanding of how value gets delivered.
 Consideration should be given to all aspects of the DoW (e.g., work items, policies) along with any other context-specific factors that may affect how the process operates.
@@ -81,7 +81,7 @@ Kanban system members are limited only by their imagination regarding how they m
 
 Active management of items in a workflow can take several forms, including but not limited to the following:
 
-- Controlling WIP.
+- Controlling WIP.[WorkInProgress].
 - Avoiding work items piling up in any part of the workflow.
 - Ensuring work items do not age unnecessarily, using the SLE as a reference.
 - Unblocking blocked work.
@@ -89,27 +89,27 @@ Active management of items in a workflow can take several forms, including but n
 A common practice is for Kanban system members to review the active management of items regularly.
 Although some may choose a daily meeting, there is no requirement to formalize the review or meet at a regular cadence so long as active management takes place.
 
-## Controlling Work In Progress
+## Controlling Work In Progress[WorkInProgress]
 
 Kanban system members must explicitly control the number of work items in a workflow from start to finish.
-That control is usually represented as numbers or slots/tokens on a Kanban board that are called WIP limits.
-A WIP limit can include (but is not limited to) work items in a single column, several grouped columns/lanes/areas, or a whole board.
+That control is usually represented as numbers or slots/tokens on a Kanban board[KanbanBoard] that are called WIP[WorkInProgress] limits.
+A WIP[WorkInProgress] limit can include (but is not limited to) work items in a single column, several grouped columns/lanes/areas, or a whole board[KanbanBoard].
 
-A side effect of controlling WIP is that it creates a pull system.
+A side effect of controlling WIP[WorkInProgress] is that it creates a pull system.
 It is called a pull system because Kanban system members start work on an item (pulls or selects) only when there is a clear signal that there is capacity to do so.
-When WIP drops below the limit in the DoW, that is a signal to select new work.
-Members should refrain from pulling/selecting more than the number of work items into a given part of the workflow as defined by the WIP Limit.
-In rare cases, system members may agree to pull additional work items beyond the WIP Limit, but it should not be routine.
+When WIP[WorkInProgress] drops below the limit in the DoW, that is a signal to select new work.
+Members should refrain from pulling/selecting more than the number of work items into a given part of the workflow as defined by the WIP[WorkInProgress] Limit.
+In rare cases, system members may agree to pull additional work items beyond the WIP[WorkInProgress] Limit, but it should not be routine.
 
-Controlling WIP not only helps workflow but often also improves the Kanban system members’ collective focus, commitment, and collaboration.
-Any acceptable exceptions to controlling WIP should be made explicit as part of the DoW.
+Controlling WIP[WorkInProgress] not only helps workflow but often also improves the Kanban system members’ collective focus, commitment, and collaboration.
+Any acceptable exceptions to controlling WIP[WorkInProgress] should be made explicit as part of the DoW.
 
 ## Service Level Expectation
 
 The SLE is a forecast of how long it should take a single work item to flow from started to finished.
 The SLE itself has two parts: a period of elapsed time and a probability associated with that period (e.g., “85% of work items will be finished in eight days or less”).
-The SLE should be based on historical cycle time, and once calculated, should be visualized on the Kanban board.
-If historical cycle time data does not exist, a best guess will do until there is enough historical data for a proper SLE calculation.
+The SLE should be based on historical cycle time[CycleTime], and once calculated, should be visualized on the Kanban board[KanbanBoard].
+If historical cycle time[CycleTime] data does not exist, a best guess will do until there is enough historical data for a proper SLE calculation.
 
 # Improving the Workflow
 
@@ -129,10 +129,10 @@ They are a reflection of the Kanban system’s current health and performance an
 
 The four mandatory flow measures to track are:
 
-- _WIP_: The number of work items started but not finished.
+- _WIP_[WorkInProgress]: The number of work items started but not finished.
 - _Throughput_: The number of work items finished per unit of time. Note the measurement of throughput is the exact count of work items.
 - _Work Item Age_: The amount of elapsed time between when a work item started and the current time.
-- _Cycle Time_: The amount of elapsed time between when a work item started and when a work item finished.
+- _Cycle Time_[CycleTime]: The amount of elapsed time between when a work item started and when a work item finished.
 
 For these mandatory four flow measures, started and finished refer to how the Kanban system members have defined those terms in the DoW.
 

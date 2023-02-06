@@ -72,7 +72,7 @@
 	<div class="autocomplete">
 		<input
 			id="item-input"
-			type="text"
+			type="search"
 			placeholder="Search Terms"
 			bind:this={searchInput}
 			bind:value={searchTerm}
@@ -99,7 +99,7 @@
 		/*the container must be positioned relative:*/
 		position: relative;
 		display: inline-block;
-		width: 300px;
+		width: 30rem;
 	}
 	input {
 		border: 1px solid transparent;
@@ -108,7 +108,7 @@
 		font-size: 16px;
 		margin: 0;
 	}
-	input[type='text'] {
+	input[type='search'] {
 		background-color: #f1f1f1;
 		width: 100%;
 	}
@@ -118,7 +118,7 @@
 		margin: 0;
 		padding: 0;
 		top: 0;
-		width: 297px;
+		width: 29rem;
 		border: 1px solid #ddd;
 		background-color: #ddd;
 	}

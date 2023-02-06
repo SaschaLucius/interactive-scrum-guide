@@ -8,26 +8,16 @@
 
 	const regexpBrackets = /\[[#A-Za-z:,?-]+\]/gi;
 
-	let tags: string[][] = [];
-	let lines: string[] = [];
-	let filteredText: string;
-	let isHeadline: boolean;
-	let rawLines: string[];
-
+	$: isHeadline = block.trim().startsWith('#');
+	$: rawLines = block.split('\n');
+	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
+	$: tags = rawLines.map((line) => getTags(line));
+	$: filteredText = getFilteredText(filter, lines);
 	$: {
-		isHeadline = block.trim().startsWith('#');
-		rawLines = block.split('\n');
-
-		for (let i = 0; i < rawLines.length; i++) {
-			const line = rawLines[i];
-			tags[i] = getTags(line);
-			tags[i].forEach((tag) => tags_store.add(tag));
-			lines[i] = line.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
-		}
-		filteredText = getFilteredText(filter);
+		tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 	}
 
-	function getFilteredText(filter: string): string {
+	function getFilteredText(filter: string, lines: string[]): string {
 		let tmp = '';
 		for (let i = 0; i < lines.length; i++) {
 			if (isVisible(lines[i], tags[i], filter)) {
@@ -47,7 +37,7 @@
 	}
 
 	function getTags(line: string): string[] {
-		let temp = line?.match(regexpBrackets);
+		let temp = line.match(regexpBrackets);
 		if (temp != null) {
 			return temp.flatMap((t) => t.substring(1, t.length - 1).split(','));
 		}

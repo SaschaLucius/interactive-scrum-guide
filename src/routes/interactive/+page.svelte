@@ -35,7 +35,7 @@
 
 <br />
 
-<Selection bind:selectedGuide options={Object.keys(guides)} on:change={resetValues} />
+<Selection on:change={resetValues} bind:selectedGuide options={Object.keys(guides)} />
 
 <br />
 

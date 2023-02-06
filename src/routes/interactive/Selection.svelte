@@ -3,7 +3,8 @@
 	export let options: string[];
 </script>
 
-<select bind:value={selectedGuide} on:change id="select">
+<!-- The Order of the defined Event handlers matters https://github.com/sveltejs/svelte/issues/7366 -->
+<select on:change bind:value={selectedGuide} id="select">
 	{#each options as option}
 		<option value={option}>{option.replaceAll('_', ' ')}</option>
 	{/each}

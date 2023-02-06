@@ -3,7 +3,7 @@
 	export let options: string[];
 </script>
 
-<!-- The Order of the defined Event handlers matters https://github.com/sveltejs/svelte/issues/7366 -->
+<!-- If you're using bind: directives together with on: directives, the order that they're defined in affects the value of the bound variable when the event handler is called. https://svelte.dev/docs#template-syntax-element-directives-bind-property -->
 <select on:change bind:value={selectedGuide} id="select">
 	{#each options as option}
 		<option value={option}>{option.replaceAll('_', ' ')}</option>

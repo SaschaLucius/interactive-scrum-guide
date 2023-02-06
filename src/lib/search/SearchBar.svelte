@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AutocompleteItem from './AutocompleteItem.svelte';
-	import { tags_store } from './store';
+	import { sorted_tags_store } from './store';
 
 	/* HANDLING THE INPUT */
 	export let searchTerm = '';
@@ -20,7 +20,7 @@
 	function filterItems() {
 		let storageArr: string[] = [];
 		if (searchTerm) {
-			$tags_store.forEach((item) => {
+			$sorted_tags_store.forEach((item) => {
 				if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
 					storageArr = [...storageArr, makeMatchBold(item, searchTerm)];
 				}

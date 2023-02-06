@@ -7,7 +7,7 @@
 
 	let searchTerm = '';
 	let selectedGuide = 'Scrum_Guide_2020';
-	$: textBlocks = getGuideText(selectedGuide).split('\n');
+	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
 
 	function getGuideText(guide: string): string {
 		for (const [key, value] of Object.entries(guides)) {

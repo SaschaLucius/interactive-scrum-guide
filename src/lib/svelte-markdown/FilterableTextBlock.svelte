@@ -14,9 +14,7 @@
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = rawLines.map((line) => getTags(line));
 	$: filteredText = getFilteredText(filter, lines);
-	$: {
-		tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
-	}
+	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
 	function getFilteredText(filter: string, lines: string[]): string {
 		let tmp = '';
@@ -25,10 +23,10 @@
 				tmp += lines[i] + '\n';
 			}
 		}
-		return tmp;
+		return tmp.trim();
 	}
 
-	function isVisible(line: string, tags: string[], filter: string) {
+	function isVisible(line: string, tags: string[], filter: string): boolean {
 		return (
 			filter == '' ||
 			(isHeadline && keepHeadlines) ||
@@ -46,6 +44,6 @@
 	}
 </script>
 
-{#if filteredText.trim().length != 0}
+{#if filteredText.length != 0}
 	<SvelteMarkdown source={filteredText + ' '} renderers={{ image: ImageComponent }} />
 {/if}

@@ -4,7 +4,7 @@
 
 	/* HANDLING THE INPUT */
 	export let searchTerm = '';
-	let searchInput: HTMLInputElement; // use with bind:this to focus element
+	let searchInput: HTMLInputElement;
 
 	/* FILTERING items DATA BASED ON INPUT */
 	let filteredItems: string[] = [];

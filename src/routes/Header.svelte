@@ -3,7 +3,6 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 
-	// https://svelte.dev/tutorial/keyed-each-blocks
 	var pages = [
 		{ path: '/interactive', name: 'Interactive Guides' },
 		{ path: '/about', name: 'About' }

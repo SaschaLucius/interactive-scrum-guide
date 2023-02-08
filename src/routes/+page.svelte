@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Scrum Guide" />
+	<meta name="description" content="Agile Guides" />
 </svelte:head>
 
 <section>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let itemLabel: any;
+	export let itemLabel: string;
 	export let highlighted: boolean;
 </script>
 

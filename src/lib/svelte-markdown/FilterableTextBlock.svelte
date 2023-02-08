@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
 	import { tags_store } from '$lib/search/store';
+	import ImageComponent from './ImageComponent.svelte';
 
 	export let block: string;
 	export let filter: string;
@@ -46,5 +47,5 @@
 </script>
 
 {#if filteredText.trim().length != 0}
-	<SvelteMarkdown source={filteredText + ' '} />
+	<SvelteMarkdown source={filteredText + ' '} renderers={{ image: ImageComponent }} />
 {/if}

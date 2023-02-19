@@ -1,6 +1,6 @@
 # Scrum Definition
 
-Scrum is a lightweight framework[#ScrumFramework] that helps people, teams and organizations[#Organization] generate value through adaptive[ScrumPillars:Adaptation] solutions for complex problems.
+Scrum is a lightweight framework[#Framework,#extendScrum] that helps people, teams and organizations[#Organization] generate value through adaptive[ScrumPillars:Adaptation] solutions for complex problems.
 
 In a nutshell, Scrum requires a Scrum Master[ScrumTeam:ScrumMaster] to foster an environment where:
 
@@ -11,13 +11,13 @@ In a nutshell, Scrum requires a Scrum Master[ScrumTeam:ScrumMaster] to foster an
 
 Scrum is simple.
 Try it[Scrum] as is and determine if its philosophy, theory, and structure help to achieve goals[Commitments:ProductGoal,Commitments:SprintGoal] and create value.
-The Scrum framework[#ScrumFramework] is purposefully incomplete, only defining the parts required to implement Scrum theory.
+The Scrum framework[#Framework] is purposefully incomplete, only defining the parts required to implement Scrum theory.[#extendScrum]
 Scrum is built upon by the collective intelligence of the people using it.
 Rather than provide people with detailed instructions, the rules of Scrum guide their relationships[ScrumTeam] and interactions[ScumEvent].
 
-Various processes, techniques and methods can be employed within the framework[#ScrumFramework].
+Various processes, techniques and methods can be employed within the framework[#Framework].
 Scrum wraps around existing practices or renders them unnecessary[Lean:WasteReduction].
-Scrum makes visible[ScrumPillars:Transparency] the relative efficacy of current management, environment, and work techniques, so that improvements[ScrumPillars:Adaptation] can be made.
+Scrum makes visible[ScrumPillars:Transparency] the relative efficacy of current management[#Management], environment, and work techniques, so that improvements[ScrumPillars:Adaptation] can be made.
 
 # Scrum Theory
 
@@ -53,7 +53,7 @@ Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars:Adaption].
 If any aspects of a process deviate outside acceptable limits or if the resulting product is unacceptable[ScrumArtefact:Increment:Commitment:DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars:Adaption].
 The adjustment[ScrumPillars:Adaption] must be made as soon as possible to minimize further deviation.
 
-Adaptation[ScrumPillars:Adaption] becomes more difficult when the people involved are not empowered or self-managing[#SelfManagement].
+Adaptation[ScrumPillars:Adaption] becomes more difficult when the people involved are not empowered[#Management] or self-managing[#SelfManagement].
 A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars:Adaption] the moment it learns anything new through inspection[ScrumPillars:Inspection].
 
 # Scrum Values[ScrumValues]
@@ -68,7 +68,7 @@ Scrum Team[ScrumTeam] members respect[ScrumValues:Respect] each other to be capa
 The Scrum Team[ScrumTeam] members have the courage[ScrumValues:Courage] to do the right thing, to work on tough problems.
 
 These values[ScrumValues] give direction to the Scrum Team[ScrumTeam] with regard to their work, actions, and behavior.
-The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].
+The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].[#Management]
 The Scrum Team[ScrumTeam] members learn and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
 When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[#externalPeople?] work with, the empirical[#Empiricism] Scrum pillars of transparency[ScrumPillars:Transparency], inspection[ScrumPillars:Inspection], and adaptation[ScrumPillars:Adaption] come to life building trust.
 
@@ -84,11 +84,11 @@ They[ScrumTeam] are also self-managing[#SelfManagement], meaning they[ScrumTeam]
 
 The Scrum Team[ScrumTeam] is small enough to remain nimble and large enough to complete significant work within a Sprint[ScumEvents:Sprint], typically 10 or fewer people.
 In general, we have found that smaller teams[ScrumTeam] communicate better and are more productive.
-If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeam], each focused[ScrumValues:Focus] on the same product.
+If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeams], each focused[ScrumValues:Focus] on the same product.
 Therefore, they[ScrumTeam] should share the same Product Goal[ScrumArtefact:ProductBacklog:Commitment:ProductGoal], Product Backlog[ScrumArtefact:ProductBacklog], and Product Owner[ScrumTeam:ProductOwner].
 
-The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[#Stakeholder] collaboration, verification, maintenance, operation, experimentation, research and development, and anything else that might be required.
-They[ScrumTeam] are structured and empowered by the organization[#Organization] to manage their[ScrumTeam] own work.
+The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[#Stakeholder] collaboration, verification[#Lerning], maintenance, operation, experimentation, research and development, and anything else that might be required.
+They[ScrumTeam] are structured and empowered[#Management] by the organization[#Organization] to manage[#Management] their[ScrumTeam] own work.
 Working in Sprints[ScumEvents:Sprint] at a sustainable pace improves[ScrumPillars:Adaption] the Scrum Team’s[ScrumTeam] focus[ScrumValues:Focus] and consistency[ReduceComplexity].
 
 The entire Scrum Team[ScrumTeam] is accountable[ScrumTeam:Accountable] for creating a valuable, useful Increment[ScrumArtifacts] every Sprint[ScumEvents:Sprint].
@@ -120,7 +120,7 @@ The Product Owner[ScrumTeam:ProductOwner] is also accountable[ScrumTeam:ProductO
 The Product Owner[ScrumTeam:ProductOwner] may do the above work or may delegate the responsibility[ProductOwner:Responsible] to others.
 Regardless, the Product Owner[ScrumTeam:ProductOwner] remains accountable.[ScrumTeam:ProductOwner:Accountable]
 
-For Product Owners[ScrumTeam:ProductOwner] to succeed, the entire organization[#Organization] must respect[ScrumValues:Respect] their decisions.
+For Product Owners[ScrumTeam:ProductOwner] to succeed, the entire organization[#Organization] must respect[ScrumValues:Respect] their decisions.[#Management]
 These decisions are visible[ScrumPillars:Transparency] in the content and ordering of the Product Backlog[ScrumArtefact:ProductBacklog], and through the inspectable[ScrumPillars:Inspection] Increment[ScrumArtifacts] at the Sprint Review[ScrumEvents:SprintReview].[ScrumTeam:ProductOwner]
 
 The Product Owner[ScrumTeam:ProductOwner] is one person, not a committee.
@@ -133,7 +133,7 @@ The Scrum Master[ScrumTeam:ScrumMaster] is accountable[ScrumTeam:ScrumMaster:Acc
 They[ScrumTeam:ScrumMaster] do this by helping everyone understand Scrum theory and practice, both within the Scrum Team[ScrumTeam] and the organization[#Organization].
 
 The Scrum Master[ScrumTeam:ScrumMaster] is accountable[ScrumTeam:ScrumMaster:Accountable] for the Scrum Team’s[ScrumTeam] effectiveness.
-They[ScrumTeam:ScrumMaster] do this by enabling the Scrum Team[ScrumTeam] to improve[ScrumPillars:Adaption] its practices, within the Scrum framework[#ScrumFramework].
+They[ScrumTeam:ScrumMaster] do this by enabling the Scrum Team[ScrumTeam] to improve[ScrumPillars:Adaption] its practices, within the Scrum framework[#Framework].
 
 Scrum Masters[ScrumTeam:ScrumMaster] are true leaders who serve the Scrum Team[ScrumTeam] and the larger organization[#Organization].
 
@@ -141,7 +141,7 @@ The Scrum Master[ScrumTeam:ScrumMaster] serves[ScrumTeam:ScrumMaster:Serve] the 
 
 - Coaching the team members[ScrumTeam] in self-management[#SelfManagement] and cross-functionality[#cross-functional];[ScrumTeam:ScrumMaster:Serve]
 - Helping the Scrum Team[ScrumTeam] focus[ScrumValues:Focus] on creating high-value Increments[ScrumTeam:ScrumMaster:Serve][ScrumArtifacts] that meet the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone];
-- Causing the removal of impediments[#impediments] to the Scrum Team’s[ScrumTeam] progress; and,[ScrumTeam:ScrumMaster:Serve]
+- Causing the removal of impediments[#Impediments] to the Scrum Team’s[ScrumTeam] progress; and,[ScrumTeam:ScrumMaster:Serve]
 - Ensuring that all Scrum events[ScrumEvents] take place and are positive, productive, and kept within the timebox[#timebox].[ScrumTeam:ScrumMaster:Serve]
 
 The Scrum Master[ScrumTeam:ScrumMaster] serves[ScrumTeam:ScrumMaster:Serve] the Product Owner[ScrumTeam:ProductOwner] in several ways, including:
@@ -156,7 +156,7 @@ The Scrum Master[ScrumTeam:ScrumMaster] serves[ScrumTeam:ScrumMaster:Serve] the 
 - Leading, training, and coaching the organization[#Organization] in its Scrum adoption;[ScrumTeam:ScrumMaster:Serve]
 - Planning and advising Scrum implementations within the organization[#Organization];[ScrumTeam:ScrumMaster:Serve]
 - Helping employees and stakeholders[#Stakeholder] understand and enact an empirical[#Empiricism] approach for complex work; and,[ScrumTeam:ScrumMaster:Serve]
-- Removing barriers between stakeholders[#Stakeholder] and Scrum Teams[ScrumTeam].[ScrumTeam:ScrumMaster:Serve]
+- Removing barriers[#Impediments] between stakeholders[#Stakeholder] and Scrum Teams[ScrumTeam].[ScrumTeam:ScrumMaster:Serve]
 
 # Scrum Events[ScrumEvents]
 
@@ -164,7 +164,7 @@ The Sprint[ScumEvents:Sprint] is a container for all other events[ScrumEvents].
 Each event[ScrumEvents] in Scrum is a formal opportunity to inspect[ScrumPillars:Inspection] and adapt[ScrumPillars:Adaption] Scrum artifacts[ScrumArtifacts].
 These events[ScrumEvents] are specifically designed to enable the transparency[ScrumPillars:Transparency] required.
 Failure to operate any events[ScrumEvents] as prescribed results in lost opportunities to inspect[ScrumPillars:Inspection] and adapt[ScrumPillars:Adaption].
-Events[ScrumEvents] are used in Scrum to create regularity[#cadence] and to minimize the need for meetings not defined in Scrum[#extendScrum].
+Events[ScrumEvents] are used in Scrum to create regularity[#cadence] and to minimize the need for meetings not defined in Scrum[#extendScrum,#OtherMeetings].
 Optimally, all events[ScrumEvents] are held at the same time and place to reduce complexity[#ReduceComplexity].
 
 ## The Sprint[ScumEvents:Sprint]
@@ -191,7 +191,7 @@ Each Sprint[ScumEvents:Sprint] may be considered a short project.
 Various practices exist to forecast[#Forecast] progress, like burn-downs[#extendScrum,#BurnDown], burn-ups[#extendScrum,#BurnUp], or cumulative flows[#extendScrum].
 While proven useful, these do not replace the importance of empiricism[#Empiricism].
 In complex environments, what will happen is unknown[#uncertency].
-Only what has already happened may be used for forward-looking decision making.
+Only what has already happened may be used for forward-looking[#Forecast] decision making.
 
 A Sprint[ScumEvents:Sprint] could be cancelled if the Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal] becomes obsolete.
 Only the Product Owner[ScrumTeam:ProductOwner] has the authority[ProductOwner:Responsible] to cancel the Sprint[ScumEvents:Sprint].
@@ -217,15 +217,15 @@ The Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal] must be final
 Through discussion with the Product Owner[ScrumTeam:ProductOwner], the Developers[ScrumTeam:Developers] select items[ScrumArtefact:ProductBacklog:Item] from the Product Backlog[ScrumArtefact:ProductBacklog] to include in the current Sprint[ScumEvents:Sprint].
 The Scrum Team[ScrumTeam] may refine[#ProductBacklogRefinement] these items[ScrumArtefact:ProductBacklog:Item] during this process, which increases understanding and confidence.
 
-Selecting how much can be completed within a Sprint[ScumEvents:Sprint] may be challenging.
-However, the more the Developers[ScrumTeam:Developers] know about their[ScrumTeam:Developers] past performance, their[ScrumTeam:Developers] upcoming capacity, and their[ScrumTeam:Developers] Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone], the more confident they[ScrumTeam:Developers] will be in their Sprint[ScumEvents:Sprint] forecasts[#Forecast].
+Selecting how much can be completed within a Sprint[ScumEvents:Sprint] may be challenging.[#Forecast]
+However, the more the Developers[ScrumTeam:Developers] know about their[ScrumTeam:Developers] past performance, their[ScrumTeam:Developers] upcoming capacity[#Capacity], and their[ScrumTeam:Developers] Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone], the more confident they[ScrumTeam:Developers] will be in their Sprint[ScumEvents:Sprint] forecasts[#Forecast].
 
 **Topic Three: How will the chosen work get done?**
 
 For each selected Product Backlog item[ScrumArtefact:ProductBacklog:Item], the Developers[ScrumTeam:Developers] plan the work necessary to create an Increment[ScrumArtifacts] that meets the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
 This is often done by decomposing Product Backlog items[ScrumArtefact:ProductBacklog:Item] into smaller work items[WorkItem] of one day[#timebox] or less.
 How this is done is at the sole discretion of the Developers[ScrumTeam:Developers].
-No one else tells them[ScrumTeam:Developers] how to turn Product Backlog items[ScrumArtefact:ProductBacklog:Item] into Increments[ScrumArtifacts] of value.
+No one else tells[#NotTheSameAsGivingAdvice] them[ScrumTeam:Developers] how to turn Product Backlog items[ScrumArtefact:ProductBacklog:Item] into Increments[ScrumArtifacts] of value.
 
 The Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal], the Product Backlog items[ScrumArtefact:ProductBacklog:Item] selected for the Sprint[ScumEvents:Sprint], plus the plan for delivering[ScrumArtifacts:Increment] them are together referred to as the Sprint Backlog.
 
@@ -243,7 +243,7 @@ If the Product Owner[ScrumTeam:ProductOwner] or Scrum Master[ScrumTeam:ScrumMast
 The Developers[ScrumTeam:Developers][ScrumTeam:Developers] want, as long as their Daily Scrum[ScumEvents:DailyScrum] focuses on progress toward the Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal] and produces an actionable plan for the next day of work.
 This creates focus[ScrumValue:Focus] and improves[ScrumPillars:Adaption] self-management[#SelfManagement].
 
-Daily Scrums[ScumEvents:DailyScrum] improve[ScrumPillars:Adaption] communications, identify impediments, promote quick decision-making, and consequently eliminate the need for other meetings[#extendScrum].
+Daily Scrums[ScumEvents:DailyScrum] improve[ScrumPillars:Adaption] communications, identify impediments[#Impediments], promote quick decision-making, and consequently eliminate the need for other meetings[#extendScrum,#OtherMeetings].
 
 The Daily Scrum[ScumEvents:DailyScrum] is not the only time Developers[ScrumTeam:Developers] are allowed to adjust[ScrumPillars:Adaption] their plan.
 They[ScrumTeam:Developers] often meet throughout the day for more detailed discussions about adapting[ScrumPillars:Adaption] or re-planning the rest of the Sprint’s[ScumEvents:Sprint] work.
@@ -253,7 +253,7 @@ They[ScrumTeam:Developers] often meet throughout the day for more detailed discu
 The purpose of the Sprint Review[ScrumEvents:SprintReview] is to inspect[ScrumPillars:Inspection] the outcome of the Sprint[ScumEvents:Sprint] and determine future adaptations[ScrumPillars:Adaption].
 The Scrum Team[ScrumTeam,ScumEvents:SprintReview:Attendees] presents the results of their work to key stakeholders[ScumEvents:SprintReview:Attendees,#Stakeholder] and progress toward the Product Goal[ScrumArtefact:ProductBacklog:Commitment:ProductGoal] is discussed.
 
-During the event[ScrumEvents:SprintReview], the Scrum Team[ScrumTeam] and stakeholders[#Stakeholder] review[ScrumEvents:SprintReview] what was accomplished[#Forecast] in the Sprint[ScumEvents:Sprint] and what has changed[Adaption] in their environment.
+During the event[ScrumEvents:SprintReview], the Scrum Team[ScrumTeam] and stakeholders[#Stakeholder] review[ScrumEvents:SprintReview] what was accomplished[#Forecast] in the Sprint[ScumEvents:Sprint] and what has changed[ScrumPillars:Adaption] in their environment.
 Based on this information, attendees[ScumEvents:SprintReview:Attendees] collaborate on what to do next.
 The Product Backlog[ScrumArtefact:ProductBacklog] may also be adjusted[ScrumPillars:Adaption] to meet new opportunities.
 The Sprint Review[ScrumEvents:SprintReview] is a working session and the Scrum Team[ScrumTeam] should avoid limiting it to a presentation.
@@ -267,7 +267,7 @@ The purpose of the Sprint Retrospective[ScrumEvents:SprintRetrospective] is to p
 
 The Scrum Team[ScrumTeam,ScumEvents:SprintRetrospective:Attendees] inspects[ScrumPillars:Inspection] how the last Sprint[ScumEvents:Sprint] went with regards to individuals, interactions, processes, tools, and their Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
 Inspected[ScrumPillars:Inspection] elements often vary with the domain of work. Assumptions that led them astray are identified and their origins explored.
-The Scrum Team[ScrumTeam] discusses what went well during the Sprint[ScumEvents:Sprint], what problems it encountered, and how those problems were (or were not) solved[ScrumValues:Courage].
+The Scrum Team[ScrumTeam] discusses what went well during the Sprint[ScumEvents:Sprint], what problems[#Impediments] it encountered, and how those problems were (or were not) solved[ScrumValues:Courage].
 
 The Scrum Team[ScrumTeam] identifies[ScrumPillars:Inspection] the most helpful changes to improve[ScrumPillars:Adaption] its effectiveness.
 The most impactful improvements[ScrumPillars:Adaption] are addressed as soon as possible.
@@ -283,7 +283,7 @@ Scrum’s artifacts[ScrumArtifacts] represent work or value.
 They[ScrumArtifacts] are designed to maximize transparency[ScrumPillars:Transparency] of key information.
 Thus, everyone inspecting[ScrumPillars:Inspection] them[ScrumArtifacts] has the same basis for adaptation[ScrumPillars:Adaption].
 
-Each artifact[ScrumArtifacts] contains a commitment[ScrumValues:Commitment] to ensure it provides information that enhances transparency[ScrumPillars:Transparency] and focus[ScrumValues:Focus] against which progress can be measured:
+Each artifact[ScrumArtifacts] contains a commitment[ScrumValues:Commitment] to ensure it provides information that enhances transparency[ScrumPillars:Transparency] and focus[ScrumValues:Focus] against which progress can be measured:[#Forecast]
 
 - For the Product Backlog[ScrumArtefact:ProductBacklog] it is the Product Goal[ScrumArtefact:ProductBacklog:Commitment:ProductGoal].
 - For the Sprint Backlog it is the Sprint Goal[ScrumArtefact:SprintBacklog:Commitment:SprintGoal].
@@ -294,7 +294,7 @@ These commitments[ScrumValues:Commitment,Commitments:ProductGoal,Commitments:Spr
 ## Product Backlog[ScrumArtefact:ProductBacklog]
 
 The Product Backlog[ScrumArtefact:ProductBacklog] is an emergent[#Emergence], ordered list of what is needed to improve[ScrumPillars:Adaption] the product.
-It[ProductBacklog] is the single source of work undertaken by the Scrum Team[ScrumTeam].
+It[ScrumArtefact:ProductBacklog] is the single source of work undertaken by the Scrum Team[ScrumTeam].
 
 Product Backlog items[ScrumArtefact:ProductBacklog:Item] that can be Done by the Scrum Team[ScrumTeam] within one Sprint[ScumEvents:Sprint] are deemed ready[#Ready] for selection in a Sprint Planning[ScumEvents:SprintPlanning] event.
 They[ScrumArtefact:ProductBacklog:Item] usually acquire this degree of transparency[ScrumPillars:Transparency] after refining[ScrumPillars:Adaption] activities.
@@ -357,19 +357,19 @@ The Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone] is a
 The moment a Product Backlog item[ScrumArtefact:ProductBacklog:Item] meets the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone], an Increment[ScrumArtifacts] is born.
 
 The Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone] creates transparency[ScrumPillars:Transparency] by providing everyone a shared understanding of what work was completed as part of the Increment[ScrumArtifacts].
-If a Product Backlog item[ScrumArtefact:ProductBacklog:Item] does not meet the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone], it cannot be released[ScrumArtifacts:Increment] or even presented at the Sprint Review[ScrumEvents:SprintReview].
-Instead, it returns to the Product Backlog[ScrumArtefact:ProductBacklog] for future consideration.
+If a Product Backlog item[ScrumArtefact:ProductBacklog:Item] does not meet the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone], it cannot be released[ScrumArtifacts:Increment] or even presented at the Sprint Review[ScrumEvents:SprintReview].[#UnfinishedWork]
+Instead, it returns to the Product Backlog[ScrumArtefact:ProductBacklog] for future consideration.[#UnfinishedWork]
 
 If the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone] for an increment[ScrumArtifacts:Increment] is part of the standards of the organization[#Organization], all Scrum Teams[ScrumTeam] must follow it as a minimum.
 If it is not an organizational[#Organization] standard, the Scrum Team[ScrumTeam] must create a Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone] appropriate for the product.
 
 The Developers[ScrumTeam:Developers] are required to conform to the Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
-If there are multiple Scrum Teams[ScrumTeam] working together on a product, they[ScrumTeam] must mutually define and comply with the same Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
+If there are multiple Scrum Teams[ScrumTeams] working together on a product, they[ScrumTeam] must mutually define and comply with the same Definition of Done[ScrumArtefact:Increment:Commitment:DefinitionOfDone].
 
 # End Note
 
 Scrum is free and offered in this Guide.
-The Scrum framework[#ScrumFramework], as outlined herein, is immutable.
+The Scrum framework[#Framework], as outlined herein, is immutable[NoChangesAreAllowed].[#extendScrum]
 While implementing only parts of Scrum is possible, the result is not Scrum.[#extendScrum]
 Scrum exists only in its entirety and functions well as a container for other techniques, methodologies, and practices[#extendScrum].
 

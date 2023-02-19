@@ -13,6 +13,20 @@ for i in docs/*.md; do
 
     newTagsFileName="src/routes/interactive/generated/tags.ts"
     echo "export const $name = [" >> $newTagsFileName
-    cat "$i" | sed -e 's/\[[^][]*\]//g' | sed 's/[.,:!?]  */&\n/g' | sed -e "$(cat rm-en-stopwords-anywhere.sed)" | tr -d '[:punct:]' | sed 's/^[ \t]*//;s/[ \t]*$//' |  sed '/^[[:space:]]*$/d' | sort -uf | sed 's/\(.*\)/"\1",/g' >> $newTagsFileName
+    cat "$i" | \
+    # remove tags []
+    sed -e 's/\[[^][]*\]//g' | \
+    # replace punctuation with newlines
+    sed 's/[[:punct:]]/\n/g' | \
+    # remove stopwords
+    sed -e "$(cat rm-en-stopwords-anywhere.sed)" | \
+    # remove leading and tailing whitespaces
+    sed 's/^[ \t]*//;s/[ \t]*$//' | \
+    # delete empty lines
+    sed '/^[[:space:]]*$/d' | \
+    # sort, uniq, ignore case
+    sort -uf | \
+    # add "<tag>",
+    sed 's/\(.*\)/"\1",/g' >> $newTagsFileName
     echo "];" >> $newTagsFileName
 done

@@ -12,7 +12,7 @@ While learning for [PSM1 Certification](https://www.scrum.org/assessments/profes
 
 ## How to run
 
-- `./generate.sh`
+- `./scripts/generate.sh`
 - `npm install`
 - `npm run dev`
 

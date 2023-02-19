@@ -1,17 +1,19 @@
 #!/bin/bash
 
-rm src/routes/generated/guides.ts || true
-rm src/routes/generated/tags.ts || true
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+rm src/lib/generated/guides.ts || true
+rm src/lib/generated/tags.ts || true
 
 for i in docs/*.md; do
     [ -f "$i" ] || break
     name="$(basename $i .md)"
-    newGuideFileName="src/routes/generated/guides.ts"
+    newGuideFileName="src/lib/generated/guides.ts"
     echo "export const $name = \`" >> $newGuideFileName
     cat "$i" >> $newGuideFileName
     echo "\`;" >> $newGuideFileName
 
-    newTagsFileName="src/routes/generated/tags.ts"
+    newTagsFileName="src/lib/generated/tags.ts"
     echo "export const $name = [" >> $newTagsFileName
     cat "$i" | \
     # remove tags []
@@ -19,7 +21,7 @@ for i in docs/*.md; do
     # replace punctuation with newlines
     sed 's/[[:punct:]]/\n/g' | \
     # remove stopwords
-    sed -e "$(cat rm-en-stopwords-anywhere.sed)" | \
+    sed -e "$(cat $SCRIPT_DIR/rm-en-stopwords-anywhere.sed)" | \
     # remove leading and tailing whitespaces
     sed 's/^[ \t]*//;s/[ \t]*$//' | \
     # delete empty lines

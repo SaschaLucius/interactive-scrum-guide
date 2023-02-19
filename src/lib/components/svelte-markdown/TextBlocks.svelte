@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilterableTextBlock from '$lib/svelte-markdown/FilterableTextBlock.svelte';
+	import FilterableTextBlock from './FilterableTextBlock.svelte';
 
 	export let searchTerm = '';
 	export let textBlocks: string[];

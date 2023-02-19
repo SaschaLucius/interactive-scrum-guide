@@ -5,6 +5,7 @@
 
 	var pages = [
 		{ path: '/interactive', name: 'Interactive Guides' },
+		{ path: '/config', name: 'Configuration' },
 		{ path: '/about', name: 'About' }
 	];
 </script>

@@ -2,12 +2,16 @@
 	import Selection from './Selection.svelte';
 	import TextBlocks from './TextBlocks.svelte';
 	import * as guides from './generated/guides';
+	import * as tags from './generated/tags';
 	import SearchBar from '$lib/search/SearchBar.svelte';
 	import { tags_store } from '$lib/search/store';
+	import { config as config_store } from '$lib/config/store';
+	import { onMount } from 'svelte';
 
 	let searchTerm = '';
 	let selectedGuide = 'Scrum_Guide_2020';
 	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
+	$: initializeTags(selectedGuide);
 
 	function getGuideText(guide: string): string {
 		for (const [key, value] of Object.entries(guides)) {
@@ -18,9 +22,26 @@
 		return '# No matching Guide found';
 	}
 
+	function getTags(guide: string): string[] {
+		for (const [key, value] of Object.entries(tags)) {
+			if (key === guide) {
+				return value as string[];
+			}
+		}
+		return [];
+	}
+
 	function resetValues(): void {
 		tags_store.reset();
 		searchTerm = '';
+	}
+
+	function initializeTags(selectedGuide: string): void {
+		if ($config_store.autoTagging) {
+			getTags(selectedGuide).forEach((item) => {
+				tags_store.add(item);
+			});
+		}
 	}
 </script>
 

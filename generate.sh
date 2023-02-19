@@ -1,17 +1,17 @@
 #!/bin/bash
 
-rm src/routes/interactive/generated/guides.ts || true
-rm src/routes/interactive/generated/tags.ts || true
+rm src/routes/generated/guides.ts || true
+rm src/routes/generated/tags.ts || true
 
 for i in docs/*.md; do
     [ -f "$i" ] || break
     name="$(basename $i .md)"
-    newGuideFileName="src/routes/interactive/generated/guides.ts"
+    newGuideFileName="src/routes/generated/guides.ts"
     echo "export const $name = \`" >> $newGuideFileName
     cat "$i" >> $newGuideFileName
     echo "\`;" >> $newGuideFileName
 
-    newTagsFileName="src/routes/interactive/generated/tags.ts"
+    newTagsFileName="src/routes/generated/tags.ts"
     echo "export const $name = [" >> $newTagsFileName
     cat "$i" | \
     # remove tags []

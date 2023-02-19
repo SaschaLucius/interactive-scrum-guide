@@ -4,7 +4,6 @@
 	import github from '$lib/images/github.svg';
 
 	var pages = [
-		{ path: '/interactive', name: 'Interactive Guides' },
 		{ path: '/config', name: 'Configuration' },
 		{ path: '/about', name: 'About' }
 	];

@@ -13,10 +13,10 @@
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = $config_store.tagSearch ? rawLines.map((line) => getTags(line)) : [];
-	$: filteredText = getFilteredText(filter, lines, $config_store.keepHeader);
+	$: filteredText = getFilteredText(filter, lines);
 	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
-	function getFilteredText(filter: string, lines: string[], keepHeader: boolean): string {
+	function getFilteredText(filter: string, lines: string[]): string {
 		let tmp = '';
 		for (let i = 0; i < lines.length; i++) {
 			if (isVisible(lines[i], tags[i], filter)) {

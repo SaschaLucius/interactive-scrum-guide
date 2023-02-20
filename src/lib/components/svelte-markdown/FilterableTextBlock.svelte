@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	import { tags_store } from '$lib/search/store';
-	import { config as config_store } from '$lib/config/store';
+	import { tags_store } from '$lib/stores/search';
+	import { config as config_store } from '$lib/stores/config';
 	import ImageComponent from './ImageComponent.svelte';
 
 	export let block: string;

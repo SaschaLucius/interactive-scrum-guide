@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AutocompleteItem from './AutocompleteItem.svelte';
-	import { sorted_tags_store } from './store';
+	import { sorted_tags_store } from '$lib/stores/search';
 
 	/* HANDLING THE INPUT */
 	export let searchTerm = '';

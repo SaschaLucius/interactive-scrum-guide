@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { config } from './store';
+	import { config } from '$lib/stores/config';
 </script>
 
 <form class="content">

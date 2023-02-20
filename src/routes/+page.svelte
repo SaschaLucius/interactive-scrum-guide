@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Selection from './Selection.svelte';
-	import TextBlocks from './TextBlocks.svelte';
-	import * as guides from './generated/guides';
-	import * as tags from './generated/tags';
-	import SearchBar from '$lib/search/SearchBar.svelte';
-	import { tags_store } from '$lib/search/store';
-	import { config as config_store } from '$lib/config/store';
+	import Selection from '$lib/components/guides/Selection.svelte';
+	import TextBlocks from '$lib/components/svelte-markdown/TextBlocks.svelte';
+	import * as guides from '$lib/generated/guides';
+	import * as tags from '$lib/generated/tags';
+	import SearchBar from '$lib/components/search/SearchBar.svelte';
+	import { tags_store } from '$lib/stores/search';
+	import { config as config_store } from '$lib/stores/config';
 
 	let searchTerm = '';
 	let selectedGuide = 'Scrum_Guide_2020';

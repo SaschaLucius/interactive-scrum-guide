@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Config from '$lib/config/Config.svelte';
+	import Config from '$lib/components/config/Config.svelte';
 </script>
 
 <svelte:head>

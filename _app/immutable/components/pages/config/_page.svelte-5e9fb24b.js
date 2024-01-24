@@ -1,4 +1,4 @@
-import{S as w,i as M,s as z,k as u,q as E,a as x,l as f,m as v,r as $,h as i,c as L,n as p,b as A,I as n,T as S,B as F,D,K as O,w as R,P as j,x as G,y as J,f as Q,t as V,z as W}from"../../../chunks/index-46152244.js";import{c as y}from"../../../chunks/store-fe87f594.js";function X(r){let t,o,e,_,g,s,l,a,h,m,k,C,q,T,b,H,P,K;return{c(){t=u("form"),o=u("label"),e=u("input"),_=E(`
+import{S as w,i as M,s as z,k as u,q as E,a as x,l as f,m as v,r as $,h as i,c as L,n as p,b as A,I as n,T as S,B as F,D,K as O,w as R,P as j,x as G,y as J,f as Q,t as V,z as W}from"../../../chunks/index-46152244.js";import{c as y}from"../../../chunks/config-fe87f594.js";function X(r){let t,o,e,_,g,s,l,a,h,m,k,C,q,T,b,H,P,K;return{c(){t=u("form"),o=u("label"),e=u("input"),_=E(`
 		Keep Header`),g=x(),s=u("label"),l=u("input"),a=E(`
 		Full-text search`),h=x(),m=u("label"),k=u("input"),C=E(`
 		Auto-Tagging`),q=x(),T=u("label"),b=u("input"),H=E(`

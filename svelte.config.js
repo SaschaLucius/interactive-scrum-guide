@@ -18,16 +18,8 @@ const config = {
 						assets: 'build',
 						strict: false
 					})
-				: autoAdapter(),
-		// https://kit.svelte.dev/docs/configuration#csp
-		csp: {
-			directives: {
-				'script-src': ['self']
-			},
-			reportOnly: {
-				'script-src': ['self']
-			}
-		}
+				: autoAdapter()
+		// TODO https://kit.svelte.dev/docs/configuration#csp
 	}
 };
 

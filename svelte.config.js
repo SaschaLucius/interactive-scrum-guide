@@ -1,6 +1,6 @@
 import autoAdapter from '@sveltejs/adapter-auto';
 import staticAdapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const TARGET = process.env.TARGET;
 
@@ -17,8 +17,17 @@ const config = {
 						pages: 'build',
 						assets: 'build',
 						strict: false
-				  })
-				: autoAdapter()
+					})
+				: autoAdapter(),
+		// https://kit.svelte.dev/docs/configuration#csp
+		csp: {
+			directives: {
+				'script-src': ['self']
+			},
+			reportOnly: {
+				'script-src': ['self']
+			}
+		}
 	}
 };
 

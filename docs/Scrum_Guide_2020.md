@@ -148,7 +148,7 @@ The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the 
 
 - Helping find techniques for effective Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal] definition and Product Backlog[ScrumArtefact,ProductBacklog] management;[ScrumTeam,ScrumMaster,Serve]
 - Helping the Scrum Team[ScrumTeam] understand the need for clear and concise Product Backlog items[ScrumArtefact,ProductBacklog,ProductBacklogItem];[ScrumTeam,ScrumMaster,Serve]
-- Helping establish empirical[Empiricism] product planning[#ProductPlanning] for a complex environment[Uncertainty]; and,[ScrumTeam,ScrumMaster,Serve]
+- Helping establish empirical[Empiricism] product[Product] planning for a complex environment[Uncertainty]; and,[ScrumTeam,ScrumMaster,Serve]
 - Facilitating stakeholder[Stakeholder] collaboration as requested or needed.[ScrumTeam,ScrumMaster,Serve]
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the organization[Organization] in several ways, including:

@@ -10,14 +10,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: 'Setup Node.js 20 LTS'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: npm
       - name: Run generate script
         run: ./scripts/generate.sh
         shell: bash
-      - name: 'Setup Node.js 18 LTS'
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: npm
       - name: Install dependencies
         run: npm install
       - name: Run Check

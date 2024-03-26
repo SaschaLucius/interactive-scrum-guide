@@ -2,8 +2,31 @@ var natural = require('natural');
 const fs = require('fs');
 const readline = require('readline');
 
-async function processLineByLine() {
-	const fileStream = fs.createReadStream('./docs/Scrum_Guide_2020.md');
+const docsFolder = './docs/';
+const guides = './src/lib/generated/guides.ts'
+const tags = './src/lib/generated/tags.ts'
+
+let allTags = [];
+
+// Cleanup
+fs.unlinkSync(guides);
+fs.unlinkSync(tags);
+
+fs.readdir(docsFolder, async (err, files) => {
+    files.forEach(async (file) => {
+        if(file.endsWith('.md')){
+                allTags = [];
+                fs.writeFileSync(guides, `export const ${file.slice(0, -3)} = \``);
+                fs.writeFileSync(tags, `export const ${file.slice(0, -3)} = [`);
+                await processLineByLine(docsFolder+file);
+                fs.appendFileSync(tags, `"${allTags.join('","')}"];`);
+                fs.appendFileSync(guides, "`;");
+        }
+    });
+});
+
+async function processLineByLine(file) {
+	const fileStream = fs.createReadStream(file);
 
 	const rl = readline.createInterface({
 		input: fileStream,
@@ -21,10 +44,12 @@ async function processLineByLine() {
 		const unique = [...new Set(all)].sort((a, b) =>
 			a.localeCompare(b, undefined, { sensitivity: 'base' })
 		);
+        allTags = allTags.concat(unique);
+
 		if (unique.length === 0) {
-			console.log(`${plain}`);
+            fs.appendFileSync(guides, plain + "\n");
 		} else {
-			console.log(`${plain}[${unique.join(',')}]`);
+            fs.appendFileSync(guides, `${plain}[${unique.join(',')}]\n`);
 		}
 	}
 }
@@ -39,4 +64,4 @@ function getTags(line) {
 	return [];
 }
 
-processLineByLine();
+

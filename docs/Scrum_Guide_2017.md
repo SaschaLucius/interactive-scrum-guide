@@ -27,8 +27,7 @@ Scrum was initially developed for managing and developing products. Starting in 
 1. Research and identify viable markets, technologies, and product capabilities;
 2. Develop products and enhancements;
 3. Release products and enhancements, as frequently as many times per day;
-4. Develop and sustain Cloud (online, secure, on-demand) and other operational
-   environments for product use; and,
+4. Develop and sustain Cloud (online, secure, on-demand) and other operational environments for product use; and,
 5. Sustain and renew products.
 
 Scrum has been used to develop software, hardware, embedded software, networks of interacting function, autonomous vehicles, schools, government, marketing, managing the operation of organizations and almost everything we use in our daily lives, as individuals and societies.

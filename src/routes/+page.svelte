@@ -6,8 +6,8 @@
 	import SearchBar from '$lib/components/search/SearchBar.svelte';
 	import { tags_store } from '$lib/stores/search';
 	import { config as config_store } from '$lib/stores/config';
+	import { searchText as searchTerm } from '$lib/stores/searchText';
 
-	let searchTerm = '';
 	let selectedGuide = 'Scrum_Guide_2020';
 	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
 	$: initializeTags(selectedGuide);
@@ -32,7 +32,7 @@
 
 	function resetValues(): void {
 		tags_store.reset();
-		searchTerm = '';
+		$searchTerm = '';
 	}
 
 	function initializeTags(selectedGuide: string): void {
@@ -51,7 +51,7 @@
 
 <h1>Interactive Agile Guides</h1>
 
-<SearchBar bind:searchTerm />
+<SearchBar />
 
 <br />
 
@@ -59,4 +59,4 @@
 
 <br />
 
-<TextBlocks bind:textBlocks bind:searchTerm />
+<TextBlocks bind:textBlocks />

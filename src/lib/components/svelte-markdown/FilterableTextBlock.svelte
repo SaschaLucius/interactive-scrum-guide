@@ -2,10 +2,10 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import { tags_store } from '$lib/stores/search';
 	import { config as config_store } from '$lib/stores/config';
+	import { searchTextLower as filter } from '$lib/stores/searchText';
 	import ImageComponent from './ImageComponent.svelte';
 
 	export let block: string;
-	export let filter: string;
 
 	const regexpBrackets = /\[[#A-Za-z:,?-]+\]/gi;
 
@@ -13,7 +13,7 @@
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = $config_store.tagSearch ? rawLines.map((line) => getTags(line)) : [];
-	$: filteredText = getFilteredText(filter, lines);
+	$: filteredText = getFilteredText($filter, lines);
 	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
 	function getFilteredText(filter: string, lines: string[]): string {
@@ -31,7 +31,7 @@
 	}
 
 	function isFullTextSearchVisible(line: string, filter: string): boolean {
-		return $config_store.fullTextSearch && line.toLowerCase().includes(filter.toLowerCase());
+		return $config_store.fullTextSearch && line.toLowerCase().includes(filter);
 	}
 
 	function isHeaderVisible(): boolean {

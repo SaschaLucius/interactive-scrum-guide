@@ -30,14 +30,14 @@ const storage = <T>(key: string, initValue: T): Writable<T> => {
 	return store;
 };
 
-interface Auth {
+interface Config {
 	keepHeader: boolean;
 	autoTagging: boolean;
 	tagSearch: boolean;
 	fullTextSearch: boolean;
 }
 
-export const config = storage<Auth>('config', {
+export const config = storage<Config>('config', {
 	keepHeader: true,
 	autoTagging: true,
 	tagSearch: true,

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import AutocompleteItem from './AutocompleteItem.svelte';
 	import { sorted_tags_store } from '$lib/stores/search';
+	import { searchText as searchTerm } from '$lib/stores/searchText';
 
 	/* HANDLING THE INPUT */
-	export let searchTerm = '';
 	let searchInput: HTMLInputElement;
 
 	/* FILTERING items DATA BASED ON INPUT */
@@ -21,8 +21,8 @@
 		let storageArr: string[] = [];
 		if (searchTerm) {
 			$sorted_tags_store.forEach((item) => {
-				if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
-					storageArr = [...storageArr, makeMatchBold(item, searchTerm)];
+				if (item.toLowerCase().includes($searchTerm.toLowerCase())) {
+					storageArr = [...storageArr, makeMatchBold(item, $searchTerm)];
 				}
 			});
 		}
@@ -30,7 +30,7 @@
 	}
 
 	function setInputVal(itemName: string) {
-		searchTerm = removeBold(itemName);
+		$searchTerm = removeBold(itemName);
 		filteredItems = [];
 		hiLiteIndex = null;
 		(document?.querySelector('#item-input') as HTMLInputElement).focus();
@@ -56,7 +56,7 @@
 			hiLiteIndex === 0 ? (hiLiteIndex = filteredItems.length - 1) : (hiLiteIndex -= 1);
 		} else if (e.key === 'Enter') {
 			if (hiLiteIndex === null) {
-				setInputVal(searchTerm);
+				setInputVal($searchTerm);
 			} else {
 				setInputVal(filteredItems[hiLiteIndex]);
 			}
@@ -75,7 +75,7 @@
 			type="search"
 			placeholder="Search Terms"
 			bind:this={searchInput}
-			bind:value={searchTerm}
+			bind:value={$searchTerm}
 			on:input={filterItems}
 		/>
 	</div>

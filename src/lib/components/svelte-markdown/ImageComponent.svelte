@@ -2,8 +2,6 @@
 	export let href = '';
 	export let title = '';
 	export let text = '';
-
-	console.log(href);
 </script>
 
 <img src={href.replace('../static', '')} {title} alt={text} />

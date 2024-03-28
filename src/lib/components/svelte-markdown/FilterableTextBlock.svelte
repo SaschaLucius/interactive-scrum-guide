@@ -12,7 +12,7 @@
 	$: isHeadline = block.trim().startsWith('#');
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
-	$: tags = $config_store.tagSearch ? rawLines.map((line) => getTags(line)) : [];
+	$: tags = rawLines.map((line) => getTags(line));
 	$: filteredText = getFilteredText($filter.toLowerCase(), lines);
 	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
@@ -39,7 +39,6 @@
 	}
 
 	function isVisible(line: string, tags: string[], filter: string): boolean {
-		console.log('line: ' + filter);
 		return filter == '' || isHeaderVisible() || isFullText(line, filter) || isTag(tags, filter);
 	}
 

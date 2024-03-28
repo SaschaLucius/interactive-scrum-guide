@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: '20'
           cache: npm
+      - name: Install dependencies
+        run: npm install
       - name: Run generate script
         run: node src/index.cjs
         shell: bash
-      - name: Install dependencies
-        run: npm install
       - name: Run Check
         run: npm run check
       - name: Run lint

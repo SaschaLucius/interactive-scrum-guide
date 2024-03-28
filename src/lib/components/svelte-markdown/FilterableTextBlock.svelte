@@ -46,7 +46,12 @@
 	function getTags(line: string): string[] {
 		let temp = line.match(regexpBrackets);
 		if (temp != null) {
-			return temp.flatMap((t) => t.substring(1, t.length - 1).split(','));
+			return temp.flatMap((t) =>
+				t
+					.substring(1, t.length - 1)
+					.split(',')
+					.map((a) => a.toLowerCase())
+			);
 		}
 		return [];
 	}

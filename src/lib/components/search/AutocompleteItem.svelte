@@ -1,13 +1,15 @@
 <script lang="ts">
 	export let itemLabel: string;
 	export let highlighted: boolean;
+
+	$: label = itemLabel.replace(/([a-z])([A-Z])/g, '$1 $2');
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li class="autocomplete-items" class:autocomplete-active={highlighted} on:click>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	{@html itemLabel.replace(/([a-z])([A-Z])/g, '$1 $2')}
+	{@html label}
 </li>
 
 <style>

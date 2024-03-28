@@ -12,7 +12,7 @@
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = rawLines.map((line) => getTags(line));
-	$: filteredText = getFilteredText($filter.toLowerCase(), lines);
+	$: filteredText = getFilteredText($filter, lines);
 
 	function getFilteredText(filter: string, lines: string[]): string {
 		let tmp = '';
@@ -25,11 +25,14 @@
 	}
 
 	function isTag(tags: string[], filter: string): boolean {
-		return tags != null && tags.includes(filter); // TODO: als Prefix
+		return (
+			tags != null &&
+			tags.filter((tag) => tag.toLowerCase().includes(filter.toLowerCase())).length > 0
+		);
 	}
 
 	function isFullText(line: string, filter: string): boolean {
-		return line.toLowerCase().includes(filter);
+		return line.toLowerCase().includes(filter.toLowerCase());
 	}
 
 	function isHeaderVisible(): boolean {

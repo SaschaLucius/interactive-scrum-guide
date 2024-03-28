@@ -19,14 +19,12 @@ let allKeywords = [];
 let allTokens = [];
 
 // Cleanup
-try{
+try {
 	fs.unlinkSync(guidesPath);
 	fs.unlinkSync(tagsPath);
+} catch (e) {
+	console.log('Files not found, creating new ones');
 }
-catch(e){
-	console.log("Files not found, creating new ones");
-}
-
 
 let tags;
 let guides;

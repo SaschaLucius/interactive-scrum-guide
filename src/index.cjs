@@ -12,7 +12,7 @@ const tagsPath = './src/lib/generated/tags.ts';
 
 const REGEX_BRACKETS = /\[[#A-Za-z:,?-]+\]/gi;
 
-const depth = 3
+const depth = 3;
 
 let allCustomTags = [];
 let allBigramms = [];
@@ -52,27 +52,35 @@ for (const file of files) {
 			allCustomTags = allCustomTags.concat(customTags);
 
 			const line = rawLine.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
-			const keywords = tokenizer.tokenize(line).filter((token) => extractKeywords(token).length === 1);
+			const keywords = tokenizer
+				.tokenize(line)
+				.filter((token) => extractKeywords(token).length === 1);
 			allKeywords = allKeywords.concat(keywords);
-			const bigrams = NGrams.bigrams(line).map((bigram) => bigram.join(' ')).filter((bigram) => extractKeywords(bigram).length === 2);
+			const bigrams = NGrams.bigrams(line)
+				.map((bigram) => bigram.join(' '))
+				.filter((bigram) => extractKeywords(bigram).length === 2);
 			allBigramms = allBigramms.concat(bigrams);
-			const trigram = NGrams.trigrams(line).map((trigram) => trigram.join(' ')).filter((trigram) => extractKeywords(trigram).length === 3);
+			const trigram = NGrams.trigrams(line)
+				.map((trigram) => trigram.join(' '))
+				.filter((trigram) => extractKeywords(trigram).length === 3);
 			allTrigrams = allTrigrams.concat(trigram);
-			const ngram4 = NGrams.ngrams(line, 4).map((trigram) => trigram.join(' ')).filter((trigram) => extractKeywords(trigram).length === 4);
+			const ngram4 = NGrams.ngrams(line, 4)
+				.map((trigram) => trigram.join(' '))
+				.filter((trigram) => extractKeywords(trigram).length === 4);
 			// TODO
 
 			fs.appendFileSync(guides, rawLine + '\n', 'utf8');
 		}
 
-		console.log(file)
-		const tri = reduceStemmed(filterByOccurence(countOccurence(allTrigrams),3))
-		console.log('tri', tri.length)
-		const bi = reduceStemmed(filterByOccurence(countOccurence(allBigramms),4))
-		console.log('bi', bi.length)
-		const key = reduceStemmed(filterByOccurence(countOccurence(allKeywords),5))
-		console.log('key', key.length)
+		console.log(file);
+		const tri = reduceStemmed(filterByOccurence(countOccurence(allTrigrams), 3));
+		console.log('tri', tri.length);
+		const bi = reduceStemmed(filterByOccurence(countOccurence(allBigramms), 4));
+		console.log('bi', bi.length);
+		const key = reduceStemmed(filterByOccurence(countOccurence(allKeywords), 5));
+		console.log('key', key.length);
 		const custom = Array.from(new Set(allCustomTags));
-		console.log('custom', custom.length)
+		console.log('custom', custom.length);
 
 		let all = tri.concat(bi).concat(key).concat(custom);
 		//all = all.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
@@ -85,7 +93,7 @@ for (const file of files) {
 if (tags !== undefined) fs.closeSync(tags);
 if (guides !== undefined) fs.closeSync(guides);
 
-function countOccurence(arr){
+function countOccurence(arr) {
 	return arr.reduce((acc, str) => {
 		const lower = str.toLowerCase();
 		acc[lower] = (acc[lower] || 0) + 1;
@@ -93,10 +101,10 @@ function countOccurence(arr){
 	}, {});
 }
 
-function filterByOccurence(counts, amount){
+function filterByOccurence(counts, amount) {
 	return Object.entries(counts)
-			.filter((a) => a[1] >= amount)
-			.map((a) => a[0])
+		.filter((a) => a[1] >= amount)
+		.map((a) => a[0]);
 }
 
 function extractKeywords(a) {
@@ -108,10 +116,13 @@ function extractKeywords(a) {
 	});
 }
 
-function reduceStemmed(arr){
+function reduceStemmed(arr) {
 	var tokenizer = new natural.WordTokenizer();
 	const stemMap = arr.reduce((acc, str) => {
-		const stemmed = tokenizer.tokenize(str).map(token => natural.PorterStemmer.stem(token)).join(' ')
+		const stemmed = tokenizer
+			.tokenize(str)
+			.map((token) => natural.PorterStemmer.stem(token))
+			.join(' ');
 		if (!acc[stemmed]) {
 			acc[stemmed] = [];
 		}

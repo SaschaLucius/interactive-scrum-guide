@@ -79,7 +79,7 @@ The Scrum Team[ScrumTeam] consists of one Scrum Master[ScrumTeam,ScrumMaster], o
 Within a Scrum Team[ScrumTeam], there are no sub-teams or hierarchies.
 It[ScrumTeam] is a cohesive unit of professionals focused[ScrumValues,Focus] on one objective at a time, the Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal].
 
-Scrum Teams[ScrumTeam] are cross-functional[CrossFunctional], meaning the members have all the skills necessary to create value each Sprint[ScumEvents,Sprint].
+Scrum Teams[ScrumTeam] are cross-functional[CrossFunctional], meaning the members have all the skills[CrossFunctional] necessary to create value each Sprint[ScumEvents,Sprint].
 They[ScrumTeam] are also self-managing[SelfManagement], meaning they[ScrumTeam] internally decide who does what, when, and how.
 
 The Scrum Team[ScrumTeam] is small enough to remain nimble and large enough to complete significant work within a Sprint[ScumEvents,Sprint], typically 10 or fewer people.
@@ -87,7 +87,7 @@ In general, we have found that smaller teams[ScrumTeam] communicate better and a
 If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeams,ScaledScrum], each focused[ScrumValues,Focus] on the same product.
 Therefore, they[ScrumTeam] should share the same Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal], Product Backlog[ScrumArtefact,ProductBacklog], and Product Owner[ScrumTeam,ProductOwner].
 
-The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[Stakeholder] collaboration, verification[Learning], maintenance, operation, experimentation, research and development, and anything else that might be required.
+The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[Stakeholder] collaboration, verification[Learning], maintenance, operation, experimentation, research and development, and anything else that might be required.[CrossFunctional]
 They[ScrumTeam] are structured and empowered[Management] by the organization[Organization] to manage[Management] their[ScrumTeam] own work.
 Working in Sprints[ScumEvents,Sprint] at a sustainable pace improves[ScrumPillars,Adaption] the Scrum Team’s[ScrumTeam] focus[ScrumValues,Focus] and consistency[ReduceComplexity].
 
@@ -139,7 +139,7 @@ Scrum Masters[ScrumTeam,ScrumMaster] are true leaders who serve the Scrum Team[S
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the Scrum Team[ScrumTeam] in several ways, including:
 
-- Coaching the team members[ScrumTeam] in self-management[SelfManagement] and cross-functionality[cross-functional];[ScrumTeam,ScrumMaster,Serve]
+- Coaching the team members[ScrumTeam] in self-management[SelfManagement] and cross-functionality[CrossFunctional];[ScrumTeam,ScrumMaster,Serve]
 - Helping the Scrum Team[ScrumTeam] focus[ScrumValues,Focus] on creating high-value Increments[ScrumTeam,ScrumMaster,Serve][ScrumArtifacts] that meet the Definition of Done[ScrumArtefact,Increment,Commitment,DefinitionOfDone];
 - Causing the removal of impediments[Impediments] to the Scrum Team’s[ScrumTeam] progress; and,[ScrumTeam,ScrumMaster,Serve]
 - Ensuring that all Scrum events[ScrumEvents] take place and are positive, productive, and kept within the timebox[Timebox].[ScrumTeam,ScrumMaster,Serve]

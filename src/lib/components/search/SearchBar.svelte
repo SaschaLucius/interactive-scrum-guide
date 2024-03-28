@@ -12,14 +12,14 @@
 	/* NAVIGATING OVER THE LIST OF ITEMS W HIGHLIGHTING */
 	let hiLiteIndex: number | null = null;
 
-	$: if (!searchTerm) {
+	$: if (!$searchTerm) {
 		filteredItems = [];
 		hiLiteIndex = null;
 	}
 
 	function filterItems() {
 		let storageArr: string[] = [];
-		if (searchTerm) {
+		if ($searchTerm) {
 			$sorted_suggestions_store.forEach((item) => {
 				if (item.toLowerCase().includes($searchTerm.toLowerCase())) {
 					storageArr = [...storageArr, makeMatchBold(item, $searchTerm)];

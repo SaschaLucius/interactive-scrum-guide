@@ -12,11 +12,13 @@ const tagsPath = './src/lib/generated/tags.ts';
 
 const REGEX_BRACKETS = /\[[#A-Za-z:,?-]+\]/gi;
 
-let allTags = [];
+const depth = 3
+
+let allCustomTags = [];
 let allBigramms = [];
-let allTriramms = [];
+let allTrigrams = [];
 let allKeywords = [];
-let allTokens = [];
+let allNGrams = [];
 
 // Cleanup
 try {
@@ -36,30 +38,46 @@ const files = fs.readdirSync(docsFolder);
 
 for (const file of files) {
 	if (file.endsWith('.md')) {
-		allTags = [];
+		allCustomTags = [];
+		allKeywords = [];
 		allBigramms = [];
-		allTriramms = [];
-		allTokens = [];
+		allTrigrams = [];
 
 		fs.appendFileSync(guides, `export const ${file.slice(0, -3)} = \``, 'utf8');
 		fs.appendFileSync(tags, `export const ${file.slice(0, -3)} = [`, 'utf8');
-		processLineByLine(docsFolder + file);
+		const lines = fs.readFileSync(docsFolder + file, 'utf-8').split('\n');
 
-		const counts = allTokens
-			.concat(allBigramms)
-			.concat(allTriramms)
-			.reduce((acc, str) => {
-				acc[str] = (acc[str] || 0) + 1;
-				return acc;
-			}, {});
+		for (const rawLine of lines) {
+			const customTags = getCustomTags(rawLine);
+			allCustomTags = allCustomTags.concat(customTags);
 
-		const everything = Object.entries(counts)
-			.filter((a) => a[1] > 2)
-			.map((a) => a[0])
-			.concat(allTags)
-			.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+			const line = rawLine.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
+			const keywords = tokenizer.tokenize(line).filter((token) => extractKeywords(token).length === 1);
+			allKeywords = allKeywords.concat(keywords);
+			const bigrams = NGrams.bigrams(line).map((bigram) => bigram.join(' ')).filter((bigram) => extractKeywords(bigram).length === 2);
+			allBigramms = allBigramms.concat(bigrams);
+			const trigram = NGrams.trigrams(line).map((trigram) => trigram.join(' ')).filter((trigram) => extractKeywords(trigram).length === 3);
+			allTrigrams = allTrigrams.concat(trigram);
+			const ngram4 = NGrams.ngrams(line, 4).map((trigram) => trigram.join(' ')).filter((trigram) => extractKeywords(trigram).length === 4);
+			// TODO
 
-		fs.appendFileSync(tags, `"${everything.join('","')}"];`, 'utf8');
+			fs.appendFileSync(guides, rawLine + '\n', 'utf8');
+		}
+
+		console.log(file)
+		const tri = reduceStemmed(filterByOccurence(countOccurence(allTrigrams),3))
+		console.log('tri', tri.length)
+		const bi = reduceStemmed(filterByOccurence(countOccurence(allBigramms),4))
+		console.log('bi', bi.length)
+		const key = reduceStemmed(filterByOccurence(countOccurence(allKeywords),5))
+		console.log('key', key.length)
+		const custom = Array.from(new Set(allCustomTags));
+		console.log('custom', custom.length)
+
+		let all = tri.concat(bi).concat(key).concat(custom);
+		//all = all.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+		fs.appendFileSync(tags, `"${all.join('","')}"];\n`, 'utf8');
 		fs.appendFileSync(guides, '`;', 'utf8');
 	}
 }
@@ -67,34 +85,21 @@ for (const file of files) {
 if (tags !== undefined) fs.closeSync(tags);
 if (guides !== undefined) fs.closeSync(guides);
 
-async function processLineByLine(file) {
-	const lines = fs.readFileSync(file, 'utf-8').split('\n');
-
-	for (const line of lines) {
-		const plain = line.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
-		const customTags = getTags(line);
-
-		allTags = allTags.concat(customTags);
-
-		allTokens = allTokens.concat(
-			tokenizer.tokenize(plain).filter((bigram) => extract(bigram).length === 1)
-		);
-		allBigramms = allBigramms.concat(
-			NGrams.bigrams(plain)
-				.map((bigram) => bigram.join(' '))
-				.filter((bigram) => extract(bigram).length === 2)
-		);
-		allTriramms = allTriramms.concat(
-			NGrams.trigrams(plain)
-				.map((trigram) => trigram.join(' '))
-				.filter((bigram) => extract(bigram).length === 3)
-		);
-
-		fs.appendFileSync(guides, plain + '\n', 'utf8');
-	}
+function countOccurence(arr){
+	return arr.reduce((acc, str) => {
+		const lower = str.toLowerCase();
+		acc[lower] = (acc[lower] || 0) + 1;
+		return acc;
+	}, {});
 }
 
-function extract(a) {
+function filterByOccurence(counts, amount){
+	return Object.entries(counts)
+			.filter((a) => a[1] >= amount)
+			.map((a) => a[0])
+}
+
+function extractKeywords(a) {
 	return keyword_extractor.extract(a, {
 		language: 'english',
 		remove_digits: true,
@@ -103,7 +108,21 @@ function extract(a) {
 	});
 }
 
-function getTags(line) {
+function reduceStemmed(arr){
+	var tokenizer = new natural.WordTokenizer();
+	const stemMap = arr.reduce((acc, str) => {
+		const stemmed = tokenizer.tokenize(str).map(token => natural.PorterStemmer.stem(token)).join(' ')
+		if (!acc[stemmed]) {
+			acc[stemmed] = [];
+		}
+		acc[stemmed].push(str);
+		return acc;
+	}, {});
+
+	return Object.values(stemMap).map((a) => a.sort((a, b) => a.length - b.length)[0]);
+}
+
+function getCustomTags(line) {
 	let temp = line.match(REGEX_BRACKETS);
 	if (temp != null) {
 		return temp.flatMap((t) => t.substring(1, t.length - 1).split(','));

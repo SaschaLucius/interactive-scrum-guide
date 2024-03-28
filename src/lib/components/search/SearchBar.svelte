@@ -118,7 +118,8 @@
 		margin: 0;
 		padding: 0;
 		top: 0;
-		width: 29rem;
+		width: 30rem;
+		height: 0px;
 		border: 1px solid #ddd;
 		background-color: #ddd;
 	}

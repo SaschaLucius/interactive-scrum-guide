@@ -7,18 +7,6 @@
 		<input type="checkbox" bind:checked={$config.keepHeader} />
 		Keep Header
 	</label>
-	<label>
-		<input type="checkbox" bind:checked={$config.fullTextSearch} />
-		Full-text search
-	</label>
-	<label>
-		<input type="checkbox" bind:checked={$config.autoTagging} />
-		Auto-Tagging
-	</label>
-	<label>
-		<input type="checkbox" bind:checked={$config.tagSearch} />
-		Tag search
-	</label>
 </form>
 
 <style>

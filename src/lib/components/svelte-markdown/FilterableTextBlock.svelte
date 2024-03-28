@@ -13,7 +13,7 @@
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = $config_store.tagSearch ? rawLines.map((line) => getTags(line)) : [];
-	$: filteredText = getFilteredText($filter, lines);
+	$: filteredText = getFilteredText($filter.toLowerCase(), lines);
 	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
 	function getFilteredText(filter: string, lines: string[]): string {
@@ -26,12 +26,12 @@
 		return tmp.trim();
 	}
 
-	function isTagSearchVisible(tags: string[], filter: string): boolean {
-		return $config_store.tagSearch && tags != null && tags.includes(filter); // TODO: als Prefix
+	function isTag(tags: string[], filter: string): boolean {
+		return tags != null && tags.includes(filter); // TODO: als Prefix
 	}
 
-	function isFullTextSearchVisible(line: string, filter: string): boolean {
-		return $config_store.fullTextSearch && line.toLowerCase().includes(filter);
+	function isFullText(line: string, filter: string): boolean {
+		return line.toLowerCase().includes(filter);
 	}
 
 	function isHeaderVisible(): boolean {
@@ -39,12 +39,8 @@
 	}
 
 	function isVisible(line: string, tags: string[], filter: string): boolean {
-		return (
-			filter == '' ||
-			isHeaderVisible() ||
-			isFullTextSearchVisible(line, filter) ||
-			isTagSearchVisible(tags, filter)
-		);
+		console.log('line: ' + filter);
+		return filter == '' || isHeaderVisible() || isFullText(line, filter) || isTag(tags, filter);
 	}
 
 	function getTags(line: string): string[] {

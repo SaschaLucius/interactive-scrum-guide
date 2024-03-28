@@ -16,7 +16,7 @@ jobs:
           node-version: '20'
           cache: npm
       - name: Run generate script
-        run: ./scripts/generate.sh
+        run: node src/index.cjs
         shell: bash
       - name: Install dependencies
         run: npm install

@@ -57,6 +57,7 @@
 		"*.{js,ts,svelte}": "eslint . --fix"
 	},
 	"dependencies": {
+		"keyword-extractor": "^0.0.28",
 		"natural": "^6.12.0",
 		"stemmer": "^2.0.1",
 		"svelte-markdown": "^0.4.1"

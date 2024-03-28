@@ -1,6 +1,10 @@
 var natural = require('natural');
 const fs = require('fs');
 const readline = require('readline');
+const keyword_extractor = require("keyword-extractor");
+
+var NGrams = natural.NGrams;
+var tokenizer = new natural.WordTokenizer();
 
 const docsFolder = './docs/';
 const guidesPath = './src/lib/generated/guides.ts'
@@ -9,6 +13,10 @@ const tagsPath = './src/lib/generated/tags.ts'
 const REGEX_BRACKETS = /\[[#A-Za-z:,?-]+\]/gi;
 
 let allTags = [];
+let allBigramms = [];
+let allTriramms = [];
+let allKeywords = [];
+let allTokens = [];
 
 // Cleanup
 fs.unlinkSync(guidesPath);
@@ -25,10 +33,22 @@ const files = fs.readdirSync(docsFolder)
 for (const file of files) {
     if(file.endsWith('.md')){
         allTags = [];
+		allBigramms = [];
+		allTriramms = [];
+		allTokens = [];
+
         fs.appendFileSync(guides, `export const ${file.slice(0, -3)} = \``,'utf8');
         fs.appendFileSync(tags, `export const ${file.slice(0, -3)} = [`,'utf8');
         processLineByLine(docsFolder+file);
-        fs.appendFileSync(tags, `"${allTags.join('","')}"];`,'utf8');
+
+		const counts = allTokens.concat(allBigramms).concat(allTriramms).reduce((acc, str) => {
+			acc[str] = (acc[str] || 0) + 1;
+			return acc;
+		}, {});
+
+		const everything = Object.entries(counts).filter(a => a[1]>2).map(a => a[0]).concat(allTags).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+        fs.appendFileSync(tags, `"${everything.join('","')}"];`,'utf8');
         fs.appendFileSync(guides, "`;",'utf8');
     }
 }
@@ -45,20 +65,25 @@ async function processLineByLine(file) {
 	for (const line of lines) {
 		const plain = line.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
 		const customTags = getTags(line);
-		const stems = natural.PorterStemmer.tokenizeAndStem(plain);
 
-		const all = stems.concat(customTags);
-		const unique = [...new Set(all)].sort((a, b) =>
-			a.localeCompare(b, undefined, { sensitivity: 'base' })
-		);
-        allTags = allTags.concat(unique);
+        allTags = allTags.concat(customTags);
 
-		if (unique.length === 0) {
-            fs.appendFileSync(guides, plain + "\n",'utf8');
-		} else {
-            fs.appendFileSync(guides, `${plain}[${unique.join(',')}]\n`,'utf8');
-		}
+		allTokens = allTokens.concat(tokenizer.tokenize(plain).filter(bigram => extract(bigram).length === 1))
+		allBigramms = allBigramms.concat(NGrams.bigrams(plain).map((bigram) => bigram.join(' ')).filter(bigram => extract(bigram).length === 2))
+		allTriramms = allTriramms.concat(NGrams.trigrams(plain).map((trigram) => trigram.join(' ')).filter(bigram => extract(bigram).length === 3))
+
+		fs.appendFileSync(guides, plain + "\n",'utf8');
 	}
+}
+
+function extract(a){
+	return keyword_extractor.extract(a,{
+		language:"english",
+		remove_digits: true,
+		return_changed_case:true,
+		remove_duplicates: false
+
+	})
 }
 
 

@@ -4,8 +4,7 @@
 	import * as guides from '$lib/generated/guides';
 	import * as tags from '$lib/generated/tags';
 	import SearchBar from '$lib/components/search/SearchBar.svelte';
-	import { tags_store } from '$lib/stores/search';
-	import { config as config_store } from '$lib/stores/config';
+	import { suggestion_store } from '$lib/stores/search';
 	import { searchText as searchTerm } from '$lib/stores/searchText';
 
 	let selectedGuide = 'Scrum_Guide_2020';
@@ -31,16 +30,14 @@
 	}
 
 	function resetValues(): void {
-		tags_store.reset();
+		suggestion_store.reset();
 		$searchTerm = '';
 	}
 
 	function initializeTags(selectedGuide: string): void {
-		if ($config_store.autoTagging) {
-			getTags(selectedGuide).forEach((item) => {
-				tags_store.add(item);
-			});
-		}
+		getTags(selectedGuide).forEach((item) => {
+			suggestion_store.add(item);
+		});
 	}
 </script>
 

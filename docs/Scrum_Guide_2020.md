@@ -92,7 +92,7 @@ They[ScrumTeam] are structured and empowered[Management] by the organization[Org
 Working in Sprints[ScumEvents,Sprint] at a sustainable pace improves[ScrumPillars,Adaption] the Scrum Team’s[ScrumTeam] focus[ScrumValues,Focus] and consistency[ReduceComplexity].
 
 The entire Scrum Team[ScrumTeam] is accountable[ScrumTeam,Accountable] for creating a valuable, useful Increment[ScrumArtifacts] every Sprint[ScumEvents,Sprint].
-Scrum defines three specific accountabilities[Accountable] within the Scrum Team[ScrumTeam]: the Developers[ScrumTeam,Developers], the Product Owner[ScrumTeam:ProductOwner], and the Scrum Master[ScrumTeam,ScrumMaster].
+Scrum defines three specific accountabilities[Accountable] within the Scrum Team[ScrumTeam]: the Developers[ScrumTeam,Developers], the Product Owner[ScrumTeam,ProductOwner], and the Scrum Master[ScrumTeam,ScrumMaster].
 
 ## Developers[ScrumTeam,Developers]
 

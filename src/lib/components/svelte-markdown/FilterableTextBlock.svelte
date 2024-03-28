@@ -1,6 +1,5 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	import { tags_store } from '$lib/stores/search';
 	import { config as config_store } from '$lib/stores/config';
 	import { searchTextLower as filter } from '$lib/stores/searchText';
 	import ImageComponent from './ImageComponent.svelte';
@@ -14,7 +13,6 @@
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = rawLines.map((line) => getTags(line));
 	$: filteredText = getFilteredText($filter.toLowerCase(), lines);
-	$: tags.forEach((tagsPerLine) => tagsPerLine.forEach((tag) => tags_store.add(tag)));
 
 	function getFilteredText(filter: string, lines: string[]): string {
 		let tmp = '';
@@ -45,12 +43,7 @@
 	function getTags(line: string): string[] {
 		let temp = line.match(regexpBrackets);
 		if (temp != null) {
-			return temp.flatMap((t) =>
-				t
-					.substring(1, t.length - 1)
-					.split(',')
-					.map((a) => a.toLowerCase())
-			);
+			return temp.flatMap((t) => t.substring(1, t.length - 1).split(','));
 		}
 		return [];
 	}

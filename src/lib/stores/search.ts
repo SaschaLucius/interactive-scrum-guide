@@ -10,7 +10,7 @@ function createStringSetStore() {
 	};
 }
 
-export const tags_store = createStringSetStore();
-export const sorted_tags_store = derived(tags_store, (tags) =>
+export const suggestion_store = createStringSetStore();
+export const sorted_suggestions_store = derived(suggestion_store, (tags) =>
 	Array.from(tags).sort((a, b) => a.localeCompare(b))
 );

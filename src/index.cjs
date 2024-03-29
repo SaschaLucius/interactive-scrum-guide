@@ -79,7 +79,7 @@ for (const file of files) {
 		console.log('bi', bi.length);
 		const key = reduceStemmed(filterByOccurence(countOccurence(allKeywords), 5));
 		console.log('key', key.length);
-		const custom = Array.from(new Set(allCustomTags));
+		const custom = Array.from(new Set(allCustomTags)).map((tag) => 'CT:' + tag); //mark custom tags
 		console.log('custom', custom.length);
 
 		let all = tri.concat(bi).concat(key).concat(custom);

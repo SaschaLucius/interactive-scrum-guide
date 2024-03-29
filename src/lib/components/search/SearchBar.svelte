@@ -30,7 +30,8 @@
 	}
 
 	function setInputVal(itemName: string) {
-		$searchTerm = removeBold(itemName);
+		const term = removeBold(itemName);
+		$searchTerm = term.startsWith('CT:') ? term.slice(3) : term;
 		filteredItems = [];
 		hiLiteIndex = null;
 		(document?.querySelector('#item-input') as HTMLInputElement).focus();

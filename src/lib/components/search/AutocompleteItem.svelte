@@ -1,9 +1,8 @@
 <script lang="ts">
 	export let itemLabel: string;
 	export let highlighted: boolean;
-
-	$: label = itemLabel.replace(/([a-z])([A-Z])/g, '$1 $2');
-	$: isTag = itemLabel !== label;
+	$: isTag = itemLabel.startsWith('CT:');
+	$: label = isTag ? itemLabel.slice(3).replace(/([a-z])([A-Z])/g, '$1 $2') : itemLabel;
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->

@@ -28,8 +28,8 @@ Lean thinking reduces waste[Lean,WasteReduction] and focuses[ScrumValues,Focus] 
 Scrum employs an iterative[Cadence], incremental[Increment] approach to optimize predictability and to control risk.
 Scrum engages groups of people[ScrumTeam] who collectively have all the skills and expertise to do the work and share or acquire such skills as needed[Learn].[SelfManagement]
 
-Scrum combines four formal events[ScrumEvents] for inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaption], within a containing event[ScrumEvents], the Sprint[ScrumEvents,Sprint].
-These events[ScrumEvents] work because they[ScrumEvents] implement the empirical[Empiricism] Scrum pillars[ScrumPillars] of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaption].
+Scrum combines four formal events[ScrumEvents] for inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaptation], within a containing event[ScrumEvents], the Sprint[ScrumEvents,Sprint].
+These events[ScrumEvents] work because they[ScrumEvents] implement the empirical[Empiricism] Scrum pillars[ScrumPillars] of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaptation].
 
 ## Transparency[ScrumPillars,Transparency]
 
@@ -44,17 +44,17 @@ Inspection[ScrumPillars,Inspection] without transparency[ScrumPillars,Transparen
 The Scrum artifacts[ScrumArtifacts] and the progress toward agreed goals[Commitment,ProductGoal,SprintGoal] must be inspected[ScrumPillars,Inspection] frequently and diligently to detect potentially undesirable variances or problems.
 To help with inspection[ScrumPillars,Inspection], Scrum provides cadence[Cadence] in the form of its five events[ScrumEvents].
 
-Inspection[ScrumPillars,Inspection] enables adaptation[ScrumPillars,Adaption].
-Inspection[ScrumPillars,Inspection] without adaptation[ScrumPillars,Adaption] is considered pointless[ScrumValues,Courage].
-Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars,Adaption].
+Inspection[ScrumPillars,Inspection] enables adaptation[ScrumPillars,Adaptation].
+Inspection[ScrumPillars,Inspection] without adaptation[ScrumPillars,Adaptation] is considered pointless[ScrumValues,Courage].
+Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars,Adaptation].
 
-## Adaptation[ScrumPillars,Adaption]
+## Adaptation[ScrumPillars,Adaptation]
 
-If any aspects of a process deviate outside acceptable limits or if the resulting product[Product] is unacceptable[ScrumArtefact,Increment,Commitment,DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars,Adaption].
-The adjustment[ScrumPillars,Adaption] must be made as soon as possible to minimize further deviation.
+If any aspects of a process deviate outside acceptable limits or if the resulting product[Product] is unacceptable[ScrumArtefact,Increment,Commitment,DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars,Adaptation].
+The adjustment[ScrumPillars,Adaptation] must be made as soon as possible to minimize further deviation.
 
-Adaptation[ScrumPillars,Adaption] becomes more difficult when the people involved are not empowered[Management] or self-managing[SelfManagement].
-A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars,Adaption] the moment it learns anything new through inspection[ScrumPillars,Inspection].
+Adaptation[ScrumPillars,Adaptation] becomes more difficult when the people involved are not empowered[Management] or self-managing[SelfManagement].
+A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars,Adaptation] the moment it learns anything new through inspection[ScrumPillars,Inspection].
 
 # Scrum Values[ScrumValues]
 
@@ -70,7 +70,7 @@ The Scrum Team[ScrumTeam] members have the courage[ScrumValues,Courage] to do th
 These values[ScrumValues] give direction to the Scrum Team[ScrumTeam] with regard to their work, actions, and behavior.
 The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].[Management]
 The Scrum Team[ScrumTeam] members learn and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
-When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[ExternalPeople] work with, the empirical[Empiricism] Scrum pillars of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaption] come to life building trust.
+When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[ExternalPeople] work with, the empirical[Empiricism] Scrum pillars of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaptation] come to life building trust.
 
 # Scrum Team[ScrumTeam]
 
@@ -89,7 +89,7 @@ Therefore, they[ScrumTeam] should share the same Product Goal[ScrumArtefact,Prod
 
 The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[Stakeholder] collaboration, verification[Learning], maintenance, operation, experimentation, research and development, and anything else that might be required.[CrossFunctional]
 They[ScrumTeam] are structured and empowered[Management] by the organization[Organization] to manage[Management] their[ScrumTeam] own work.
-Working in Sprints[ScumEvents,Sprint] at a sustainable pace improves[ScrumPillars,Adaption] the Scrum Team’s[ScrumTeam] focus[ScrumValues,Focus] and consistency[ReduceComplexity].
+Working in Sprints[ScumEvents,Sprint] at a sustainable pace improves[ScrumPillars,Adaptation] the Scrum Team’s[ScrumTeam] focus[ScrumValues,Focus] and consistency[ReduceComplexity].
 
 The entire Scrum Team[ScrumTeam] is accountable[ScrumTeam,Accountable] for creating a valuable, useful Increment[ScrumArtifacts] every Sprint[ScumEvents,Sprint].
 Scrum defines three specific accountabilities[Accountable] within the Scrum Team[ScrumTeam]: the Developers[ScrumTeam,Developers], the Product Owner[ScrumTeam,ProductOwner], and the Scrum Master[ScrumTeam,ScrumMaster].
@@ -102,7 +102,7 @@ The specific skills needed by the Developers[ScrumTeam,Developers] are often bro
 
 - Creating a plan for the Sprint[ScumEvents,Sprint], the Sprint Backlog;[ScrumTeam,Developers,Accountable]
 - Instilling quality by adhering to a Definition of Done[ScrumArtefact,Increment,Commitment,DefinitionOfDone];[ScrumTeam,Developers,Accountable]
-- Adapting[ScrumPillars,Adaption] their plan each day toward the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal]; and,[ScrumTeam,Developers,Accountable]
+- Adapting[ScrumPillars,Adaptation] their plan each day toward the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal]; and,[ScrumTeam,Developers,Accountable]
 - Holding each other accountable as professionals.[ScrumTeam,Developers,Accountable]
 
 ## Product Owner[ScrumTeam,ProductOwner]
@@ -133,7 +133,7 @@ The Scrum Master[ScrumTeam,ScrumMaster] is accountable[ScrumTeam,ScrumMaster,Acc
 They[ScrumTeam,ScrumMaster] do this by helping everyone understand Scrum theory and practice, both within the Scrum Team[ScrumTeam] and the organization[Organization].
 
 The Scrum Master[ScrumTeam,ScrumMaster] is accountable[ScrumTeam,ScrumMaster,Accountable] for the Scrum Team’s[ScrumTeam] effectiveness.
-They[ScrumTeam,ScrumMaster] do this by enabling the Scrum Team[ScrumTeam] to improve[ScrumPillars,Adaption] its practices, within the Scrum framework[Framework].
+They[ScrumTeam,ScrumMaster] do this by enabling the Scrum Team[ScrumTeam] to improve[ScrumPillars,Adaptation] its practices, within the Scrum framework[Framework].
 
 Scrum Masters[ScrumTeam,ScrumMaster] are true leaders who serve the Scrum Team[ScrumTeam] and the larger organization[Organization].
 
@@ -161,9 +161,9 @@ The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the 
 # Scrum Events[ScrumEvents]
 
 The Sprint[ScumEvents,Sprint] is a container for all other events[ScrumEvents].
-Each event[ScrumEvents] in Scrum is a formal opportunity to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaption] Scrum artifacts[ScrumArtifacts].
+Each event[ScrumEvents] in Scrum is a formal opportunity to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaptation] Scrum artifacts[ScrumArtifacts].
 These events[ScrumEvents] are specifically designed to enable the transparency[ScrumPillars,Transparency] required.
-Failure to operate any events[ScrumEvents] as prescribed results in lost opportunities to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaption].
+Failure to operate any events[ScrumEvents] as prescribed results in lost opportunities to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaptation].
 Events[ScrumEvents] are used in Scrum to create regularity[Cadence] and to minimize the need for meetings not defined in Scrum[extendScrum,OtherMeetings].
 Optimally, all events[ScrumEvents] are held at the same time and place to reduce complexity[ReduceComplexity].
 
@@ -178,12 +178,12 @@ All the work[PBI] necessary to achieve the Product Goal[ScrumArtefact,ProductBac
 
 During the Sprint[ScumEvents,Sprint]:
 
-- No changes[ScrumPillars,Adaption] are made that would endanger the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal];
+- No changes[ScrumPillars,Adaptation] are made that would endanger the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal];
 - Quality does not decrease;
-- The Product Backlog[ScrumArtefact,ProductBacklog] is refined[ScrumPillars,Adaption] as needed; and,
-- Scope may be clarified and renegotiated[ScrumPillars,Adaption] with the Product Owner[ScrumTeam,ProductOwner] as more is learned.
+- The Product Backlog[ScrumArtefact,ProductBacklog] is refined[ScrumPillars,Adaptation] as needed; and,
+- Scope may be clarified and renegotiated[ScrumPillars,Adaptation] with the Product Owner[ScrumTeam,ProductOwner] as more is learned.
 
-Sprints[ScumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaption] of progress toward a Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal] at least every calendar month[Timebox].
+Sprints[ScumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaptation] of progress toward a Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal] at least every calendar month[Timebox].
 When a Sprint’s[ScumEvents,Sprint] horizon[Timebox] is too long[Timebox] the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] may become invalid, complexity may rise[ReduceComplexity], and risk may[Uncertainty] increase.
 Shorter[Timebox] Sprints[ScumEvents,Sprint] can be employed to generate more learning cycles[Cadence] and limit risk of cost and effort to a smaller time frame[Timebox].
 Each Sprint[ScumEvents,Sprint] may be considered a short project.
@@ -234,28 +234,28 @@ For shorter Sprints[ScumEvents,Sprint], the event is usually shorter.
 
 ## Daily Scrum[ScumEvents,DailyScrum]
 
-The purpose of the Daily Scrum[ScumEvents,DailyScrum] is to inspect[ScrumPillars,Inspection] progress toward the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] and adapt[ScrumPillars,Adaption] the Sprint Backlog as necessary, adjusting[ScrumPillars,Adaption] the upcoming planned work.
+The purpose of the Daily Scrum[ScumEvents,DailyScrum] is to inspect[ScrumPillars,Inspection] progress toward the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] and adapt[ScrumPillars,Adaptation] the Sprint Backlog as necessary, adjusting[ScrumPillars,Adaptation] the upcoming planned work.
 
 The Daily Scrum[ScumEvents,DailyScrum] is a 15-minute[Timebox] event for the Developers[ScrumTeam,Developers,ScumEvents,DailyScrum,Attendees] of the Scrum Team[ScrumTeam].
 To reduce complexity[ReduceComplexity], it is held at the same time and place every working day[ScrumEvents,order] of the Sprint[ScumEvents,Sprint].
 If the Product Owner[ScrumTeam,ProductOwner] or Scrum Master[ScrumTeam,ScrumMaster] are actively working on items[ScrumArtefact,ProductBacklog,ProductBacklogItem,WorkItem] in the Sprint Backlog, they[ScrumTeam,ProductOwner,ScrumTeam,ScrumMaster] participate[ScumEvents,DailyScrum,Attendees] as Developers[ScrumTeam,Developers].
 
 The Developers[ScrumTeam,Developers] want, as long as their Daily Scrum[ScumEvents,DailyScrum] focuses on progress toward the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] and produces an actionable plan for the next day of work.
-This creates focus[ScrumValue,Focus] and improves[ScrumPillars,Adaption] self-management[SelfManagement].
+This creates focus[ScrumValue,Focus] and improves[ScrumPillars,Adaptation] self-management[SelfManagement].
 
-Daily Scrums[ScumEvents,DailyScrum] improve[ScrumPillars,Adaption] communications, identify impediments[Impediments], promote quick decision-making, and consequently eliminate the need for other meetings[extendScrum,OtherMeetings].
+Daily Scrums[ScumEvents,DailyScrum] improve[ScrumPillars,Adaptation] communications, identify impediments[Impediments], promote quick decision-making, and consequently eliminate the need for other meetings[extendScrum,OtherMeetings].
 
-The Daily Scrum[ScumEvents,DailyScrum] is not the only time Developers[ScrumTeam,Developers] are allowed to adjust[ScrumPillars,Adaption] their plan.
-They[ScrumTeam,Developers] often meet throughout the day for more detailed discussions about adapting[ScrumPillars,Adaption] or re-planning the rest of the Sprint’s[ScumEvents,Sprint] work.
+The Daily Scrum[ScumEvents,DailyScrum] is not the only time Developers[ScrumTeam,Developers] are allowed to adjust[ScrumPillars,Adaptation] their plan.
+They[ScrumTeam,Developers] often meet throughout the day for more detailed discussions about adapting[ScrumPillars,Adaptation] or re-planning the rest of the Sprint’s[ScumEvents,Sprint] work.
 
 ## Sprint Review[ScrumEvents,SprintReview]
 
-The purpose of the Sprint Review[ScrumEvents,SprintReview] is to inspect[ScrumPillars,Inspection] the outcome of the Sprint[ScumEvents,Sprint] and determine future adaptations[ScrumPillars,Adaption].
+The purpose of the Sprint Review[ScrumEvents,SprintReview] is to inspect[ScrumPillars,Inspection] the outcome of the Sprint[ScumEvents,Sprint] and determine future adaptations[ScrumPillars,Adaptation].
 The Scrum Team[ScrumTeam,ScumEvents,SprintReview,Attendees] presents the results of their work to key stakeholders[ScumEvents,SprintReview,Attendees,Stakeholder] and progress toward the Product Goal[ScrumArtefact,ProductBacklog,Commitment,ProductGoal] is discussed.
 
-During the event[ScrumEvents,SprintReview], the Scrum Team[ScrumTeam] and stakeholders[Stakeholder] review[ScrumEvents,SprintReview] what was accomplished[Forecast] in the Sprint[ScumEvents,Sprint] and what has changed[ScrumPillars,Adaption] in their environment.
+During the event[ScrumEvents,SprintReview], the Scrum Team[ScrumTeam] and stakeholders[Stakeholder] review[ScrumEvents,SprintReview] what was accomplished[Forecast] in the Sprint[ScumEvents,Sprint] and what has changed[ScrumPillars,Adaptation] in their environment.
 Based on this information, attendees[ScumEvents,SprintReview,Attendees] collaborate on what to do next.
-The Product Backlog[ScrumArtefact,ProductBacklog] may also be adjusted[ScrumPillars,Adaption] to meet new opportunities.
+The Product Backlog[ScrumArtefact,ProductBacklog] may also be adjusted[ScrumPillars,Adaptation] to meet new opportunities.
 The Sprint Review[ScrumEvents,SprintReview] is a working session and the Scrum Team[ScrumTeam] should avoid limiting it to a presentation.
 
 The Sprint Review[ScrumEvents,SprintReview] is the second to last[ScrumEvents,order] event of the Sprint[ScumEvents,Sprint] and is timeboxed[Timebox] to a maximum of four hours[Timebox] for a one-month Sprint.
@@ -269,9 +269,9 @@ The Scrum Team[ScrumTeam,ScumEvents,SprintRetrospective,Attendees] inspects[Scru
 Inspected[ScrumPillars,Inspection] elements often vary with the domain of work. Assumptions that led them astray are identified and their origins explored.
 The Scrum Team[ScrumTeam] discusses what went well during the Sprint[ScumEvents,Sprint], what problems[Impediments] it encountered, and how those problems were (or were not) solved[ScrumValues,Courage].
 
-The Scrum Team[ScrumTeam] identifies[ScrumPillars,Inspection] the most helpful changes to improve[ScrumPillars,Adaption] its effectiveness.
-The most impactful improvements[ScrumPillars,Adaption] are addressed as soon as possible.
-They[ScrumPillars,Adaption] may even be added to the Sprint Backlog for the next Sprint[ScumEvents,Sprint].
+The Scrum Team[ScrumTeam] identifies[ScrumPillars,Inspection] the most helpful changes to improve[ScrumPillars,Adaptation] its effectiveness.
+The most impactful improvements[ScrumPillars,Adaptation] are addressed as soon as possible.
+They[ScrumPillars,Adaptation] may even be added to the Sprint Backlog for the next Sprint[ScumEvents,Sprint].
 
 The Sprint Retrospective[ScrumEvents,SprintRetrospective] concludes[ScrumEvents,Order] the Sprint[ScumEvents,Sprint].
 It[ScrumEvents,SprintRetrospective] is timeboxed[Timebox] to a maximum of three hours[Timebox] for a onemonth Sprint[ScumEvents,Sprint].
@@ -281,7 +281,7 @@ For shorter Sprints[ScumEvents,Sprint], the event[ScrumEvents,SprintRetrospectiv
 
 Scrum’s artifacts[ScrumArtifacts] represent work or value.
 They[ScrumArtifacts] are designed to maximize transparency[ScrumPillars,Transparency] of key information.
-Thus, everyone inspecting[ScrumPillars,Inspection] them[ScrumArtifacts] has the same basis for adaptation[ScrumPillars,Adaption].
+Thus, everyone inspecting[ScrumPillars,Inspection] them[ScrumArtifacts] has the same basis for adaptation[ScrumPillars,Adaptation].
 
 Each artifact[ScrumArtifacts] contains a commitment[ScrumValues,Commitment] to ensure it provides information that enhances transparency[ScrumPillars,Transparency] and focus[ScrumValues,Focus] against which progress can be measured:[Forecast]
 
@@ -293,11 +293,11 @@ These commitments[ScrumValues,Commitment,ProductGoal,SprintGoal,ScrumArtefact,In
 
 ## Product Backlog[ScrumArtefact,ProductBacklog]
 
-The Product Backlog[ScrumArtefact,ProductBacklog] is an emergent[Emergence], ordered list of what is needed to improve[ScrumPillars,Adaption] the product.
+The Product Backlog[ScrumArtefact,ProductBacklog] is an emergent[Emergence], ordered list of what is needed to improve[ScrumPillars,Adaptation] the product.
 It[ScrumArtefact,ProductBacklog] is the single source of work undertaken by the Scrum Team[ScrumTeam].
 
 Product Backlog items[ScrumArtefact,ProductBacklog,ProductBacklogItem] that can be Done by the Scrum Team[ScrumTeam] within one Sprint[ScumEvents,Sprint] are deemed ready[Ready] for selection in a Sprint Planning[ScumEvents,SprintPlanning] event.
-They[ScrumArtefact,ProductBacklog,ProductBacklogItem] usually acquire this degree of transparency[ScrumPillars,Transparency] after refining[ScrumPillars,Adaption] activities.
+They[ScrumArtefact,ProductBacklog,ProductBacklogItem] usually acquire this degree of transparency[ScrumPillars,Transparency] after refining[ScrumPillars,Adaptation] activities.
 Product Backlog[ScrumArtefact,ProductBacklog] refinement[ProductBacklogRefinement] is the act of breaking down and further defining Product Backlog items[ScrumArtefact,ProductBacklog,ProductBacklogItem] into smaller more precise items[ScrumArtefact,ProductBacklog,ProductBacklogItem].
 This[ProductBacklogRefinement] is an ongoing activity to add details, such as a description, order, and size.
 Attributes often vary with the domain of work.
@@ -335,7 +335,7 @@ The Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] also creates 
 
 The Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] is created during the Sprint Planning[ScumEvents,SprintPlanning] event and then added to the Sprint Backlog.
 As the Developers[ScrumTeam,Developers] work during the Sprint[ScumEvents,Sprint], they[ScrumTeam,Developers] keep the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal] in mind.
-If the work turns out to be different than they[ScrumTeam,Developers] expected, they[ScrumTeam,Developers] collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate[ScrumPillars,Adaption] the scope of the Sprint Backlog within the Sprint[ScumEvents,Sprint] without affecting the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal].
+If the work turns out to be different than they[ScrumTeam,Developers] expected, they[ScrumTeam,Developers] collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate[ScrumPillars,Adaptation] the scope of the Sprint Backlog within the Sprint[ScumEvents,Sprint] without affecting the Sprint Goal[ScrumArtefact,SprintBacklog,Commitment,SprintGoal].
 
 ## Increment[ScrumArtifacts]
 

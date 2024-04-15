@@ -1,3 +1,15 @@
+<script context="module" lang="ts">
+	interface UmamiTracker {
+		track(name: string, options?: object): void;
+	}
+
+	interface UmamiWindow extends Window {
+		umami: UmamiTracker;
+	}
+
+	declare let window: UmamiWindow;
+</script>
+
 <script lang="ts">
 	export let selectedGuide = '';
 	export let options: string[];

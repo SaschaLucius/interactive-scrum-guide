@@ -4,9 +4,16 @@
 </script>
 
 <!-- If you're using bind: directives together with on: directives, the order that they're defined in affects the value of the bound variable when the event handler is called. https://svelte.dev/docs#template-syntax-element-directives-bind-property -->
-<select on:change bind:value={selectedGuide} id="select">
+<select
+	on:change
+	on:change={() => window.umami.track('changed')}
+	bind:value={selectedGuide}
+	id="select"
+>
 	{#each options as option}
-		<option value={option}>{option.replaceAll('_', ' ')}</option>
+		<option data-umami-event={`Guide Selected: ${option}`} value={option}
+			>{option.replaceAll('_', ' ')}</option
+		>
 	{/each}
 </select>
 

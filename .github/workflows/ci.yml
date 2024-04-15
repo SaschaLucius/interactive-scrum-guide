@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run generate script
-        run: node src/index.cjs
+        run: node src/generate.cjs
         shell: bash
       - name: Run Check
         run: npm run check

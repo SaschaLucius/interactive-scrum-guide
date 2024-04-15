@@ -12,12 +12,12 @@
 	$: rawLines = block.split('\n');
 	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
 	$: tags = rawLines.map((line) => getTags(line));
-	$: filteredText = getFilteredText($filter, lines);
+	$: filteredText = getFilteredText($filter, lines, $config_store.keepHeader);
 
-	function getFilteredText(filter: string, lines: string[]): string {
+	function getFilteredText(filter: string, lines: string[], keepHeader: boolean): string {
 		let tmp = '';
 		for (let i = 0; i < lines.length; i++) {
-			if (isVisible(lines[i], tags[i], filter)) {
+			if (isVisible(lines[i], tags[i], filter, keepHeader)) {
 				tmp += lines[i] + '\n';
 			}
 		}
@@ -35,12 +35,14 @@
 		return line.toLowerCase().includes(filter.toLowerCase());
 	}
 
-	function isHeaderVisible(): boolean {
-		return $config_store.keepHeader && isHeadline;
+	function isHeaderVisible(keepHeader: boolean): boolean {
+		return keepHeader && isHeadline;
 	}
 
-	function isVisible(line: string, tags: string[], filter: string): boolean {
-		return filter == '' || isHeaderVisible() || isFullText(line, filter) || isTag(tags, filter);
+	function isVisible(line: string, tags: string[], filter: string, keepHeader: boolean): boolean {
+		return (
+			filter == '' || isHeaderVisible(keepHeader) || isFullText(line, filter) || isTag(tags, filter)
+		);
 	}
 
 	function getTags(line: string): string[] {

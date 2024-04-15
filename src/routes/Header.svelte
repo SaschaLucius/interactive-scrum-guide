@@ -3,10 +3,7 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 
-	var pages = [
-		{ path: '/config', name: 'Configuration' },
-		{ path: '/about', name: 'About' }
-	];
+	var pages = [{ path: '/about', name: 'About' }];
 </script>
 
 <header>

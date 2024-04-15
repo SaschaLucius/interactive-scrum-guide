@@ -6,6 +6,7 @@
 	import SearchBar from '$lib/components/search/SearchBar.svelte';
 	import { suggestion_store } from '$lib/stores/search';
 	import { searchText as searchTerm } from '$lib/stores/searchText';
+	import Config from '$lib/components/config/Config.svelte';
 
 	let selectedGuide = 'Scrum_Guide_2020';
 	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
@@ -48,7 +49,10 @@
 
 <h1>Interactive Agile Guides</h1>
 
-<SearchBar />
+<div class="search-config-container">
+	<SearchBar />
+	<Config />
+</div>
 
 <br />
 
@@ -57,3 +61,9 @@
 <br />
 
 <TextBlocks bind:textBlocks />
+
+<style>
+	.search-config-container {
+		display: flex;
+	}
+</style>

@@ -7,9 +7,14 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<li class="autocomplete-items" class:autocomplete-active={highlighted} on:click>
+<li
+	class="autocomplete-items"
+	data-umami-event={`Autocomplete Clicked: ${label}`}
+	class:autocomplete-active={highlighted}
+	on:click
+>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	{@html isTag ? 'Custom Tag: ' + label : label}
+	{@html isTag ? 'Tag: ' + label : label}
 </li>
 
 <style>

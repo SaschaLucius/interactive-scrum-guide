@@ -1,10 +1,7 @@
 var natural = require('natural');
 const fs = require('fs');
-const readline = require('readline');
 const keyword_extractor = require('keyword-extractor');
-
-var NGrams = natural.NGrams;
-var tokenizer = new natural.WordTokenizer();
+const NGrams = natural.NGrams;
 
 const docsFolder = './docs/';
 const guidesPath = './src/lib/generated/guides.ts';
@@ -12,12 +9,9 @@ const tagsPath = './src/lib/generated/tags.ts';
 
 const REGEX_BRACKETS = /\[[#A-Za-z:,?-]+\]/gi;
 
-const depth = 3;
+const depth = 4;
 
 let allCustomTags = [];
-let allBigramms = [];
-let allTrigrams = [];
-let allKeywords = [];
 let allNGrams = [];
 
 // Cleanup
@@ -28,20 +22,17 @@ try {
 	console.log('Files not found, creating new ones');
 }
 
-let tags;
-let guides;
-
-tags = fs.openSync(tagsPath, 'a');
-guides = fs.openSync(guidesPath, 'a');
+const tags = fs.openSync(tagsPath, 'a');
+const guides = fs.openSync(guidesPath, 'a');
 
 const files = fs.readdirSync(docsFolder);
-
 for (const file of files) {
 	if (file.endsWith('.md')) {
 		allCustomTags = [];
-		allKeywords = [];
-		allBigramms = [];
-		allTrigrams = [];
+
+		for (let i = 0; i < depth; i++) {
+			allNGrams[i] = [];
+		}
 
 		fs.appendFileSync(guides, `export const ${file.slice(0, -3)} = \``, 'utf8');
 		fs.appendFileSync(tags, `export const ${file.slice(0, -3)} = [`, 'utf8');
@@ -52,40 +43,31 @@ for (const file of files) {
 			allCustomTags = allCustomTags.concat(customTags);
 
 			const line = rawLine.replace(/(\[[#A-Za-z:,?-]+\])/g, '');
-			const keywords = tokenizer
-				.tokenize(line)
-				.filter((token) => extractKeywords(token).length === 1);
-			allKeywords = allKeywords.concat(keywords);
-			const bigrams = NGrams.bigrams(line)
-				.map((bigram) => bigram.join(' '))
-				.filter((bigram) => extractKeywords(bigram).length === 2);
-			allBigramms = allBigramms.concat(bigrams);
-			const trigram = NGrams.trigrams(line)
-				.map((trigram) => trigram.join(' '))
-				.filter((trigram) => extractKeywords(trigram).length === 3);
-			allTrigrams = allTrigrams.concat(trigram);
-			const ngram4 = NGrams.ngrams(line, 4)
-				.map((trigram) => trigram.join(' '))
-				.filter((trigram) => extractKeywords(trigram).length === 4);
-			// TODO
+			for (let i = 0; i < depth; i++) {
+				const ngrams = NGrams.ngrams(line, i + 1)
+					.map((ngram) => ngram.join(' '))
+					.filter((ngram) => extractKeywords(ngram).length === i + 1);
+				allNGrams[i] = allNGrams[i].concat(ngrams);
+			}
 
 			fs.appendFileSync(guides, rawLine + '\n', 'utf8');
 		}
 
 		console.log(file);
-		const tri = reduceStemmed(filterByOccurence(countOccurence(allTrigrams), 3));
-		console.log('tri', tri.length);
-		const bi = reduceStemmed(filterByOccurence(countOccurence(allBigramms), 4));
-		console.log('bi', bi.length);
-		const key = reduceStemmed(filterByOccurence(countOccurence(allKeywords), 5));
-		console.log('key', key.length);
-		const custom = Array.from(new Set(allCustomTags)).map((tag) => 'CT:' + tag); //mark custom tags
-		console.log('custom', custom.length);
 
-		let all = tri.concat(bi).concat(key).concat(custom);
+		let results = [];
+		for (let i = 0; i < depth; i++) {
+			const key = reduceStemmed(filterByOccurence(countOccurence(allNGrams[i]), depth - i + 2)); // + 2 because of expected amount of results
+			console.log(`\t${key.length} "${i + 1}-grams" found (min ${depth - i + 2} duplicates)`);
+			results = results.concat(key);
+		}
+		const custom = Array.from(new Set(allCustomTags)).map((tag) => 'CT:' + tag); //mark custom tags
+		console.log('\t' + custom.length, '"custom tags" found');
+
+		results = results.concat(custom);
 		//all = all.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-		fs.appendFileSync(tags, `"${all.join('","')}"];\n`, 'utf8');
+		fs.appendFileSync(tags, `"${results.join('","')}"];\n`, 'utf8');
 		fs.appendFileSync(guides, '`;', 'utf8');
 	}
 }

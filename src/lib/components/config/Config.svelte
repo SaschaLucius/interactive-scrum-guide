@@ -2,10 +2,10 @@
 	import { config } from '$lib/stores/config';
 </script>
 
-<form class="content">
+<form style="text-align: center;">
 	<label>
+		Keep Document Structure
 		<input type="checkbox" bind:checked={$config.keepHeader} />
-		Keep Header
 	</label>
 </form>
 

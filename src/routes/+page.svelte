@@ -7,10 +7,16 @@
 	import { suggestion_store } from '$lib/stores/search';
 	import { searchText as searchTerm } from '$lib/stores/searchText';
 	import Config from '$lib/components/config/Config.svelte';
+	import { onMount } from 'svelte';
+	import { trackPageView } from '@lukulent/svelte-umami';
 
 	let selectedGuide = 'Scrum_Guide_2020';
 	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
 	$: initializeTags(selectedGuide);
+
+	onMount(() => {
+		trackPageView({ url: '/interactive-scrum-guide' });
+	});
 
 	function getGuideText(guide: string): string {
 		for (const [key, value] of Object.entries(guides)) {

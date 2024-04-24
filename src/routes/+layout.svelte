@@ -1,10 +1,17 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+	import { UmamiAnalytics } from '@lukulent/svelte-umami';
 </script>
 
 <div class="app">
 	<Header />
+
+	<UmamiAnalytics
+		websiteID="0904e6a4-a410-4778-8a77-74b102499058"
+		srcURL="https://eu.umami.is/script.js"
+		configuration={{ 'data-auto-track': false }}
+	/>
 
 	<main>
 		<slot />

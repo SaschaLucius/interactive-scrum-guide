@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { handleEvent } from '@lukulent/svelte-umami';
+
 	export let itemLabel: string;
 	export let highlighted: boolean;
 	$: isTag = itemLabel.startsWith('CT:');
@@ -9,7 +11,8 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li
 	class="autocomplete-items"
-	data-umami-event={`Autocomplete Clicked: ${label}`}
+	data-umami-event={`autocomplete: ${label.replace(/<[^>]+>/g, '')}`}
+	on:click={handleEvent}
 	class:autocomplete-active={highlighted}
 	on:click
 >

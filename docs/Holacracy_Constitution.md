@@ -1,5 +1,3 @@
-# **Holacracy Constitution**
-
 ## Preamble
 
 The **_"Ratifiers"_** hereby adopt this **_"Constitution"_** as the formal authority structure of the specified **_"Organization"_**. In so doing, the Ratifiers cede their power to govern and run the Organization into the rules and processes herein, except for any powers that the Ratifiers lack the authority to delegate. The Ratifiers or their successors may amend this Constitution or repeal it using whatever authority they relied upon to adopt it, provided that any amendments are made in writing.

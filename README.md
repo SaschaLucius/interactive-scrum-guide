@@ -14,6 +14,7 @@ While learning for [PSM1 Certification](https://www.scrum.org/assessments/profes
 
 - `./scripts/generate.sh`
 - `npm install`
+- `npm run prepare`
 - `npm run dev`
 
 ## Sources

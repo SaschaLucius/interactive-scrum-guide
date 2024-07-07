@@ -13,7 +13,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"coverage": "vitest run --coverage",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"pre-commit": "npx lint-staged"
 	},
 	"devDependencies": {
@@ -37,7 +37,7 @@
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"husky": "9.0.11",
+		"husky": "^9.0.11",
 		"jsdom": "24.0.0",
 		"lint-staged": "15.2.2",
 		"prettier": "^3.2.5",

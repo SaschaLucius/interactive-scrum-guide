@@ -4,7 +4,7 @@ ADD . /app
 WORKDIR /app
 
 RUN npm install
-RUN node src/generate.cjs
+RUN node /app/src/generate.cjs
 RUN npm run build
 
 FROM nginx:stable

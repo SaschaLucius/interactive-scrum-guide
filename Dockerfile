@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN npm install
 RUN node /app/src/generate.cjs
-RUN npm run build
+RUN npm run build:static
 
 FROM nginx:stable
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -54,7 +54,7 @@ If any aspects of a process deviate outside acceptable limits or if the resultin
 The adjustment[ScrumPillars,Adaptation] must be made as soon as possible to minimize further deviation.
 
 Adaptation[ScrumPillars,Adaptation] becomes more difficult when the people involved are not empowered[Management] or self-managing[SelfManagement].
-A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars,Adaptation] the moment it learns anything new through inspection[ScrumPillars,Inspection].
+A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars,Adaptation] the moment it learns[Learn] anything new through inspection[ScrumPillars,Inspection].
 
 # Scrum Values[ScrumValues]
 
@@ -69,7 +69,7 @@ The Scrum Team[ScrumTeam] members have the courage[ScrumValues,Courage] to do th
 
 These values[ScrumValues] give direction to the Scrum Team[ScrumTeam] with regard to their work, actions, and behavior.
 The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].[Management]
-The Scrum Team[ScrumTeam] members learn and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
+The Scrum Team[ScrumTeam] members learn[Learn] and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
 When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[ExternalPeople] work with, the empirical[Empiricism] Scrum pillars of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaptation] come to life building trust.
 
 # Scrum Team[ScrumTeam]
@@ -181,11 +181,11 @@ During the Sprint[ScumEvents,Sprint]:
 - No changes[ScrumPillars,Adaptation] are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];
 - Quality does not decrease;
 - The Product Backlog[ScrumArtifacts,ProductBacklog] is refined[ScrumPillars,Adaptation] as needed; and,
-- Scope may be clarified and renegotiated[ScrumPillars,Adaptation] with the Product Owner[ScrumTeam,ProductOwner] as more is learned.
+- Scope may be clarified and renegotiated[ScrumPillars,Adaptation] with the Product Owner[ScrumTeam,ProductOwner] as more is learned[Learn].
 
 Sprints[ScumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaptation] of progress toward a Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal] at least every calendar month[Timebox].
 When a Sprint’s[ScumEvents,Sprint] horizon[Timebox] is too long[Timebox] the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] may become invalid, complexity may rise[ReduceComplexity], and risk may[Uncertainty] increase.
-Shorter[Timebox] Sprints[ScumEvents,Sprint] can be employed to generate more learning cycles[Cadence] and limit risk of cost and effort to a smaller time frame[Timebox].
+Shorter[Timebox] Sprints[ScumEvents,Sprint] can be employed to generate more learning[Learn] cycles[Cadence] and limit risk of cost and effort to a smaller time frame[Timebox].
 Each Sprint[ScumEvents,Sprint] may be considered a short project.
 
 Various practices exist to forecast[Forecast] progress, like burn-downs[ExtendScrum,BurnDown], burn-ups[ExtendScrum,BurnUp], or cumulative flows[ExtendScrum].
@@ -324,7 +324,7 @@ The Sprint Backlog is composed of the Sprint Goal[ScrumArtifacts,SprintBacklog,C
 
 The Sprint Backlog is a plan by and for the Developers[ScrumTeam,Developers].
 It is a highly visible[ScrumPillars,Transparency], real-time picture of the work that the Developers[ScrumTeam,Developers] plan to accomplish[Forecast] during the Sprint[ScumEvents,Sprint] in order to achieve the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
-Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned.
+Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned[Learn].
 It should have enough detail that they[ScrumTeam,Developers] can inspect[ScrumPillars,Inspection] their progress in the Daily Scrum[ScumEvents,DailyScrum].
 
 ### Commitment[ScrumValues,Commitment]: Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal]

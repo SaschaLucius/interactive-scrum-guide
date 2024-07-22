@@ -85,7 +85,7 @@ They[ScrumTeam] are also self-managing[SelfManagement], meaning they[ScrumTeam] 
 The Scrum Team[ScrumTeam] is small enough to remain nimble and large enough to complete significant work within a Sprint[ScumEvents,Sprint], typically 10 or fewer people.
 In general, we have found that smaller teams[ScrumTeam] communicate better and are more productive.
 If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeams,ScaledScrum], each focused[ScrumValues,Focus] on the same product.
-Therefore, they[ScrumTeam] should share the same Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], Product Backlog[ScrumArtifacts,ProductBacklog], and Product Owner[ScrumTeam,ProductOwner].
+Therefore, they[ScrumTeams] should share the same Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], Product Backlog[ScrumArtifacts,ProductBacklog], and Product Owner[ScrumTeam,ProductOwner].
 
 The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[Stakeholder] collaboration, verification[Learn], maintenance, operation, experimentation, research and development, and anything else that might be required.[CrossFunctional]
 They[ScrumTeam] are structured and empowered[Management] by the organization[Organization] to manage[Management] their[ScrumTeam] own work.

@@ -74,7 +74,8 @@
 		<input
 			id="item-input"
 			type="search"
-			placeholder="Search Terms"
+			placeholder="Utilize Search to narrow down the guide to the relevant sections."
+			title="The guide can be narrowed down by searching with pre-defined tags or free form text."
 			bind:this={searchInput}
 			bind:value={$searchTerm}
 			on:input={filterItems}

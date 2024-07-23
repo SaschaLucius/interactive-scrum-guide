@@ -25,7 +25,7 @@ Scrum is founded on empiricism[Empiricism] and lean thinking.
 Empiricism[Empiricism] asserts that knowledge comes from experience and making decisions based on what is observed[ScrumPillars,Inspection].
 Lean thinking reduces waste[Lean,WasteReduction] and focuses[ScrumValues,Focus] on the essentials.
 
-Scrum employs an iterative[Cadence], incremental[Increment] approach to optimize predictability and to control risk.
+Scrum employs an iterative[Cadence], incremental[Increment] approach to optimize predictability and to control risk[Risk].
 Scrum engages groups of people[ScrumTeam] who collectively have all the skills and expertise to do the work and share or acquire such skills as needed[Learn].[SelfManagement]
 
 Scrum combines four formal events[ScrumEvents] for inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaptation], within a containing event[ScrumEvents], the Sprint[ScrumEvents,Sprint].
@@ -35,17 +35,17 @@ These events[ScrumEvents] work because they[ScrumEvents] implement the empirical
 
 The emergent[Emergence] process and work must be visible[ScrumPillars,Transparency] to those performing the work[ScrumTeam,Developers] as well as those receiving the work[Stakeholder].
 With Scrum, important decisions are based on the perceived state of its three formal artifacts[ScrumArtifacts].
-Artifacts[ScrumArtifacts] that have low transparency[ScrumPillars,Transparency] can lead to decisions that diminish value and increase risk.
+Artifacts[ScrumArtifacts] that have low transparency[ScrumPillars,Transparency] can lead to decisions that diminish value and increase risk.[Risk]
 Transparency[ScrumPillars,Transparency] enables inspection[ScrumPillars,Inspection].
-Inspection[ScrumPillars,Inspection] without transparency[ScrumPillars,Transparency] is misleading and wasteful.
+Inspection[ScrumPillars,Inspection] without transparency[ScrumPillars,Transparency] is misleading and wasteful.[Risk]
 
 ## Inspection[ScrumPillars,Inspection]
 
-The Scrum artifacts[ScrumArtifacts] and the progress toward agreed goals[Commitment,ProductGoal,SprintGoal] must be inspected[ScrumPillars,Inspection] frequently and diligently to detect potentially undesirable variances or problems.
+The Scrum artifacts[ScrumArtifacts] and the progress toward agreed goals[Commitment,ProductGoal,SprintGoal] must be inspected[ScrumPillars,Inspection] frequently and diligently to detect potentially undesirable variances or problems.[Risk]
 To help with inspection[ScrumPillars,Inspection], Scrum provides cadence[Cadence] in the form of its five events[ScrumEvents].
 
 Inspection[ScrumPillars,Inspection] enables adaptation[ScrumPillars,Adaptation].
-Inspection[ScrumPillars,Inspection] without adaptation[ScrumPillars,Adaptation] is considered pointless[ScrumValues,Courage].
+Inspection[ScrumPillars,Inspection] without adaptation[ScrumPillars,Adaptation] is considered pointless[ScrumValues,Courage].[Risk]
 Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars,Adaptation].
 
 ## Adaptation[ScrumPillars,Adaptation]
@@ -53,7 +53,7 @@ Scrum events[ScrumEvents] are designed to provoke change[ScrumPillars,Adaptation
 If any aspects of a process deviate outside acceptable limits or if the resulting product[Product] is unacceptable[ScrumArtifacts,Increment,Commitment,DefinitionOfDone], the process being applied[ScrumEvents] or the materials being produced[ScrumArtifacts] must be adjusted[ScrumPillars,Adaptation].
 The adjustment[ScrumPillars,Adaptation] must be made as soon as possible to minimize further deviation.
 
-Adaptation[ScrumPillars,Adaptation] becomes more difficult when the people involved are not empowered[Management] or self-managing[SelfManagement].
+Adaptation[ScrumPillars,Adaptation] becomes more difficult when the people involved are not empowered[Management] or self-managing[SelfManagement].[Risk]
 A Scrum Team[ScrumTeam] is expected to adapt[ScrumPillars,Adaptation] the moment it learns[Learn] anything new through inspection[ScrumPillars,Inspection].
 
 # Scrum Values[ScrumValues]
@@ -68,7 +68,7 @@ Scrum Team[ScrumTeam] members respect[ScrumValues,Respect] each other to be capa
 The Scrum Team[ScrumTeam] members have the courage[ScrumValues,Courage] to do the right thing, to work on tough problems.
 
 These values[ScrumValues] give direction to the Scrum Team[ScrumTeam] with regard to their work, actions, and behavior.
-The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].[Management]
+The decisions that are made, the steps taken, and the way Scrum is used should reinforce these values[ScrumValues], not diminish or undermine them[ScrumValues].[Management,Risk]
 The Scrum Team[ScrumTeam] members learn[Learn] and explore the values[ScrumValues] as they[ScrumTeam] work with the Scrum events[ScrumEvents] and artifacts[ScrumArtifacts].
 When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the people they[ExternalPeople] work with, the empirical[Empiricism] Scrum pillars of transparency[ScrumPillars,Transparency], inspection[ScrumPillars,Inspection], and adaptation[ScrumPillars,Adaptation] come to life building trust.
 
@@ -76,7 +76,7 @@ When these values[ScrumValues] are embodied by the Scrum Team[ScrumTeam] and the
 
 The fundamental unit of Scrum is a small team[ScrumTeam] of people, a Scrum Team[ScrumTeam].
 The Scrum Team[ScrumTeam] consists of one Scrum Master[ScrumTeam,ScrumMaster], one Product Owner[ScrumTeam,ProductOwner], and Developers[ScrumTeam,Developers].
-Within a Scrum Team[ScrumTeam], there are no sub-teams or hierarchies.
+Within a Scrum Team[ScrumTeam], there are no sub-teams or hierarchies.[Risk]
 It[ScrumTeam] is a cohesive unit of professionals focused[ScrumValues,Focus] on one objective at a time, the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal].
 
 Scrum Teams[ScrumTeam] are cross-functional[CrossFunctional], meaning the members have all the skills[CrossFunctional] necessary to create value each Sprint[ScumEvents,Sprint].
@@ -84,7 +84,7 @@ They[ScrumTeam] are also self-managing[SelfManagement], meaning they[ScrumTeam] 
 
 The Scrum Team[ScrumTeam] is small enough to remain nimble and large enough to complete significant work within a Sprint[ScumEvents,Sprint], typically 10 or fewer people.
 In general, we have found that smaller teams[ScrumTeam] communicate better and are more productive.
-If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeams,ScaledScrum], each focused[ScrumValues,Focus] on the same product.
+If Scrum Teams[ScrumTeam] become too large, they[ScrumTeam] should consider reorganizing into multiple cohesive Scrum Teams[ScrumTeams,ScaledScrum], each focused[ScrumValues,Focus] on the same product.[Risk]
 Therefore, they[ScrumTeams] should share the same Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], Product Backlog[ScrumArtifacts,ProductBacklog], and Product Owner[ScrumTeam,ProductOwner].
 
 The Scrum Team[ScrumTeam] is responsible[Responsible] for all product-related activities from stakeholder[Stakeholder] collaboration, verification[Learn], maintenance, operation, experimentation, research and development, and anything else that might be required.[CrossFunctional]
@@ -135,13 +135,13 @@ They[ScrumTeam,ScrumMaster] do this by helping everyone understand Scrum theory 
 The Scrum Master[ScrumTeam,ScrumMaster] is accountable[ScrumTeam,ScrumMaster,Accountable] for the Scrum Team’s[ScrumTeam] effectiveness.
 They[ScrumTeam,ScrumMaster] do this by enabling the Scrum Team[ScrumTeam] to improve[ScrumPillars,Adaptation] its practices, within the Scrum framework[Framework].
 
-Scrum Masters[ScrumTeam,ScrumMaster] are true leaders who serve the Scrum Team[ScrumTeam] and the larger organization[Organization].
+Scrum Masters[ScrumTeam,ScrumMaster] are true leaders who serve[Serve] the Scrum Team[ScrumTeam] and the larger organization[Organization].
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the Scrum Team[ScrumTeam] in several ways, including:
 
 - Coaching the team members[ScrumTeam] in self-management[SelfManagement] and cross-functionality[CrossFunctional];[ScrumTeam,ScrumMaster,Serve]
 - Helping the Scrum Team[ScrumTeam] focus[ScrumValues,Focus] on creating high-value Increments[ScrumTeam,ScrumMaster,Serve][ScrumArtifacts] that meet the Definition of Done[ScrumArtifacts,Increment,Commitment,DefinitionOfDone];
-- Causing the removal of impediments[Impediments] to the Scrum Team’s[ScrumTeam] progress; and,[ScrumTeam,ScrumMaster,Serve]
+- Causing the removal of impediments[Impediments,Risk] to the Scrum Team’s[ScrumTeam] progress; and,[ScrumTeam,ScrumMaster,Serve]
 - Ensuring that all Scrum events[ScrumEvents] take place and are positive, productive, and kept within the timebox[Timebox].[ScrumTeam,ScrumMaster,Serve]
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the Product Owner[ScrumTeam,ProductOwner] in several ways, including:
@@ -153,17 +153,17 @@ The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the 
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the organization[Organization] in several ways, including:
 
-- Leading, training, and coaching the organization[Organization] in its Scrum adoption;[ScrumTeam,ScrumMaster,Serve]
+- Leading, training, and coaching the organization[Organization] in its Scrum adoption;[ScrumTeam,ScrumMaster,Serve,Adaptation]
 - Planning and advising Scrum implementations within the organization[Organization];[ScrumTeam,ScrumMaster,Serve]
 - Helping employees and stakeholders[Stakeholder] understand and enact an empirical[Empiricism] approach for complex work; and,[ScrumTeam,ScrumMaster,Serve]
-- Removing barriers[Impediments] between stakeholders[Stakeholder] and Scrum Teams[ScrumTeam].[ScrumTeam,ScrumMaster,Serve]
+- Removing barriers[Impediments] between stakeholders[Stakeholder] and Scrum Teams[ScrumTeam].[ScrumTeam,ScrumMaster,Serve,Risk]
 
 # Scrum Events[ScrumEvents]
 
 The Sprint[ScumEvents,Sprint] is a container for all other events[ScrumEvents].
 Each event[ScrumEvents] in Scrum is a formal opportunity to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaptation] Scrum artifacts[ScrumArtifacts].
 These events[ScrumEvents] are specifically designed to enable the transparency[ScrumPillars,Transparency] required.
-Failure to operate any events[ScrumEvents] as prescribed results in lost opportunities to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaptation].
+Failure to operate any events[ScrumEvents] as prescribed results in lost opportunities to inspect[ScrumPillars,Inspection] and adapt[ScrumPillars,Adaptation].[Risk]
 Events[ScrumEvents] are used in Scrum to create regularity[Cadence] and to minimize the need for meetings not defined in Scrum[ExtendScrum,OtherMeetings].
 Optimally, all events[ScrumEvents] are held at the same time and place to reduce complexity[ReduceComplexity].
 
@@ -174,23 +174,23 @@ Sprints[ScumEvents,Sprint] are the heartbeat[Cadence] of Scrum, where ideas are 
 They[ScumEvents,Sprint] are fixed length[Timebox] events[ScumEvents,Sprint] of one month[Timebox] or less to create consistency[ReduceComplexity].
 A new Sprint[ScumEvents,Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents,order,ScumEvents,Sprint].
 
-All the work[PBI] necessary to achieve the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], including Sprint Planning[ScumEvents,SprintPlanning], Daily Scrums[ScumEvents,DailyScrum], Sprint Review[ScrumEvents,SprintReview], and Sprint Retrospective[ScrumEvents,SprintRetrospective], happen within Sprints[ScumEvents,Sprint].
+All the work[ProductBacklogItem] necessary to achieve the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], including Sprint Planning[ScumEvents,SprintPlanning], Daily Scrums[ScumEvents,DailyScrum], Sprint Review[ScrumEvents,SprintReview], and Sprint Retrospective[ScrumEvents,SprintRetrospective], happen within Sprints[ScumEvents,Sprint].
 
 During the Sprint[ScumEvents,Sprint]:
 
-- No changes[ScrumPillars,Adaptation] are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];
+- No changes[ScrumPillars,Adaptation] are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];[Risk]
 - Quality does not decrease;
 - The Product Backlog[ScrumArtifacts,ProductBacklog] is refined[ScrumPillars,Adaptation] as needed; and,
 - Scope may be clarified and renegotiated[ScrumPillars,Adaptation] with the Product Owner[ScrumTeam,ProductOwner] as more is learned[Learn].
 
 Sprints[ScumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[ScrumPillars,Inspection] and adaptation[ScrumPillars,Adaptation] of progress toward a Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal] at least every calendar month[Timebox].
-When a Sprint’s[ScumEvents,Sprint] horizon[Timebox] is too long[Timebox] the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] may become invalid, complexity may rise[ReduceComplexity], and risk may[Uncertainty] increase.
+When a Sprint’s[ScumEvents,Sprint] horizon[Timebox] is too long[Timebox] the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] may become invalid, complexity may rise[ReduceComplexity], and risk may[Uncertainty] increase.[Risk]
 Shorter[Timebox] Sprints[ScumEvents,Sprint] can be employed to generate more learning[Learn] cycles[Cadence] and limit risk of cost and effort to a smaller time frame[Timebox].
 Each Sprint[ScumEvents,Sprint] may be considered a short project.
 
 Various practices exist to forecast[Forecast] progress, like burn-downs[ExtendScrum,BurnDown], burn-ups[ExtendScrum,BurnUp], or cumulative flows[ExtendScrum].
 While proven useful, these do not replace the importance of empiricism[Empiricism].
-In complex environments, what will happen is unknown[Uncertainty].
+In complex environments, what will happen is unknown[Uncertainty].[Risk]
 Only what has already happened may be used for forward-looking[Forecast] decision making.
 
 A Sprint[ScumEvents,Sprint] could be cancelled if the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] becomes obsolete.

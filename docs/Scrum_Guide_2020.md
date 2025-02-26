@@ -13,7 +13,7 @@ Scrum is simple.
 Try it[Scrum] as is and determine if its philosophy, theory, and structure help to achieve goals[Commitment,ProductGoal,SprintGoal] and create value.
 The Scrum framework[Framework] is purposefully incomplete, only defining the parts required to implement Scrum theory.[ExtendScrum]
 Scrum is built upon by the collective intelligence of the people using it.
-Rather than provide people with detailed instructions, the rules of Scrum guide their relationships[ScrumTeam] and interactions[ScumEvent].
+Rather than provide people with detailed instructions, the rules of Scrum guide their relationships[ScrumTeam] and interactions[ScrumEvent].
 
 Various processes, techniques and methods can be employed within the framework[Framework].
 Scrum wraps around existing practices or renders them unnecessary[Lean,WasteReduction].

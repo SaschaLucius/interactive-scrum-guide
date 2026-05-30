@@ -26,6 +26,14 @@ export default ts.config(
 		}
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'package/', '.env', '.env.*', '!.env.example']
+		ignores: [
+			'build/',
+			'.svelte-kit/',
+			'package/',
+			'.env',
+			'.env.*',
+			'!.env.example',
+			'src/generate.cjs'
+		]
 	}
 );

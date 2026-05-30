@@ -49,7 +49,7 @@ Scrum is now widely used for products[Product], services, and the management of 
 
 The essence of Scrum is a small team[ScrumTeam] of people.
 The individual team[ScrumTeam] is highly flexible and adaptive[EmpiricalScrumPillars,Adaptation].
-These strengths continue operating in single, several, many, and networks of teams[ScrumTeams] that develop, release, operate and sustain the work and work products of thousands of people.
+These strengths continue operating in single, several, many, and networks of teams[ScrumTeams,ScaledScrum] that develop, release, operate and sustain the work and work products of thousands of people.
 They collaborate and interoperate through sophisticated development architectures and target release environments.
 
 When the words "develop" and "development" are used in the Scrum Guide, they refer to complex work, such as those types identified above.
@@ -135,9 +135,9 @@ However, the Product Owner[ScrumTeam,ProductOwner] remains accountable[ScrumTeam
 The Product Owner[ScrumTeam,ProductOwner] is one person, not a committee.
 The Product Owner[ScrumTeam,ProductOwner] may represent the desires of a committee in the Product Backlog[ScrumArtifacts,ProductBacklog], but those wanting to change a Product Backlog item's[ScrumArtifacts,ProductBacklog,ProductBacklogItem] priority must address the Product Owner[ScrumTeam,ProductOwner].
 
-For the Product Owner[ScrumTeam,ProductOwner] to succeed, the entire organization[Organization] must respect[ScrumValues,Respect] his or her decisions.
+For the Product Owner[ScrumTeam,ProductOwner] to succeed, the entire organization[Organization] must respect[ScrumValues,Respect] his or her decisions.[Management]
 The Product Owner's[ScrumTeam,ProductOwner] decisions are visible[EmpiricalScrumPillars,Transparency] in the content and ordering of the Product Backlog[ScrumArtifacts,ProductBacklog].
-No one can force the Development Team[ScrumTeam,Developers] to work from a different set of requirements.
+No one can force the Development Team[ScrumTeam,Developers] to work from a different set of requirements.[SelfManagement,Management]
 
 ## The Development Team[ScrumTeam,Developers]
 
@@ -178,33 +178,33 @@ The Scrum Master[ScrumTeam,ScrumMaster] helps everyone change these interactions
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the Product Owner[ScrumTeam,ProductOwner] in several ways, including:
 
-- Ensuring that goals, scope, and product domain are understood by everyone on the Scrum Team[ScrumTeam] as well as possible;
-- Finding techniques for effective Product Backlog[ScrumArtifacts,ProductBacklog] management;
-- Helping the Scrum Team[ScrumTeam] understand the need for clear and concise Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem];
-- Understanding product planning in an empirical[Empiricism] environment;
-- Ensuring the Product Owner[ScrumTeam,ProductOwner] knows how to arrange the Product Backlog[ScrumArtifacts,ProductBacklog] to maximize value[ValueDelivery];
-- Understanding and practicing agility; and,
-- Facilitating Scrum events[ScrumEvents] as requested or needed.
+- Ensuring that goals, scope, and product domain are understood by everyone on the Scrum Team[ScrumTeam] as well as possible;[ScrumTeam,ScrumMaster,Serve]
+- Finding techniques for effective Product Backlog[ScrumArtifacts,ProductBacklog] management;[ScrumTeam,ScrumMaster,Serve]
+- Helping the Scrum Team[ScrumTeam] understand the need for clear and concise Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem];[ScrumTeam,ScrumMaster,Serve]
+- Understanding product planning in an empirical[Empiricism] environment;[ScrumTeam,ScrumMaster,Serve]
+- Ensuring the Product Owner[ScrumTeam,ProductOwner] knows how to arrange the Product Backlog[ScrumArtifacts,ProductBacklog] to maximize value[ValueDelivery];[ScrumTeam,ScrumMaster,Serve]
+- Understanding and practicing agility; and,[ScrumTeam,ScrumMaster,Serve]
+- Facilitating Scrum events[ScrumEvents] as requested or needed.[ScrumTeam,ScrumMaster,Serve]
 
 ### Scrum Master[ScrumTeam,ScrumMaster] Service to the Development Team[ScrumTeam,Developers]
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the Development Team[ScrumTeam,Developers] in several ways, including:
 
-- Coaching the Development Team[ScrumTeam,Developers] in self-organization[SelfManagement] and cross-functionality[CrossFunctional];
-- Helping the Development Team[ScrumTeam,Developers] to create high-value products[ValueDelivery];
-- Removing impediments[Impediments] to the Development Team's[ScrumTeam,Developers] progress;
-- Facilitating Scrum events[ScrumEvents] as requested or needed; and,
-- Coaching the Development Team[ScrumTeam,Developers] in organizational environments in which Scrum is not yet fully adopted and understood.
+- Coaching the Development Team[ScrumTeam,Developers] in self-organization[SelfManagement] and cross-functionality[CrossFunctional];[ScrumTeam,ScrumMaster,Serve]
+- Helping the Development Team[ScrumTeam,Developers] to create high-value products[ValueDelivery];[ScrumTeam,ScrumMaster,Serve]
+- Removing impediments[Impediments] to the Development Team's[ScrumTeam,Developers] progress;[ScrumTeam,ScrumMaster,Serve]
+- Facilitating Scrum events[ScrumEvents] as requested or needed; and,[ScrumTeam,ScrumMaster,Serve]
+- Coaching the Development Team[ScrumTeam,Developers] in organizational environments in which Scrum is not yet fully adopted and understood.[ScrumTeam,ScrumMaster,Serve]
 
 ### Scrum Master[ScrumTeam,ScrumMaster] Service to the Organization[Organization]
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the organization[Organization] in several ways, including:
 
-- Leading and coaching the organization[Organization] in its Scrum adoption;
-- Planning Scrum implementations within the organization[Organization];
-- Helping employees and stakeholders[Stakeholder] understand and enact Scrum and empirical[Empiricism] product development;
-- Causing change that increases the productivity of the Scrum Team[ScrumTeam]; and,
-- Working with other Scrum Masters[ScrumTeam,ScrumMaster] to increase the effectiveness of the application of Scrum in the organization[Organization].
+- Leading and coaching the organization[Organization] in its Scrum adoption;[ScrumTeam,ScrumMaster,Serve,EmpiricalScrumPillars,Adaptation]
+- Planning Scrum implementations within the organization[Organization];[ScrumTeam,ScrumMaster,Serve]
+- Helping employees and stakeholders[Stakeholder] understand and enact Scrum and empirical[Empiricism] product development;[ScrumTeam,ScrumMaster,Serve]
+- Causing change that increases the productivity of the Scrum Team[ScrumTeam]; and,[ScrumTeam,ScrumMaster,Serve]
+- Working with other Scrum Masters[ScrumTeam,ScrumMaster] to increase the effectiveness of the application of Scrum in the organization[Organization].[ScrumTeam,ScrumMaster,Serve]
 
 # Scrum Events[ScrumEvents]
 
@@ -219,15 +219,15 @@ Failure to include any of these events[ScrumEvents] results in reduced transpare
 
 ## The Sprint[ScrumEvents,Sprint]
 
-The heart of Scrum is a Sprint[ScrumEvents,Sprint], a time-box[Timebox] of one month or less during which a "Done"[ScrumArtifacts,Increment,Commitment,DefinitionOfDone], useable, and potentially releasable product Increment[ScrumArtifacts,Increment] is created.
+The heart of Scrum is a Sprint[ScrumEvents,Sprint,Cadence], a time-box[Timebox] of one month or less during which a "Done"[ScrumArtifacts,Increment,Commitment,DefinitionOfDone], useable, and potentially releasable product Increment[ScrumArtifacts,Increment] is created.
 Sprints[ScrumEvents,Sprint] have consistent durations throughout a development effort.
-A new Sprint[ScrumEvents,Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents,Sprint].
+A new Sprint[ScrumEvents,Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents,Sprint,Order].
 
 Sprints[ScrumEvents,Sprint] contain and consist of the Sprint Planning[ScrumEvents,SprintPlanning], Daily Scrums[ScrumEvents,DailyScrum], the development work, the Sprint Review[ScrumEvents,SprintReview], and the Sprint Retrospective[ScrumEvents,SprintRetrospective].
 
 During the Sprint[ScrumEvents,Sprint]:
 
-- No changes are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];
+- No changes are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];[Risk]
 - Quality[Quality] goals do not decrease; and,
 - Scope may be clarified and re-negotiated[EmpiricalScrumPillars,Adaptation] between the Product Owner[ScrumTeam,ProductOwner] and Development Team[ScrumTeam,Developers] as more is learned[Learn].
 
@@ -236,7 +236,7 @@ Like projects, Sprints[ScrumEvents,Sprint] are used to accomplish something.
 Each Sprint[ScrumEvents,Sprint] has a goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] of what is to be built, a design and flexible plan that will guide building it, the work, and the resultant product increment[ScrumArtifacts,Increment].
 
 Sprints[ScrumEvents,Sprint] are limited to one calendar month[Timebox].
-When a Sprint's[ScrumEvents,Sprint] horizon[Timebox] is too long the definition of what is being built may change, complexity may rise, and risk[Risk] may increase.
+When a Sprint's[ScrumEvents,Sprint] horizon[Timebox] is too long the definition of what is being built may change, complexity may rise[ReduceComplexity], and risk[Risk] may increase.
 Sprints[ScrumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] of progress toward a Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] at least every calendar month[Timebox].
 Sprints[ScrumEvents,Sprint] also limit risk[Risk] to one calendar month[Timebox] of cost.
 
@@ -279,7 +279,7 @@ The Development Team[ScrumTeam,Developers] works to forecast[Forecast] the funct
 The Product Owner[ScrumTeam,ProductOwner] discusses the objective that the Sprint[ScrumEvents,Sprint] should achieve and the Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] that, if completed in the Sprint[ScrumEvents,Sprint], would achieve the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
 The entire Scrum Team[ScrumTeam] collaborates on understanding the work of the Sprint[ScrumEvents,Sprint].
 
-The input to this meeting is the Product Backlog[ScrumArtifacts,ProductBacklog], the latest product Increment[ScrumArtifacts,Increment], projected capacity of the Development Team[ScrumTeam,Developers] during the Sprint[ScrumEvents,Sprint], and past performance of the Development Team[ScrumTeam,Developers].
+The input to this meeting is the Product Backlog[ScrumArtifacts,ProductBacklog], the latest product Increment[ScrumArtifacts,Increment], projected capacity[Capacity] of the Development Team[ScrumTeam,Developers] during the Sprint[ScrumEvents,Sprint], and past performance of the Development Team[ScrumTeam,Developers].
 The number of items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] selected from the Product Backlog[ScrumArtifacts,ProductBacklog] for the Sprint[ScrumEvents,Sprint] is solely up to the Development Team[ScrumTeam,Developers].
 Only the Development Team[ScrumTeam,Developers] can assess what it can accomplish over the upcoming Sprint[ScrumEvents,Sprint].
 
@@ -299,7 +299,7 @@ The Development Team[ScrumTeam,Developers] self-organizes[SelfManagement] to und
 
 The Product Owner[ScrumTeam,ProductOwner] can help to clarify the selected Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] and make trade-offs.
 If the Development Team[ScrumTeam,Developers] determines it has too much or too little work, it may renegotiate the selected Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] with the Product Owner[ScrumTeam,ProductOwner].
-The Development Team[ScrumTeam,Developers] may also invite other people to attend to provide technical or domain advice.
+The Development Team[ScrumTeam,Developers] may also invite other people to attend[ScrumEvents,SprintPlanning,Attendees] to provide technical or domain advice.
 
 By the end of the Sprint Planning[ScrumEvents,SprintPlanning], the Development Team[ScrumTeam,Developers] should be able to explain to the Product Owner[ScrumTeam,ProductOwner] and Scrum Master[ScrumTeam,ScrumMaster] how it intends to work as a self-organizing[SelfManagement] team to accomplish the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and create the anticipated Increment[ScrumArtifacts,Increment].
 
@@ -314,7 +314,7 @@ The Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] can be any o
 
 As the Development Team[ScrumTeam,Developers] works, it keeps the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] in mind.
 In order to satisfy the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal], it implements functionality and technology.
-If the work turns out to be different than the Development Team[ScrumTeam,Developers] expected, they collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate the scope of Sprint Backlog[ScrumArtifacts,SprintBacklog] within the Sprint[ScrumEvents,Sprint].
+If the work turns out to be different than the Development Team[ScrumTeam,Developers] expected, they collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate[EmpiricalScrumPillars,Adaptation] the scope of Sprint Backlog[ScrumArtifacts,SprintBacklog] within the Sprint[ScrumEvents,Sprint].
 
 ## Daily Scrum[ScrumEvents,DailyScrum]
 
@@ -341,7 +341,7 @@ The Development Team[ScrumTeam,Developers] or team members often meet immediatel
 The Scrum Master[ScrumTeam,ScrumMaster] ensures that the Development Team[ScrumTeam,Developers] has the meeting, but the Development Team[ScrumTeam,Developers] is responsible[ScrumTeam,Developers,Responsible] for conducting the Daily Scrum[ScrumEvents,DailyScrum].
 The Scrum Master[ScrumTeam,ScrumMaster] teaches the Development Team[ScrumTeam,Developers] to keep the Daily Scrum[ScrumEvents,DailyScrum] within the 15-minute[Timebox] time-box[Timebox].
 
-The Daily Scrum[ScrumEvents,DailyScrum] is an internal meeting for the Development Team[ScrumTeam,Developers].
+The Daily Scrum[ScrumEvents,DailyScrum] is an internal meeting for the Development Team[ScrumTeam,Developers,ScrumEvents,DailyScrum,Attendees].
 If others are present, the Scrum Master[ScrumTeam,ScrumMaster] ensures that they do not disrupt the meeting.
 
 Daily Scrums[ScrumEvents,DailyScrum] improve communications, eliminate other meetings[ExtendScrum,OtherMeetings], identify impediments[Impediments] to development for removal, highlight and promote quick decision-making, and improve the Development Team's[ScrumTeam,Developers] level of knowledge.
@@ -381,7 +381,7 @@ The Product Backlog[ScrumArtifacts,ProductBacklog] may also be adjusted overall 
 
 The Sprint Retrospective[ScrumEvents,SprintRetrospective] is an opportunity for the Scrum Team[ScrumTeam] to inspect[EmpiricalScrumPillars,Inspection] itself and create a plan for improvements[EmpiricalScrumPillars,Adaptation] to be enacted during the next Sprint[ScrumEvents,Sprint].
 
-The Sprint Retrospective[ScrumEvents,SprintRetrospective] occurs after the Sprint Review[ScrumEvents,SprintReview] and prior to the next Sprint Planning[ScrumEvents,SprintPlanning].
+The Sprint Retrospective[ScrumEvents,SprintRetrospective] occurs after the Sprint Review[ScrumEvents,SprintReview,ScrumEvents,Order] and prior to the next Sprint Planning[ScrumEvents,SprintPlanning].
 This is at most a three-hour[Timebox] meeting for one-month Sprints[ScrumEvents,Sprint].
 For shorter Sprints[ScrumEvents,Sprint], the event is usually shorter.
 The Scrum Master[ScrumTeam,ScrumMaster] ensures that the event takes place and that attendants[ScrumEvents,SprintRetrospective,Attendees] understand its purpose.
@@ -428,7 +428,7 @@ As a product[Product] is used and gains value[ValueDelivery], and the marketplac
 Requirements never stop changing, so a Product Backlog[ScrumArtifacts,ProductBacklog] is a living artifact.
 Changes in business requirements, market conditions, or technology may cause changes in the Product Backlog[ScrumArtifacts,ProductBacklog].
 
-Multiple Scrum Teams[ScrumTeam] often work together on the same product[Product].
+Multiple Scrum Teams[ScrumTeam,ScaledScrum] often work together on the same product[Product].
 One Product Backlog[ScrumArtifacts,ProductBacklog] is used to describe the upcoming work on the product[Product].
 A Product Backlog[ScrumArtifacts,ProductBacklog] attribute that groups items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] may then be employed.
 
@@ -436,7 +436,7 @@ Product Backlog refinement[ProductBacklogRefinement] is the act of adding detail
 This is an ongoing process in which the Product Owner[ScrumTeam,ProductOwner] and the Development Team[ScrumTeam,Developers] collaborate on the details of Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem].
 During Product Backlog refinement[ProductBacklogRefinement], items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] are reviewed and revised.
 The Scrum Team[ScrumTeam] decides how and when refinement[ProductBacklogRefinement] is done.
-Refinement[ProductBacklogRefinement] usually consumes no more than 10% of the capacity of the Development Team[ScrumTeam,Developers].
+Refinement[ProductBacklogRefinement] usually consumes no more than 10% of the capacity[Capacity] of the Development Team[ScrumTeam,Developers].
 However, Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] can be updated at any time by the Product Owner[ScrumTeam,ProductOwner] or at the Product Owner's[ScrumTeam,ProductOwner] discretion.
 
 Higher ordered Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] are usually clearer and more detailed than lower ordered ones.

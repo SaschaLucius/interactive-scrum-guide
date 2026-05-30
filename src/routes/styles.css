@@ -133,6 +133,6 @@ button:focus:not(:focus-visible) {
 mark {
 	background-color: #fde68a;
 	color: inherit;
-	padding: 0.1em 0.15em;
+	padding: 0;
 	border-radius: 2px;
 }

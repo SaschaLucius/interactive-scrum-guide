@@ -2,8 +2,12 @@
 	"name": "interactive-scrum-guide",
 	"version": "0.0.1",
 	"scripts": {
+		"generate": "node src/generate.cjs",
+		"predev": "npm run generate",
 		"dev": "vite dev",
+		"prebuild": "npm run generate",
 		"build": "vite build",
+		"prebuild:static": "npm run generate",
 		"build:static": "TARGET=static vite build",
 		"preview": "vite preview",
 		"test": "playwright test",

@@ -2,6 +2,7 @@
 	import AutocompleteItem from './AutocompleteItem.svelte';
 	import { sorted_suggestions_store } from '$lib/stores/search';
 	import { searchText as searchTerm } from '$lib/stores/searchText';
+	import { stemmer } from 'stemmer';
 
 	/* HANDLING THE INPUT */
 	let searchInput: HTMLInputElement;
@@ -22,9 +23,17 @@
 	function filterItems() {
 		let storageArr: string[] = [];
 		if ($searchTerm) {
+			const termLower = $searchTerm.toLowerCase();
+			const termStemmed = stemmer(termLower);
 			$sorted_suggestions_store.forEach((item) => {
-				if (item.toLowerCase().includes($searchTerm.toLowerCase())) {
+				const itemLower = item.toLowerCase();
+				if (itemLower.includes(termLower)) {
 					storageArr = [...storageArr, makeMatchBold(item, $searchTerm)];
+				} else {
+					const words = itemLower.split(/\s+/);
+					if (words.some((w) => stemmer(w).includes(termStemmed))) {
+						storageArr = [...storageArr, item];
+					}
 				}
 			});
 		}

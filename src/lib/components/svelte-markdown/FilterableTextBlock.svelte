@@ -17,6 +17,14 @@
 	let rawLines = $derived(block.split('\n'));
 	let lines = $derived(rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, '')));
 	let tags = $derived(rawLines.map((line) => getTags(line)));
+	let stemmedLines = $derived(
+		lines.map((line) =>
+			line
+				.toLowerCase()
+				.split(/\s+/)
+				.map((w) => stemmer(w))
+		)
+	);
 	let filteredText = $derived(
 		getFilteredText($filter, $filterStemmed, lines, $config_store.keepHeader)
 	);
@@ -29,7 +37,7 @@
 	): string {
 		let tmp = '';
 		for (let i = 0; i < lines.length; i++) {
-			if (isVisible(lines[i], tags[i], filter, filterStemmed, keepHeader)) {
+			if (isVisible(lines[i], tags[i], filter, filterStemmed, keepHeader, i)) {
 				tmp += lines[i] + '\n';
 			}
 		}
@@ -46,11 +54,14 @@
 		);
 	}
 
-	function isFullText(line: string, filter: string, filterStemmed: string): boolean {
-		const lineLower = line.toLowerCase();
-		if (lineLower.includes(filter)) return true;
-		const words = lineLower.split(/\s+/);
-		return words.some((word) => stemmer(word).includes(filterStemmed));
+	function isFullText(
+		line: string,
+		filter: string,
+		filterStemmed: string,
+		lineIndex: number
+	): boolean {
+		if (line.toLowerCase().includes(filter)) return true;
+		return stemmedLines[lineIndex].some((stem) => stem.includes(filterStemmed));
 	}
 
 	function isHeaderVisible(keepHeader: boolean): boolean {
@@ -62,12 +73,13 @@
 		tags: string[],
 		filter: string,
 		filterStemmed: string,
-		keepHeader: boolean
+		keepHeader: boolean,
+		lineIndex: number
 	): boolean {
 		return (
 			filter == '' ||
 			isHeaderVisible(keepHeader) ||
-			isFullText(line, filter, filterStemmed) ||
+			isFullText(line, filter, filterStemmed, lineIndex) ||
 			isTag(tags, filter, filterStemmed)
 		);
 	}

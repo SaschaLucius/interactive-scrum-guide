@@ -5,7 +5,7 @@ function createStringSetStore() {
 
 	return {
 		subscribe,
-		add: (item: string) => update((n) => n.add(item)),
+		add: (item: string) => update((n) => new Set([...n, item])),
 		reset: () => set(new Set<string>())
 	};
 }

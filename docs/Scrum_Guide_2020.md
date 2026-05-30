@@ -240,7 +240,7 @@ The Daily Scrum[ScrumEvents,DailyScrum] is a 15-minute[Timebox] event for the De
 To reduce complexity[ReduceComplexity], it is held at the same time and place every working day[ScrumEvents,Order] of the Sprint[ScrumEvents,Sprint].
 If the Product Owner[ScrumTeam,ProductOwner] or Scrum Master[ScrumTeam,ScrumMaster] are actively working on items[ScrumArtifacts,ProductBacklog,ProductBacklogItem,WorkItem] in the Sprint Backlog, they[ScrumTeam,ProductOwner,ScrumMaster] participate[ScrumEvents,DailyScrum,Attendees] as Developers[ScrumTeam,Developers].
 
-The Developers[ScrumTeam,Developers] want, as long as their Daily Scrum[ScrumEvents,DailyScrum] focuses on progress toward the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and produces an actionable plan for the next day of work.
+The Developers[ScrumTeam,Developers] can select whatever structure and techniques they want, as long as their Daily Scrum[ScrumEvents,DailyScrum] focuses on progress toward the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and produces an actionable plan for the next day of work.[SelfManagement]
 This creates focus[ScrumValues,Focus] and improves[EmpiricalScrumPillars,Adaptation] self-management[SelfManagement].
 
 Daily Scrums[ScrumEvents,DailyScrum] improve[EmpiricalScrumPillars,Adaptation] communications, identify impediments[Impediments], promote quick decision-making, and consequently eliminate the need for other meetings[ExtendScrum,OtherMeetings].

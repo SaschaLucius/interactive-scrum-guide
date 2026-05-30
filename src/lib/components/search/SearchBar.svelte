@@ -116,32 +116,58 @@
 </form>
 
 <style>
-	div.autocomplete {
-		/*the container must be positioned relative:*/
+	form {
 		position: relative;
-		display: inline-block;
-		width: 30rem;
-	}
-	input {
-		border: 1px solid transparent;
-		background-color: #f1f1f1;
-		padding: 10px;
-		font-size: 16px;
-		margin: 0;
-	}
-	input[type='search'] {
-		background-color: #f1f1f1;
 		width: 100%;
 	}
 
-	#autocomplete-items-list {
+	div.autocomplete {
 		position: relative;
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+		padding: 0.625rem 0.875rem;
+		font-size: 0.9375rem;
+		line-height: 1.5;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		color: var(--color-text);
+		box-shadow: var(--shadow-sm);
+		transition:
+			border-color 0.15s ease,
+			box-shadow 0.15s ease;
+		box-sizing: border-box;
 		margin: 0;
-		padding: 0;
-		top: 0;
-		width: 30rem;
-		height: 0px;
-		border: 1px solid #ddd;
-		background-color: #ddd;
+	}
+
+	input::placeholder {
+		color: var(--color-text-muted);
+		font-size: 0.875rem;
+	}
+
+	input:focus {
+		outline: none;
+		border-color: var(--color-theme-1);
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+	}
+
+	#autocomplete-items-list {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0.25rem 0;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		box-shadow: var(--shadow-md);
+		z-index: 50;
+		max-height: 16rem;
+		overflow-y: auto;
+		list-style: none;
 	}
 </style>

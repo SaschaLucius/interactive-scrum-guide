@@ -44,7 +44,10 @@ for (const file of files) {
 			guideText += rawLine + '\n';
 		}
 
-		const escapedGuide = guideText.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+		const escapedGuide = guideText
+			.replace(/\\/g, '\\\\')
+			.replace(/`/g, '\\`')
+			.replace(/\$\{/g, '\\${');
 		guidesContent += `export const ${file.slice(0, -3)} = \`${escapedGuide}\`;\n`;
 
 		console.log(file);

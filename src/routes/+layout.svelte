@@ -21,8 +21,8 @@
 
 	<footer>
 		<p>
-			Thank you for trying out my page, issues and improvement request can be submitted <a
-				href="https://github.com/SaschaLucius/interactive-scrum-guide/issues">here</a
+			Feedback and suggestions are welcome on <a
+				href="https://github.com/SaschaLucius/interactive-scrum-guide/issues">GitHub</a
 			>
 		</p>
 	</footer>
@@ -39,28 +39,25 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
+		padding: 1.5rem 1rem;
 		width: 100%;
-		max-width: 64rem;
+		max-width: 52rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
 	footer {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
+		padding: 1.5rem 1rem;
+		border-top: 1px solid var(--color-border);
+		margin-top: 2rem;
 	}
 
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	footer p {
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
+		margin: 0;
 	}
 </style>

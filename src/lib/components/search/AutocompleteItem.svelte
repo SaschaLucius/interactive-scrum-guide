@@ -28,32 +28,25 @@
 <style>
 	li.autocomplete-items {
 		list-style: none;
-		border-bottom: 1px solid #d4d4d4;
-		z-index: 99;
-		/*position the autocomplete items to be the same width as the container:*/
-		top: 100%;
-		left: 0;
-		right: 0;
-		padding: 10px;
+		padding: 0.5rem 0.875rem;
 		cursor: pointer;
-		background-color: #fff;
+		font-size: 0.875rem;
+		color: var(--color-text);
+		transition: background 0.1s ease;
 	}
 
 	li.autocomplete-items:hover {
-		/*when hovering an item:*/
-		background-color: #81921f;
-		color: white;
+		background-color: var(--color-bg-1);
+		color: var(--color-theme-1);
 	}
 
 	li.autocomplete-items:active {
-		/*when navigating through the items using the arrow keys:*/
-		background-color: DodgerBlue !important;
+		background-color: var(--color-theme-1);
 		color: #ffffff;
 	}
 
 	.autocomplete-active {
-		/*when navigating through the items using the arrow keys:*/
-		background-color: DodgerBlue !important;
+		background-color: var(--color-theme-1);
 		color: #ffffff;
 	}
 </style>

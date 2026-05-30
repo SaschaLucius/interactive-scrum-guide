@@ -56,23 +56,34 @@
 	<meta name="description" content="Interactive Agile Guides" />
 </svelte:head>
 
-<h1>Interactive Agile Guides</h1>
-
-<div class="search-config-container">
-	<SearchBar />
-	<Config />
-</div>
-
-<br />
-
-<Selection onchange={resetValues} bind:selectedGuide options={Object.keys(guides)} />
-
-<br />
+<section class="controls">
+	<div class="search-row">
+		<SearchBar />
+		<Config />
+	</div>
+	<Selection onchange={resetValues} bind:selectedGuide options={Object.keys(guides)} />
+</section>
 
 <TextBlocks {textBlocks} />
 
 <style>
-	.search-config-container {
+	.controls {
 		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.search-row {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	@media (max-width: 640px) {
+		.search-row {
+			flex-direction: column;
+			align-items: stretch;
+		}
 	}
 </style>

@@ -83,6 +83,16 @@ pre {
 	color: var(--color-text);
 }
 
+code {
+	font-family: var(--font-body);
+	font-size: 0.8em;
+	background-color: var(--color-bg-2);
+	color: var(--color-theme-2);
+	padding: 0.15em 0.5em;
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
 .text-column {
 	display: flex;
 	max-width: 48rem;
@@ -118,4 +128,11 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+mark {
+	background-color: #fde68a;
+	color: inherit;
+	padding: 0.1em 0.15em;
+	border-radius: 2px;
 }

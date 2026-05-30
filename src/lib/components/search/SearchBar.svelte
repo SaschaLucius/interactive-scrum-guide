@@ -84,6 +84,13 @@
 			return;
 		}
 	}
+
+	function closeSuggestions() {
+		setTimeout(() => {
+			filteredItems = [];
+			hiLiteIndex = null;
+		}, 150);
+	}
 </script>
 
 <svelte:window onkeydown={navigateList} />
@@ -98,6 +105,7 @@
 			bind:this={searchInput}
 			bind:value={$searchTerm}
 			oninput={filterItems}
+			onblur={closeSuggestions}
 		/>
 	</div>
 

@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vitest/config';
 
-/** @type {import('vite').UserConfig} */
-const config = {
+export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
 		// jest like globals
@@ -11,11 +11,9 @@ const config = {
 		includeSource: ['src/**/*.{js,ts,svelte}'],
 		// Add @testing-library/jest-dom matchers & mocks of SvelteKit modules
 		setupFiles: ['./setupTest.ts'],
-		// Exclude files in c8
+		// Exclude files in coverage
 		coverage: {
 			exclude: ['setupTest.ts']
 		}
 	}
-};
-
-export default config;
+});

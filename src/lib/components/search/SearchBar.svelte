@@ -7,15 +7,17 @@
 	let searchInput: HTMLInputElement;
 
 	/* FILTERING items DATA BASED ON INPUT */
-	let filteredItems: string[] = [];
+	let filteredItems: string[] = $state([]);
 
 	/* NAVIGATING OVER THE LIST OF ITEMS W HIGHLIGHTING */
-	let hiLiteIndex: number | null = null;
+	let hiLiteIndex: number | null = $state(null);
 
-	$: if (!$searchTerm) {
-		filteredItems = [];
-		hiLiteIndex = null;
-	}
+	$effect(() => {
+		if (!$searchTerm) {
+			filteredItems = [];
+			hiLiteIndex = null;
+		}
+	});
 
 	function filterItems() {
 		let storageArr: string[] = [];
@@ -52,9 +54,17 @@
 
 	function navigateList(e: KeyboardEvent) {
 		if (e.key === 'ArrowDown' && (hiLiteIndex == null || hiLiteIndex <= filteredItems.length - 1)) {
-			hiLiteIndex === null ? (hiLiteIndex = 0) : (hiLiteIndex += 1);
+			if (hiLiteIndex === null) {
+				hiLiteIndex = 0;
+			} else {
+				hiLiteIndex += 1;
+			}
 		} else if (e.key === 'ArrowUp' && hiLiteIndex !== null) {
-			hiLiteIndex === 0 ? (hiLiteIndex = filteredItems.length - 1) : (hiLiteIndex -= 1);
+			if (hiLiteIndex === 0) {
+				hiLiteIndex = filteredItems.length - 1;
+			} else {
+				hiLiteIndex -= 1;
+			}
 		} else if (e.key === 'Enter') {
 			if (hiLiteIndex === null) {
 				setInputVal($searchTerm);
@@ -67,7 +77,7 @@
 	}
 </script>
 
-<svelte:window on:keydown={navigateList} />
+<svelte:window onkeydown={navigateList} />
 
 <form autocomplete="off">
 	<div class="autocomplete">
@@ -78,18 +88,18 @@
 			title="The guide can be narrowed down by searching with pre-defined tags or free form text."
 			bind:this={searchInput}
 			bind:value={$searchTerm}
-			on:input={filterItems}
+			oninput={filterItems}
 		/>
 	</div>
 
 	<!-- FILTERED LIST OF ITEMS -->
 	{#if filteredItems.length > 0}
 		<ul id="autocomplete-items-list">
-			{#each filteredItems as item, i}
+			{#each filteredItems as item, i (item)}
 				<AutocompleteItem
 					itemLabel={item}
 					highlighted={i === hiLiteIndex}
-					on:click={() => setInputVal(item)}
+					onclick={() => setInputVal(item)}
 				/>
 			{/each}
 		</ul>

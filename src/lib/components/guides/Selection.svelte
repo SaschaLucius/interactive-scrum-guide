@@ -1,17 +1,21 @@
 <script lang="ts">
 	import { trackEventWithProperties } from '@lukulent/svelte-umami';
-	export let selectedGuide = '';
-	export let options: string[];
+	let {
+		selectedGuide = $bindable(''),
+		options,
+		onchange
+	}: { selectedGuide?: string; options: string[]; onchange?: () => void } = $props();
 </script>
 
-<!-- If you're using bind: directives together with on: directives, the order that they're defined in affects the value of the bound variable when the event handler is called. https://svelte.dev/docs#template-syntax-element-directives-bind-property -->
 <select
-	on:change
 	bind:value={selectedGuide}
-	on:change={() => trackEventWithProperties(selectedGuide, { url: '/interactive-scrum-guide' })}
+	onchange={() => {
+		trackEventWithProperties(selectedGuide, { url: '/interactive-scrum-guide' });
+		onchange?.();
+	}}
 	id="select"
 >
-	{#each options as option}
+	{#each options as option (option)}
 		<option value={option}>{option.replaceAll('_', ' ')}</option>
 	{/each}
 </select>

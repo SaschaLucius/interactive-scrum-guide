@@ -1,9 +1,9 @@
 <script lang="ts">
 	import FilterableTextBlock from './FilterableTextBlock.svelte';
 
-	export let textBlocks: string[];
+	let { textBlocks }: { textBlocks: string[] } = $props();
 </script>
 
-{#each textBlocks as block}
+{#each textBlocks as block (block)}
 	<FilterableTextBlock {block} />
 {/each}

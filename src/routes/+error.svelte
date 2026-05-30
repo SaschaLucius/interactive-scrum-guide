@@ -1,8 +1,8 @@
-<script lang ts>
-	import { page } from '$app/stores';
-	let error = $page.error === null ? 'NOT_FOUND' : $page.error.message;
-	let status = $page.status;
-	let route = $page.route;
+<script lang="ts">
+	import { page } from '$app/state';
+	let error = $derived(page.error === null ? 'NOT_FOUND' : page.error.message);
+	let status = $derived(page.status);
+	let route = $derived(page.route);
 </script>
 
 <svelte:head>

@@ -1,20 +1,25 @@
 <script lang="ts">
 	import { handleEvent } from '@lukulent/svelte-umami';
 
-	export let itemLabel: string;
-	export let highlighted: boolean;
-	$: isTag = itemLabel.startsWith('CT:');
-	$: label = isTag ? itemLabel.slice(3).replace(/([a-z])([A-Z])/g, '$1 $2') : itemLabel;
+	let {
+		itemLabel,
+		highlighted,
+		onclick
+	}: { itemLabel: string; highlighted: boolean; onclick?: (e: MouseEvent) => void } = $props();
+	let isTag = $derived(itemLabel.startsWith('CT:'));
+	let label = $derived(isTag ? itemLabel.slice(3).replace(/([a-z])([A-Z])/g, '$1 $2') : itemLabel);
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <li
 	class="autocomplete-items"
 	data-umami-event={`autocomplete: ${label.replace(/<[^>]+>/g, '')}`}
-	on:click={handleEvent}
+	onclick={(e) => {
+		handleEvent(e);
+		onclick?.(e);
+	}}
 	class:autocomplete-active={highlighted}
-	on:click
 >
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html isTag ? 'Tag: ' + label : label}

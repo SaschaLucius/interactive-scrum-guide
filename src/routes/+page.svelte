@@ -10,9 +10,12 @@
 	import { onMount } from 'svelte';
 	import { trackPageView } from '@lukulent/svelte-umami';
 
-	let selectedGuide = 'Scrum_Guide_2020';
-	$: textBlocks = getGuideText(selectedGuide).split('\n\n');
-	$: initializeTags(selectedGuide);
+	let selectedGuide = $state('Scrum_Guide_2020');
+	let textBlocks = $derived(getGuideText(selectedGuide).split('\n\n'));
+
+	$effect(() => {
+		initializeTags(selectedGuide);
+	});
 
 	onMount(() => {
 		trackPageView({ url: '/interactive-scrum-guide' });
@@ -62,11 +65,11 @@
 
 <br />
 
-<Selection on:change={resetValues} bind:selectedGuide options={Object.keys(guides)} />
+<Selection onchange={resetValues} bind:selectedGuide options={Object.keys(guides)} />
 
 <br />
 
-<TextBlocks bind:textBlocks />
+<TextBlocks {textBlocks} />
 
 <style>
 	.search-config-container {

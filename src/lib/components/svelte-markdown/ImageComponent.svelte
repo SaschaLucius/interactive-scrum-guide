@@ -1,7 +1,9 @@
 <script lang="ts">
-	export let href = '';
-	export let title = '';
-	export let text = '';
+	let {
+		href = '',
+		title = '',
+		text = ''
+	}: { href?: string; title?: string; text?: string } = $props();
 </script>
 
 <img src={href.replace('../static', '')} {title} alt={text} />

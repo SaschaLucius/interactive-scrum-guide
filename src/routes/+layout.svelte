@@ -2,6 +2,8 @@
 	import Header from './Header.svelte';
 	import './styles.css';
 	import { UmamiAnalytics } from '@lukulent/svelte-umami';
+
+	let { children } = $props();
 </script>
 
 <div class="app">
@@ -14,7 +16,7 @@
 	/>
 
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 
 	<footer>

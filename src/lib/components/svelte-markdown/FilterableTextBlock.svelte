@@ -4,15 +4,15 @@
 	import { searchTextLower as filter } from '$lib/stores/searchText';
 	import ImageComponent from './ImageComponent.svelte';
 
-	export let block: string;
+	let { block }: { block: string } = $props();
 
 	const regexpBrackets = /\[[#A-Za-z:,?-]+\]/gi;
 
-	$: isHeadline = block.trim().startsWith('#');
-	$: rawLines = block.split('\n');
-	$: lines = rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, ''));
-	$: tags = rawLines.map((line) => getTags(line));
-	$: filteredText = getFilteredText($filter, lines, $config_store.keepHeader);
+	let isHeadline = $derived(block.trim().startsWith('#'));
+	let rawLines = $derived(block.split('\n'));
+	let lines = $derived(rawLines.map((line) => line.replace(/(\[[#A-Za-z:,?-]+\])/g, '')));
+	let tags = $derived(rawLines.map((line) => getTags(line)));
+	let filteredText = $derived(getFilteredText($filter, lines, $config_store.keepHeader));
 
 	function getFilteredText(filter: string, lines: string[], keepHeader: boolean): string {
 		let tmp = '';

@@ -5,15 +5,15 @@ Scrum is a lightweight framework[Framework,ExtendScrum] that helps people, teams
 In a nutshell, Scrum requires a Scrum Master[ScrumTeam,ScrumMaster] to foster an environment where:
 
 1. A Product Owner[ScrumTeam,ProductOwner] orders the work[ScrumArtifacts,ProductBacklog,ProductBacklogItem] for a complex problem into a Product Backlog[ScrumArtifacts,ProductBacklog].
-2. The Scrum Team[ScrumTeam] turns a selection of the work[SprintBacklogItem,ScrumArtifacts,ProductBacklog,ProductBacklogItem] into an Increment[ScrumArtifacts,Increment] of value during a Sprint[ScrumEvents,Sprint].
-3. The Scrum Team[ScrumTeam] and its stakeholders[Stakeholder] inspect[EmpiricalScrumPillars,Inspection] the results[Increment] and adjust[EmpiricalScrumPillars,Adaptation] for the next Sprint[ScrumEvents,Sprint].[ScrumEvent,SprintReview]
+2. The Scrum Team[ScrumTeam] turns a selection of the work[ScrumArtifacts,SprintBacklog,ProductBacklogItem] into an Increment[ScrumArtifacts,Increment] of value during a Sprint[ScrumEvents,Sprint].
+3. The Scrum Team[ScrumTeam] and its stakeholders[Stakeholder] inspect[EmpiricalScrumPillars,Inspection] the results[ScrumArtifacts,Increment] and adjust[EmpiricalScrumPillars,Adaptation] for the next Sprint[ScrumEvents,Sprint].[ScrumEvents,SprintReview]
 4. Repeat[Cadence]
 
 Scrum is simple.
 Try it[Scrum] as is and determine if its philosophy, theory, and structure help to achieve goals[Commitment,ProductGoal,SprintGoal] and create value[ValueDelivery].
 The Scrum framework[Framework] is purposefully incomplete, only defining the parts required to implement Scrum theory.[ExtendScrum]
 Scrum is built upon by the collective intelligence of the people using it.
-Rather than provide people with detailed instructions, the rules of Scrum guide their relationships[ScrumTeam] and interactions[ScrumEvent].
+Rather than provide people with detailed instructions, the rules of Scrum guide their relationships[ScrumTeam] and interactions[ScrumEvents].
 
 Various processes, techniques and methods can be employed within the framework[Framework].
 Scrum wraps around existing practices or renders them unnecessary[Lean,WasteReduction].
@@ -100,7 +100,7 @@ Developers[ScrumTeam,Developers] are the people in the Scrum Team[ScrumTeam] tha
 
 The specific skills needed by the Developers[ScrumTeam,Developers] are often broad and will vary with the domain of work. However, the Developers[ScrumTeam,Developers] are always accountable[ScrumTeam,Developers,Accountable] for:
 
-- Creating a plan for the Sprint[ScrumEvents,Sprint], the Sprint Backlog;[ScrumTeam,Developers,Accountable]
+- Creating a plan for the Sprint[ScrumEvents,Sprint], the Sprint Backlog[ScrumArtifacts,SprintBacklog];[ScrumTeam,Developers,Accountable]
 - Instilling quality[Quality] by adhering to a Definition of Done[ScrumArtifacts,Increment,Commitment,DefinitionOfDone];[ScrumTeam,Developers,Accountable]
 - Adapting[EmpiricalScrumPillars,Adaptation] their plan each day toward the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal]; and,[ScrumTeam,Developers,Accountable]
 - Holding each other accountable as professionals.[ScrumTeam,Developers,Accountable]
@@ -153,7 +153,7 @@ The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the 
 
 The Scrum Master[ScrumTeam,ScrumMaster] serves[ScrumTeam,ScrumMaster,Serve] the organization[Organization] in several ways, including:
 
-- Leading, training, and coaching the organization[Organization] in its Scrum adoption;[ScrumTeam,ScrumMaster,Serve,Adaptation]
+- Leading, training, and coaching the organization[Organization] in its Scrum adoption;[ScrumTeam,ScrumMaster,Serve,EmpiricalScrumPillars,Adaptation]
 - Planning and advising Scrum implementations within the organization[Organization];[ScrumTeam,ScrumMaster,Serve]
 - Helping employees and stakeholders[Stakeholder] understand and enact an empirical[Empiricism] approach for complex work; and,[ScrumTeam,ScrumMaster,Serve]
 - Removing barriers[Impediments] between stakeholders[Stakeholder] and Scrum Teams[ScrumTeam].[ScrumTeam,ScrumMaster,Serve,Risk]
@@ -172,15 +172,15 @@ Optimally, all events[ScrumEvents] are held at the same time and place to reduce
 Sprints[ScrumEvents,Sprint] are the heartbeat[Cadence] of Scrum, where ideas are turned into value.
 
 They[ScrumEvents,Sprint] are fixed length[Timebox] events[ScrumEvents,Sprint] of one month[Timebox] or less to create consistency[ReduceComplexity].
-A new Sprint[ScrumEvents,Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents,Order,ScrumEvents,Sprint].
+A new Sprint[ScrumEvents,Sprint] starts immediately after the conclusion of the previous Sprint[ScrumEvents,Sprint,Order].
 
-All the work[ProductBacklogItem] necessary to achieve the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], including Sprint Planning[ScrumEvents,SprintPlanning], Daily Scrums[ScrumEvents,DailyScrum], Sprint Review[ScrumEvents,SprintReview], and Sprint Retrospective[ScrumEvents,SprintRetrospective], happen within Sprints[ScrumEvents,Sprint].
+All the work[ScrumArtifacts,ProductBacklog,ProductBacklogItem] necessary to achieve the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal], including Sprint Planning[ScrumEvents,SprintPlanning], Daily Scrums[ScrumEvents,DailyScrum], Sprint Review[ScrumEvents,SprintReview], and Sprint Retrospective[ScrumEvents,SprintRetrospective], happen within Sprints[ScrumEvents,Sprint].
 
 During the Sprint[ScrumEvents,Sprint]:
 
 - No changes[EmpiricalScrumPillars,Adaptation] are made that would endanger the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal];[Risk]
 - Quality[Quality] does not decrease;
-- The Product Backlog[ScrumArtifacts,ProductBacklog] is refined[EmpiricalScrumPillars,Adaptation] as needed; and,
+- The Product Backlog[ScrumArtifacts,ProductBacklog] is refined[ProductBacklogRefinement,EmpiricalScrumPillars,Adaptation] as needed; and,
 - Scope may be clarified and renegotiated[EmpiricalScrumPillars,Adaptation] with the Product Owner[ScrumTeam,ProductOwner] as more is learned[Learn].
 
 Sprints[ScrumEvents,Sprint] enable predictability[Forecast] by ensuring inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] of progress toward a Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal] at least every calendar month[Timebox].
@@ -234,7 +234,7 @@ For shorter Sprints[ScrumEvents,Sprint], the event is usually shorter.
 
 ## Daily Scrum[ScrumEvents,DailyScrum]
 
-The purpose of the Daily Scrum[ScrumEvents,DailyScrum] is to inspect[EmpiricalScrumPillars,Inspection] progress toward the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and adapt[EmpiricalScrumPillars,Adaptation] the Sprint Backlog as necessary, adjusting[EmpiricalScrumPillars,Adaptation] the upcoming planned work.
+The purpose of the Daily Scrum[ScrumEvents,DailyScrum] is to inspect[EmpiricalScrumPillars,Inspection] progress toward the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and adapt[EmpiricalScrumPillars,Adaptation] the Sprint Backlog[ScrumArtifacts,SprintBacklog] as necessary, adjusting[EmpiricalScrumPillars,Adaptation] the upcoming planned work.
 
 The Daily Scrum[ScrumEvents,DailyScrum] is a 15-minute[Timebox] event for the Developers[ScrumTeam,Developers,ScrumEvents,DailyScrum,Attendees] of the Scrum Team[ScrumTeam].
 To reduce complexity[ReduceComplexity], it is held at the same time and place every working day[ScrumEvents,Order] of the Sprint[ScrumEvents,Sprint].
@@ -271,7 +271,7 @@ The Scrum Team[ScrumTeam] discusses what went well during the Sprint[ScrumEvents
 
 The Scrum Team[ScrumTeam] identifies[EmpiricalScrumPillars,Inspection] the most helpful changes to improve[EmpiricalScrumPillars,Adaptation] its effectiveness.
 The most impactful improvements[EmpiricalScrumPillars,Adaptation] are addressed as soon as possible.
-They[EmpiricalScrumPillars,Adaptation] may even be added to the Sprint Backlog for the next Sprint[ScrumEvents,Sprint].
+They[EmpiricalScrumPillars,Adaptation] may even be added to the Sprint Backlog[ScrumArtifacts,SprintBacklog] for the next Sprint[ScrumEvents,Sprint].
 
 The Sprint Retrospective[ScrumEvents,SprintRetrospective] concludes[ScrumEvents,Order] the Sprint[ScrumEvents,Sprint].
 It[ScrumEvents,SprintRetrospective] is timeboxed[Timebox] to a maximum of three hours[Timebox] for a onemonth Sprint[ScrumEvents,Sprint].
@@ -322,8 +322,8 @@ They[ScrumTeam] must fulfill (or abandon) one objective[ScrumArtifacts,ProductBa
 
 The Sprint Backlog[ScrumArtifacts,SprintBacklog] is composed of the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] (why), the set of Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] selected for the Sprint[ScrumEvents,Sprint] (what), as well as an actionable plan[WorkItem] for delivering the Increment[ScrumArtifacts,Increment] (how).
 
-The Sprint Backlog[ScrumArtifacts,SprintBacklog] is a plan by and for the Developers[ScrumTeam,Roles,Developers].
-It[ScrumArtifacts,SprintBacklog] is a highly visible[EmpiricalScrumPillars,Transparency], real-time picture of the work that the Developers[ScrumTeam,Roles,Developers] plan to accomplish[Forecast] during the Sprint[ScrumEvents,Sprint] in order to achieve the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
+The Sprint Backlog[ScrumArtifacts,SprintBacklog] is a plan by and for the Developers[ScrumTeam,Developers].
+It[ScrumArtifacts,SprintBacklog] is a highly visible[EmpiricalScrumPillars,Transparency], real-time picture of the work that the Developers[ScrumTeam,Developers] plan to accomplish[Forecast] during the Sprint[ScrumEvents,Sprint] in order to achieve the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
 Consequently, the Sprint Backlog[ScrumArtifacts,SprintBacklog] is updated throughout the Sprint as more is learned[Learn].
 It should have enough detail that they[ScrumTeam,Developers] can inspect[EmpiricalScrumPillars,Inspection] their progress in the Daily Scrum[ScrumEvents,DailyScrum].
 
@@ -333,9 +333,9 @@ The Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] is the singl
 Although the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] is a commitment[ScrumValues,Commitment] by the Developers[ScrumTeam,Developers], it provides flexibility in terms of the exact work needed to achieve it.
 The Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] also creates coherence[Coherence] and focus[ScrumValues,Focus], encouraging the Scrum Team[ScrumTeam] to work together rather than on separate initiatives.
 
-The Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] is created during the Sprint Planning[ScrumEvents,SprintPlanning] event and then added to the Sprint Backlog.
+The Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] is created during the Sprint Planning[ScrumEvents,SprintPlanning] event and then added to the Sprint Backlog[ScrumArtifacts,SprintBacklog].
 As the Developers[ScrumTeam,Developers] work during the Sprint[ScrumEvents,Sprint], they[ScrumTeam,Developers] keep the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] in mind.
-If the work turns out to be different than they[ScrumTeam,Developers] expected, they[ScrumTeam,Developers] collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate[EmpiricalScrumPillars,Adaptation] the scope of the Sprint Backlog within the Sprint[ScrumEvents,Sprint] without affecting the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
+If the work turns out to be different than they[ScrumTeam,Developers] expected, they[ScrumTeam,Developers] collaborate with the Product Owner[ScrumTeam,ProductOwner] to negotiate[EmpiricalScrumPillars,Adaptation] the scope of the Sprint Backlog[ScrumArtifacts,SprintBacklog] within the Sprint[ScrumEvents,Sprint] without affecting the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal].
 
 ## Increment[ScrumArtifacts]
 
@@ -346,7 +346,7 @@ In order to provide value[ValueDelivery], the Increment[ScrumArtifacts] must be 
 Multiple Increments[ScrumArtifacts] may be created within a Sprint[ScrumEvents,Sprint].
 The sum of the Increments[ScrumArtifacts] is presented at the Sprint Review[ScrumEvents,SprintReview] thus supporting empiricism[Empiricism].
 However, an Increment[ScrumArtifacts] may be delivered to stakeholders[Stakeholder] prior to the end of the Sprint.
-The Sprint Review[ScrumEvents,SprintReview] should never be considered a gate to releasing[ScrumArtifacts,Increment] value.
+The Sprint Review[ScrumEvents,SprintReview] should never be considered a gate to releasing[ScrumArtifacts,Increment] value[ValueDelivery].
 
 Work cannot be considered part of an Increment[ScrumArtifacts] unless it meets the Definition of Done[ScrumArtifacts,Increment,Commitment,DefinitionOfDone].
 

@@ -1,12 +1,8 @@
 <script lang="ts">
-	let {
-		href = '',
-		title = '',
-		text = ''
-	}: { href?: string; title?: string; text?: string } = $props();
+	let { src = '', title = '', alt = '' }: { src?: string; title?: string; alt?: string } = $props();
 </script>
 
-<img src={href.replace('../static', '')} {title} alt={text} />
+<img src={src.replace('../static', '')} {title} {alt} />
 
 <style>
 	img {

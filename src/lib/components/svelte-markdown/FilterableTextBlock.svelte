@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
+	import Markdown from 'svelte-exmarkdown';
 	import { config as config_store } from '$lib/stores/config';
 	import { searchTextLower as filter } from '$lib/stores/searchText';
 	import ImageComponent from './ImageComponent.svelte';
@@ -7,6 +7,7 @@
 	let { block }: { block: string } = $props();
 
 	const regexpBrackets = /\[[#A-Za-z:,?-]+\]/gi;
+	const plugins = [{ renderer: { img: ImageComponent } }];
 
 	let isHeadline = $derived(block.trim().startsWith('#'));
 	let rawLines = $derived(block.split('\n'));
@@ -55,5 +56,5 @@
 </script>
 
 {#if filteredText.length != 0}
-	<SvelteMarkdown source={filteredText + ' '} renderers={{ image: ImageComponent }} />
+	<Markdown md={filteredText + ' '} {plugins} />
 {/if}

@@ -57,6 +57,6 @@
 		"keyword-extractor": "^0.0.28",
 		"natural": "^8.1.1",
 		"stemmer": "^2.0.1",
-		"svelte-markdown": "^0.4.1"
+		"svelte-exmarkdown": "^5.0.2"
 	}
 }

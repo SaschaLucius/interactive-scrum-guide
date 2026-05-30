@@ -3,7 +3,7 @@
 	import { resolve } from '$app/paths';
 	import github from '$lib/images/github.svg';
 
-	const pages = [{ path: '/about', name: 'About' }];
+	const pages = [{ path: '/about', name: 'About' }] as const;
 </script>
 
 <header>

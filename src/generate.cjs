@@ -14,16 +14,8 @@ const depth = 4;
 let allCustomTags = [];
 let allNGrams = [];
 
-// Cleanup
-try {
-	fs.unlinkSync(guidesPath);
-	fs.unlinkSync(tagsPath);
-} catch (e) {
-	console.log('Files not found, creating new ones');
-}
-
-const tags = fs.openSync(tagsPath, 'a');
-const guides = fs.openSync(guidesPath, 'a');
+let guidesContent = '';
+let tagsContent = '';
 
 const files = fs.readdirSync(docsFolder);
 for (const file of files) {
@@ -34,9 +26,8 @@ for (const file of files) {
 			allNGrams[i] = [];
 		}
 
-		fs.appendFileSync(guides, `export const ${file.slice(0, -3)} = \``, 'utf8');
-		fs.appendFileSync(tags, `export const ${file.slice(0, -3)} = [`, 'utf8');
 		const lines = fs.readFileSync(docsFolder + file, 'utf-8').split('\n');
+		let guideText = '';
 
 		for (const rawLine of lines) {
 			const customTags = getCustomTags(rawLine);
@@ -50,8 +41,11 @@ for (const file of files) {
 				allNGrams[i] = allNGrams[i].concat(ngrams);
 			}
 
-			fs.appendFileSync(guides, rawLine + '\n', 'utf8');
+			guideText += rawLine + '\n';
 		}
+
+		const escapedGuide = guideText.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+		guidesContent += `export const ${file.slice(0, -3)} = \`${escapedGuide}\`;\n`;
 
 		console.log(file);
 
@@ -65,15 +59,15 @@ for (const file of files) {
 		console.log('\t' + custom.length, '"custom tags" found');
 
 		results = results.concat(custom);
-		//all = all.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-		fs.appendFileSync(tags, `"${results.join('","')}"];\n`, 'utf8');
-		fs.appendFileSync(guides, '`;', 'utf8');
+		const tagsArray = results.length > 0 ? `"${results.join('","')}"` : '';
+		tagsContent += `export const ${file.slice(0, -3)} = [${tagsArray}];\n`;
 	}
 }
 
-if (tags !== undefined) fs.closeSync(tags);
-if (guides !== undefined) fs.closeSync(guides);
+fs.mkdirSync('./src/lib/generated', { recursive: true });
+fs.writeFileSync(guidesPath, guidesContent, 'utf8');
+fs.writeFileSync(tagsPath, tagsContent, 'utf8');
 
 function countOccurence(arr) {
 	return arr.reduce((acc, str) => {

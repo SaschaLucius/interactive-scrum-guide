@@ -13,7 +13,7 @@ This guide assumes the reader is operating a process using the Scrum framework[F
 Therefore, The Scrum Guide applies in its entirety.
 
 # Definition of Kanban
-Kanban[KanbanFramework] (n): a strategy for optimizing the flow[Flow] of value[Value,ValueDelivery] through a process that uses a visual, workin-progress[WorkInProgress] limited pull system[PullSystem].
+Kanban[KanbanFramework] (n): a strategy for optimizing the flow[Flow] of value[Value,ValueDelivery] through a process that uses a visual, work-in-progress[WorkInProgress] limited pull system[PullSystem].
 
 # Kanban with Scrum Theory
 ## Flow and Empiricism[Empiricism]
@@ -43,8 +43,8 @@ Little's Law also shows us how flow[Flow] theory relies on empiricism[Empiricism
 
 # Kanban Practices[KanbanPractices]
 Scrum Teams[ScrumTeam] can achieve flow[Flow] optimization by using the following four practices[KanbanPractices]:
-- Visualization of the Workflow[Workflow,Transparency]
-- Limiting Work in Progress[WorkInProgress] (WIP)
+- Visualization of the Workflow[Workflow,EmpiricalScrumPillars,Transparency]
+- Limiting Work in Progress[WorkInProgress] (WIP)[WIPLimit]
 - Active management of work items[WorkItems] in progress[WorkInProgress]
 - Inspecting and adapting[EmpiricalScrumPillars,Inspection,EmpiricalScrumPillars,Adaptation] the team's Definition of Workflow[DefinitionOfWorkflow]
 
@@ -74,17 +74,17 @@ value[Value], process improvement value[Value]) that are flowing through the Scr
 (of which there must be at least one active state).
 - Explicit policies about how work flows[Flow] through each state (which may include items from
 a Scrum Team's[ScrumTeam] Definition of Done[ScrumArtifacts,Increment,Commitment,DefinitionOfDone] and pull policies between stages).
-- Policies for limiting Work in Progress[WorkInProgress] (WIP).
+- Policies for limiting Work in Progress[WorkInProgress,WIPLimit] (WIP).
 
 ## Limiting Work in Progress[WorkInProgress] (WIP)
 Work in Progress[WorkInProgress] (WIP) refers to the work items[WorkItems] the Scrum Team[ScrumTeam] has started but has not yet
 finished.
-Scrum Teams[ScrumTeam] using Kanban[KanbanFramework] must explicitly limit the number of these work items[WorkItems] in progress[WorkInProgress]. A
-Scrum Team[ScrumTeam] can explicitly limit WIP[WorkInProgress] however they see fit but should stick to that limit once
+Scrum Teams[ScrumTeam] using Kanban[KanbanFramework] must explicitly limit[WIPLimit] the number of these work items[WorkItems] in progress[WorkInProgress]. A
+Scrum Team[ScrumTeam] can explicitly limit WIP[WorkInProgress,WIPLimit] however they see fit but should stick to that limit once
 established.
 The primary effect of limiting WIP[WorkInProgress] is that it creates a pull system[PullSystem]. It is called a pull system[PullSystem] because
-the team[ScrumTeam] starts work (i.e. pulls) on an item only when it is clear that it has the capacity to do so.
-When the WIP[WorkInProgress] drops below the defined limit, that is the signal to start new work. Note this is
+the team[ScrumTeam] starts work (i.e. pulls) on an item only when it is clear that it has the capacity[Capacity] to do so.
+When the WIP[WorkInProgress] drops below the defined limit[WIPLimit], that is the signal to start new work. Note this is
 different from a push system, which demands that work starts on an item whenever it is
 requested.
 Limiting WIP[WorkInProgress] helps flow[Flow] and improves the Scrum Team's[ScrumTeam] self-management[SelfManagement], focus[ScrumValues,Focus], commitment[ScrumValues,Commitment],
@@ -98,7 +98,7 @@ following:
 - Making sure that work items[WorkItems] are only pulled into the Workflow[Workflow] at about the same rate
 that they leave the Workflow[Workflow].
 - Ensuring work items[WorkItems] aren't left to age unnecessarily.
-- Responding quickly to blocked or queued work items[WorkItems] as well those that are exceeding the
+- Responding quickly to blocked[Impediments] or queued work items[WorkItems] as well those that are exceeding the
 team's expected Cycle Time[CycleTime] levels (See Service Level Expectation[ServiceLevelExpectation] - SLE).
 Service Level Expectation[ServiceLevelExpectation] (SLE)
 A service level expectation[ServiceLevelExpectation] (SLE) forecasts[Forecast] how long it should take a given item to flow[Flow] from start
@@ -118,7 +118,7 @@ The following are aspects of the Definition of Workflow[DefinitionOfWorkflow] th
 Workflow[Workflow] or bringing more transparency[EmpiricalScrumPillars,Transparency] to an area in which the team[ScrumTeam] wants to inspect[EmpiricalScrumPillars,Inspection]
 and adapt[EmpiricalScrumPillars,Adaptation].
 - How-we-work policies - these can directly address an impediment[Impediments]. For example, adjusting
-WIP[WorkInProgress] limits and SLEs[ServiceLevelExpectation] or changing the batch size (how often items are pulled between
+WIP[WorkInProgress] limits[WIPLimit] and SLEs[ServiceLevelExpectation] or changing the batch size (how often items are pulled between
 states) can have a dramatic impact. 
 
 # Flow-Based Events[ScrumEvents]
@@ -140,7 +140,7 @@ to optimize the value[Value] delivered in the Sprint[ScrumEvents,Sprint]
 
 ## Sprint Planning[ScrumEvents,SprintPlanning]
 A flow-based[Flow] Sprint Planning[ScrumEvents,SprintPlanning] meeting uses flow[Flow] metrics as an aid for developing the Sprint
-Backlog[ScrumArtifacts,SprintBacklog]. Reviewing historical throughput[Throughput] can help a Scrum Team[ScrumTeam] understand their capacity for
+Backlog[ScrumArtifacts,SprintBacklog]. Reviewing historical throughput[Throughput] can help a Scrum Team[ScrumTeam] understand their capacity[Capacity] for
 the next Sprint[ScrumEvents,Sprint].
 
 ## Daily Scrum[ScrumEvents,DailyScrum]
@@ -149,22 +149,22 @@ consistent flow[Flow]. While the goal of the Daily Scrum[ScrumEvents,DailyScrum]
 Guide, the meeting itself takes place around the Kanban board[KanbanBoard] and focuses[ScrumValues,Focus] on where flow[Flow] is
 lacking and on what actions the Developers[ScrumTeam,Developers] can take to get it back.
 Additional things to consider during a flow-based[Flow] Daily Scrum[ScrumEvents,DailyScrum] include the following:
-- What work items[WorkItems] are blocked and what can be done to get them unblocked?
+- What work items[WorkItems] are blocked[Impediments] and what can be done to get them unblocked?
 - What work is flowing slower than expected? What is the Work Item Age[WorkItemAge] of each item in
 progress[WorkInProgress]? What work items[WorkItems] have violated or are about to violate their SLE[ServiceLevelExpectation] and what can
 the Scrum Team[ScrumTeam] do to get that work completed?
 - Are there any factors not represented on the board that may impact our ability to
 complete work today?
-- Have we learned anything new that might change what the Scrum Team[ScrumTeam] has planned to
+- Have we learned[Learn] anything new that might change what the Scrum Team[ScrumTeam] has planned to
 work on next?
-- Have we broken our WIP[WorkInProgress] limit? And what can we do to ensure we can complete the work
+- Have we broken our WIP[WorkInProgress] limit[WIPLimit]? And what can we do to ensure we can complete the work
 in progress[WorkInProgress]?
 
 ## Sprint Review[ScrumEvents,SprintReview]
 The Scrum Guide provides an outline of the Sprint Review[ScrumEvents,SprintReview]. Inspecting[EmpiricalScrumPillars,Inspection] Kanban[KanbanFramework] flow[Flow] metrics as part
 of the review can create opportunities for new conversations about monitoring progress towards
 the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal]. Reviewing Throughput[Throughput] can provide additional information when the Product
-Owner[ScrumTeam,ProductOwner] discusses likely delivery dates.
+Owner[ScrumTeam,ProductOwner] discusses likely delivery dates[Forecast].
 
 ## Sprint Retrospective[ScrumEvents,SprintRetrospective]
 A flow-based[Flow] Sprint Retrospective[ScrumEvents,SprintRetrospective] adds the inspection[EmpiricalScrumPillars,Inspection] of flow[Flow] metrics and analytics to help

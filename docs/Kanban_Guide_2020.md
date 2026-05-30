@@ -33,7 +33,7 @@ Rather, value optimization[ValueOptimization] means striving to find the right b
 
 - An effective workflow[Workflow] is one that delivers what customers want when they want it.
 - An efficient workflow[Workflow] allocates available economic resources as optimally as possible to deliver value[Value].
-- A predictable workflow[Workflow] means being able to accurately forecast value delivery[ValueDelivery] within an acceptable degree of uncertainty.
+- A predictable[Forecast] workflow[Workflow] means being able to accurately forecast[Forecast] value delivery[ValueDelivery] within an acceptable degree of uncertainty.
 
 The strategy of Kanban[KanbanFramework] is to get members to ask the right questions sooner as part of a continuous improvement[ContinuousImprovement] effort in pursuit of these goals.
 Only by finding a sustainable balance among these three elements can value optimization[ValueOptimization] be achieved.
@@ -43,7 +43,7 @@ Professional knowledge workers, such as those in finance, marketing, healthcare,
 
 # Kanban Theory
 
-Kanban[KanbanFramework] draws on established flow theory[FlowTheory], including but not limited to: systems thinking[SystemsThinking], lean principles[LeanPrinciples], queuing theory[QueuingTheory] (batch size and queue size), variability, and quality control.
+Kanban[KanbanFramework] draws on established flow theory[FlowTheory], including but not limited to: systems thinking[SystemsThinking], lean principles[LeanPrinciples], queuing theory[QueuingTheory] (batch size and queue size), variability[Variability], and quality control[Quality].
 Continually improving a Kanban system[KanbanSystem] over time based on these theories is one way that organizations[Organization] can attempt to optimize the delivery of value[Value].
 
 The theory upon which Kanban[KanbanFramework] is based is also shared by many existing value-oriented methodologies and frameworks.
@@ -65,17 +65,17 @@ _At minimum_, members must create their DoW[DefinitionOfWorkflow] using all of t
 - One or more defined states that the work items[WorkItems] flow through from started to finished. Any work items[WorkItems] between a started point and a finished point are considered work in progress[WorkInProgress] (WIP).
 - A definition of how WIP[WorkInProgress] will be controlled from started to finished.
 - Explicit policies about how work items[WorkItems] can flow through each state from started to finished.
-- A service level expectation[ServiceLevelExpectation] (SLE), which is a forecast of how long it should take a work item[WorkItems] to flow from started to finished.
+- A service level expectation[ServiceLevelExpectation] (SLE), which is a forecast[Forecast] of how long it should take a work item[WorkItems] to flow from started to finished.
 
 Kanban system members[KanbanSystemMembers] often require additional DoW[DefinitionOfWorkflow] elements such as values, principles, and working agreements depending on the team's circumstances.
 The options vary, and there are resources beyond this guide that can help with deciding which ones to incorporate.
 
 The visualization of the DoW[DefinitionOfWorkflow] is called a Kanban board[KanbanBoard].
-Making at least the minimum elements of DoW[DefinitionOfWorkflow] transparent on the Kanban board[KanbanBoard] is essential to processing knowledge that informs optimal workflow[Workflow] operation and facilitates continuous process improvement[ContinuousImprovement].
+Making at least the minimum elements of DoW[DefinitionOfWorkflow] transparent[Transparency] on the Kanban board[KanbanBoard] is essential to processing knowledge that informs optimal workflow[Workflow] operation and facilitates continuous process improvement[ContinuousImprovement].
 
 There are no specific guidelines for how a visualization should look as long as it encompasses the shared understanding of how value[Value] gets delivered.
 Consideration should be given to all aspects of the DoW[DefinitionOfWorkflow] (e.g., work items[WorkItems], policies) along with any other context-specific factors that may affect how the process operates.
-Kanban system members[KanbanSystemMembers] are limited only by their imagination regarding how they make flow[Flow] transparent.
+Kanban system members[KanbanSystemMembers] are limited only by their imagination regarding how they make flow[Flow] transparent[Transparency].
 
 ## Actively Managing Items in a Workflow[Workflow]
 
@@ -84,7 +84,7 @@ Active management of items in a workflow[Workflow] can take several forms, inclu
 - Controlling WIP[WorkInProgress].
 - Avoiding work items[WorkItems] piling up in any part of the workflow[Workflow].
 - Ensuring work items[WorkItems] do not age unnecessarily, using the SLE[ServiceLevelExpectation] as a reference.
-- Unblocking blocked work.
+- Unblocking blocked work.[Impediments]
 
 A common practice is for Kanban system members[KanbanSystemMembers] to review the active management of items regularly.
 Although some may choose a daily meeting, there is no requirement to formalize the review or meet at a regular cadence so long as active management takes place.
@@ -92,28 +92,28 @@ Although some may choose a daily meeting, there is no requirement to formalize t
 ## Controlling Work In Progress[WorkInProgress]
 
 Kanban system members[KanbanSystemMembers] must explicitly control the number of work items[WorkItems] in a workflow[Workflow] from start to finish.
-That control is usually represented as numbers or slots/tokens on a Kanban board[KanbanBoard] that are called WIP[WorkInProgress] limits.
-A WIP[WorkInProgress] limit can include (but is not limited to) work items[WorkItems] in a single column, several grouped columns/lanes/areas, or a whole board[KanbanBoard].
+That control is usually represented as numbers or slots/tokens on a Kanban board[KanbanBoard] that are called WIP[WorkInProgress] limits[WIPLimit].
+A WIP[WorkInProgress] limit[WIPLimit] can include (but is not limited to) work items[WorkItems] in a single column, several grouped columns/lanes/areas, or a whole board[KanbanBoard].
 
 A side effect of controlling WIP[WorkInProgress] is that it creates a pull system[PullSystem].
 It is called a pull system[PullSystem] because Kanban system members[KanbanSystemMembers] start work on an item (pulls or selects) only when there is a clear signal that there is capacity to do so.
 When WIP[WorkInProgress] drops below the limit in the DoW[DefinitionOfWorkflow], that is a signal to select new work.
-Members should refrain from pulling/selecting more than the number of work items[WorkItems] into a given part of the workflow[Workflow] as defined by the WIP[WorkInProgress] Limit.
-In rare cases, system members may agree to pull additional work items[WorkItems] beyond the WIP[WorkInProgress] Limit, but it should not be routine.
+Members should refrain from pulling/selecting more than the number of work items[WorkItems] into a given part of the workflow[Workflow] as defined by the WIP[WorkInProgress] Limit[WIPLimit].
+In rare cases, system members may agree to pull additional work items[WorkItems] beyond the WIP[WorkInProgress] Limit[WIPLimit], but it should not be routine.
 
-Controlling WIP[WorkInProgress] not only helps workflow[Workflow] but often also improves the Kanban system members'[KanbanSystemMembers] collective focus, commitment, and collaboration.
+Controlling WIP[WorkInProgress] not only helps workflow[Workflow] but often also improves the Kanban system members'[KanbanSystemMembers] collective focus[Focus], commitment[Commitment], and collaboration.
 Any acceptable exceptions to controlling WIP[WorkInProgress] should be made explicit as part of the DoW[DefinitionOfWorkflow].
 
 ## Service Level Expectation[ServiceLevelExpectation]
 
-The SLE[ServiceLevelExpectation] is a forecast of how long it should take a single work item[WorkItems] to flow from started to finished.
+The SLE[ServiceLevelExpectation] is a forecast[Forecast] of how long it should take a single work item[WorkItems] to flow from started to finished.
 The SLE[ServiceLevelExpectation] itself has two parts: a period of elapsed time and a probability associated with that period (e.g., "85% of work items[WorkItems] will be finished in eight days or less").
 The SLE[ServiceLevelExpectation] should be based on historical cycle time[CycleTime], and once calculated, should be visualized on the Kanban board[KanbanBoard].
 If historical cycle time[CycleTime] data does not exist, a best guess will do until there is enough historical data for a proper SLE[ServiceLevelExpectation] calculation.
 
 # Improving the Workflow[Workflow]
 
-Having made the DoW[DefinitionOfWorkflow] explicit, the Kanban system members'[KanbanSystemMembers] responsibility is to continuously improve their workflow[Workflow] to achieve a better balance of effectiveness, efficiency, and predictability.
+Having made the DoW[DefinitionOfWorkflow] explicit, the Kanban system members'[KanbanSystemMembers] responsibility is to continuously improve[ContinuousImprovement] their workflow[Workflow] to achieve a better balance of effectiveness, efficiency, and predictability[Forecast].
 The information they gain from visualization and other Kanban measures[KanbanMeasures] guide what tweaks to the DoW[DefinitionOfWorkflow] may be most beneficial.
 
 It is common practice to review the DoW[DefinitionOfWorkflow] from time to time to discuss and implement any changes needed.
@@ -147,7 +147,7 @@ Kanban system members[KanbanSystemMembers] may and often should use additional c
 
 # Endnote
 
-Kanban's[KanbanFramework] practices and measures are immutable.
+Kanban's[KanbanFramework] practices and measures are immutable[NoChangesAreAllowed].
 Although implementing only parts of Kanban[KanbanFramework] is possible, the result is not Kanban[KanbanFramework].
 One can and likely should add other principles, methodologies, and techniques to the Kanban system[KanbanSystem], but the minimum set of practices, measures, and the spirit of optimizing value[Value] must be preserved.
 

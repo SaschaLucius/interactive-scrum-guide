@@ -4,9 +4,6 @@
 	import { sorted_suggestions_store } from '$lib/stores/search';
 	import { searchText as searchTerm } from '$lib/stores/searchText';
 
-	/* HANDLING THE INPUT */
-	let searchInput: HTMLInputElement;
-
 	/* FILTERING items DATA BASED ON INPUT */
 	let filteredItems: string[] = $state([]);
 
@@ -56,26 +53,18 @@
 	}
 
 	function navigateList(e: KeyboardEvent) {
-		if (e.key === 'ArrowDown' && (hiLiteIndex == null || hiLiteIndex <= filteredItems.length - 1)) {
-			if (hiLiteIndex === null) {
-				hiLiteIndex = 0;
-			} else {
-				hiLiteIndex += 1;
-			}
-		} else if (e.key === 'ArrowUp' && hiLiteIndex !== null) {
-			if (hiLiteIndex === 0) {
-				hiLiteIndex = filteredItems.length - 1;
-			} else {
-				hiLiteIndex -= 1;
-			}
+		if (e.key === 'ArrowDown') {
+			if (filteredItems.length === 0) return;
+			e.preventDefault();
+			hiLiteIndex = hiLiteIndex === null ? 0 : Math.min(hiLiteIndex + 1, filteredItems.length - 1);
+		} else if (e.key === 'ArrowUp') {
+			if (hiLiteIndex === null || filteredItems.length === 0) return;
+			e.preventDefault();
+			hiLiteIndex = hiLiteIndex === 0 ? filteredItems.length - 1 : hiLiteIndex - 1;
 		} else if (e.key === 'Enter') {
-			if (hiLiteIndex === null) {
-				setInputVal($searchTerm);
-			} else {
-				setInputVal(filteredItems[hiLiteIndex]);
-			}
-		} else {
-			return;
+			e.preventDefault();
+			const picked = hiLiteIndex === null ? $searchTerm : filteredItems[hiLiteIndex];
+			if (picked != null) setInputVal(picked);
 		}
 	}
 
@@ -87,8 +76,6 @@
 	}
 </script>
 
-<svelte:window onkeydown={navigateList} />
-
 <form autocomplete="off" onsubmit={(e) => e.preventDefault()}>
 	<div class="autocomplete">
 		<input
@@ -96,9 +83,9 @@
 			type="search"
 			placeholder="Utilize Search to narrow down the guide to the relevant sections."
 			title="The guide can be narrowed down by searching with pre-defined tags or free form text."
-			bind:this={searchInput}
 			bind:value={$searchTerm}
 			oninput={filterItems}
+			onkeydown={navigateList}
 			onblur={closeSuggestions}
 		/>
 	</div>

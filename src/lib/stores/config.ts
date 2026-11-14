@@ -9,7 +9,9 @@ const storage = <T>(key: string, initValue: T): Writable<T> => {
 	if (!browser) return store;
 
 	const storedValueStr = localStorage.getItem(key);
-	if (storedValueStr != null) store.set(JSON.parse(storedValueStr));
+	const stored = readStored<T>(storedValueStr);
+	if (stored !== undefined) store.set(stored);
+	else if (storedValueStr != null) localStorage.removeItem(key);
 
 	store.subscribe((val) => {
 		if (val == null) {
@@ -20,15 +22,22 @@ const storage = <T>(key: string, initValue: T): Writable<T> => {
 	});
 
 	window.addEventListener('storage', () => {
-		const storedValueStr = localStorage.getItem(key);
-		if (storedValueStr == null) return;
-
-		const localValue: T = JSON.parse(storedValueStr);
-		if (localValue !== get(store)) store.set(localValue);
+		const next = readStored<T>(localStorage.getItem(key));
+		if (next === undefined) return;
+		if (next !== get(store)) store.set(next);
 	});
 
 	return store;
 };
+
+function readStored<T>(raw: string | null): T | undefined {
+	if (raw == null) return undefined;
+	try {
+		return JSON.parse(raw) as T;
+	} catch {
+		return undefined;
+	}
+}
 
 interface Config {
 	keepHeader: boolean;

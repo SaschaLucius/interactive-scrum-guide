@@ -4,16 +4,7 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
-		// jest like globals
 		globals: true,
-		environment: 'jsdom',
-		// in-source testing
-		includeSource: ['src/**/*.{js,ts,svelte}'],
-		// Add @testing-library/jest-dom matchers & mocks of SvelteKit modules
-		setupFiles: ['./setupTest.ts'],
-		// Exclude files in coverage
-		coverage: {
-			exclude: ['setupTest.ts']
-		}
+		includeSource: ['src/**/*.{js,ts,svelte}']
 	}
 });

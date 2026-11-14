@@ -22,7 +22,6 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.0",
-		"@fontsource/fira-mono": "^5.2.7",
 		"@lukulent/svelte-umami": "^0.0.4",
 		"@playwright/test": "^1.60.0",
 		"@sveltejs/adapter-auto": "^7.0.1",

@@ -1,11 +1,8 @@
 <script lang="ts">
 	import Markdown from 'svelte-exmarkdown';
+	import { tagMatches, textMatches } from '$lib/match';
 	import { config as config_store } from '$lib/stores/config';
-	import {
-		searchTextLower as filter,
-		searchTextStemmed as filterStemmed
-	} from '$lib/stores/searchText';
-	import { stemmer } from 'stemmer';
+	import { searchTextLower as filter } from '$lib/stores/searchText';
 	import ImageComponent from './ImageComponent.svelte';
 
 	let { block }: { block: string } = $props();
@@ -22,19 +19,9 @@
 
 	let isHeadline = $derived(block.trim().startsWith('#'));
 	let rawLines = $derived(block.split('\n'));
-	let lines = $derived(rawLines.map((line) => processLineTags(line, $filter, $filterStemmed)));
+	let lines = $derived(rawLines.map((line) => processLineTags(line, $filter)));
 	let tags = $derived(rawLines.map((line) => getTags(line)));
-	let stemmedLines = $derived(
-		lines.map((line) =>
-			line
-				.toLowerCase()
-				.split(/\s+/)
-				.map((w) => stemmer(w))
-		)
-	);
-	let filteredText = $derived(
-		getFilteredText($filter, $filterStemmed, lines, $config_store.keepHeader)
-	);
+	let filteredText = $derived(getFilteredText($filter, lines, $config_store.keepHeader));
 
 	function rehypeHighlight({ term }: { term: string }) {
 		return (tree: import('svelte-exmarkdown').HastNode) => {
@@ -76,58 +63,30 @@
 		node.children = newChildren;
 	}
 
-	function getFilteredText(
-		filter: string,
-		filterStemmed: string,
-		lines: string[],
-		keepHeader: boolean
-	): string {
+	function getFilteredText(filter: string, lines: string[], keepHeader: boolean): string {
 		let tmp = '';
 		for (let i = 0; i < lines.length; i++) {
-			if (isVisible(lines[i], tags[i], filter, filterStemmed, keepHeader, i)) {
+			if (isVisible(lines[i], tags[i], filter, keepHeader)) {
 				tmp += lines[i] + '\n';
 			}
 		}
 		return tmp.trim();
 	}
 
-	function isTag(tags: string[], filter: string, filterStemmed: string): boolean {
-		return (
-			tags != null &&
-			tags.filter((tag) => {
-				const tagLower = tag.toLowerCase();
-				return tagLower.includes(filter) || stemmer(tagLower).includes(filterStemmed);
-			}).length > 0
-		);
-	}
-
-	function isFullText(
-		line: string,
-		filter: string,
-		filterStemmed: string,
-		lineIndex: number
-	): boolean {
-		if (line.toLowerCase().includes(filter)) return true;
-		return stemmedLines[lineIndex].some((stem) => stem.includes(filterStemmed));
+	function isTag(tags: string[], filter: string): boolean {
+		return tags != null && tags.some((tag) => tagMatches(tag, filter));
 	}
 
 	function isHeaderVisible(keepHeader: boolean): boolean {
 		return keepHeader && isHeadline;
 	}
 
-	function isVisible(
-		line: string,
-		tags: string[],
-		filter: string,
-		filterStemmed: string,
-		keepHeader: boolean,
-		lineIndex: number
-	): boolean {
+	function isVisible(line: string, tags: string[], filter: string, keepHeader: boolean): boolean {
 		return (
 			filter == '' ||
 			isHeaderVisible(keepHeader) ||
-			isFullText(line, filter, filterStemmed, lineIndex) ||
-			isTag(tags, filter, filterStemmed)
+			textMatches(line, filter) ||
+			isTag(tags, filter)
 		);
 	}
 
@@ -139,16 +98,13 @@
 		return [];
 	}
 
-	function processLineTags(line: string, filter: string, filterStemmed: string): string {
+	function processLineTags(line: string, filter: string): string {
 		if (!filter) {
 			return line.replace(regexpBrackets, '');
 		}
 		return line.replace(regexpBrackets, (match) => {
 			const individualTags = match.substring(1, match.length - 1).split(',');
-			const matchingTags = individualTags.filter((tag) => {
-				const tagLower = tag.toLowerCase();
-				return tagLower.includes(filter) || stemmer(tagLower).includes(filterStemmed);
-			});
+			const matchingTags = individualTags.filter((tag) => tagMatches(tag, filter));
 			if (matchingTags.length > 0) {
 				return ' ' + matchingTags.map((t) => '`' + t + '`').join(' ') + ' ';
 			}

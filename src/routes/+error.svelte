@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	let error = $derived(page.error === null ? 'NOT_FOUND' : page.error.message);
 	let status = $derived(page.status);
-	let route = $derived(page.route);
+	let route = $derived(page.route.id ?? '');
 </script>
 
 <svelte:head>

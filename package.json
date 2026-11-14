@@ -29,7 +29,6 @@
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.61.1",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
-		"@types/cookie": "0.6.0",
 		"@vitest/coverage-v8": "^4.1.7",
 		"eslint": "^10.4.1",
 		"eslint-config-prettier": "^10.1.8",
@@ -53,8 +52,6 @@
 		"*.{js,ts,svelte}": "eslint --fix"
 	},
 	"dependencies": {
-		"keyword-extractor": "^0.0.28",
-		"natural": "^8.1.1",
 		"stemmer": "^2.0.1",
 		"svelte-exmarkdown": "^5.0.2"
 	}

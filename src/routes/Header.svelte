@@ -15,7 +15,7 @@
 	<nav>
 		<ul>
 			{#each pages as p (p.path)}
-				<li aria-current={page.url.pathname === p.path ? 'page' : undefined}>
+				<li aria-current={page.url.pathname === `${p.path}/` ? 'page' : undefined}>
 					<a href={resolve(p.path)}>{p.name}</a>
 				</li>
 			{/each}

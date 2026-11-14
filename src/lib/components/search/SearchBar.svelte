@@ -89,7 +89,7 @@
 
 <svelte:window onkeydown={navigateList} />
 
-<form autocomplete="off">
+<form autocomplete="off" onsubmit={(e) => e.preventDefault()}>
 	<div class="autocomplete">
 		<input
 			id="item-input"

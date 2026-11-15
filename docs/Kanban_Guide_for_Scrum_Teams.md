@@ -20,15 +20,15 @@ Kanban[KanbanFramework] (n): a strategy for optimizing the flow[Flow] of value[V
 Central to the definition of Kanban[KanbanFramework] is the concept of flow[Flow].
 Flow[Flow] is the movement of value[Value] throughout the product[Product] development system.
 Kanban[KanbanFramework] optimizes flow[Flow] by improving the overall efficiency, effectiveness, and predictability[Forecast] of a process.
-Optimizing flow[Flow] in a Scrum[Scrum] context requires defining what flow[Flow] means in Scrum[Scrum].
-Scrum[Scrum] is founded on empirical[Empiricism] process control theory, or empiricism[Empiricism].
-Key to empirical[Empiricism] process control is the frequency of the transparency[EmpiricalScrumPillars,Transparency], inspection[EmpiricalScrumPillars,Inspection], and adaptation[EmpiricalScrumPillars,Adaptation] cycle - which we can also describe as the Cycle Time[CycleTime] through the feedback loop.
-When Kanban[KanbanFramework] practices[KanbanPractices] are applied to Scrum[Scrum], they provide a focus[ScrumValues,Focus] on improving the flow[Flow] through the feedback loop; optimizing transparency[EmpiricalScrumPillars,Transparency] and the frequency of inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] for both the product[Product] and the process.
+Optimizing flow[Flow] in a Scrum[Scrum] context requires defining what flow means in Scrum.
+Scrum[Scrum] is founded on empirical[Empiricism] process control theory, or empiricism.
+Key to empirical[Empiricism] process control is the frequency of the transparency[EmpiricalScrumPillars,Transparency], inspection[Inspection], and adaptation[Adaptation] cycle - which we can also describe as the Cycle Time[CycleTime] through the feedback loop.
+When Kanban[KanbanFramework] practices[KanbanPractices] are applied to Scrum[Scrum], they provide a focus[ScrumValues,Focus] on improving the flow[Flow] through the feedback loop; optimizing transparency[EmpiricalScrumPillars,Transparency] and the frequency of inspection[Inspection] and adaptation[Adaptation] for both the product[Product] and the process.
 
 ## The Basic Metrics of Flow[Flow,FlowMeasures]
 The four basic metrics of flow[Flow,FlowMeasures] that Scrum Teams[ScrumTeam] using Kanban[KanbanFramework] need to track are as follows:
-- Work in Progress[WorkInProgress] (WIP): The number of work items[WorkItems] started but not finished. The team[ScrumTeam] can use the WIP[WorkInProgress] metric to provide transparency[EmpiricalScrumPillars,Transparency] about their progress towards reducing their WIP[WorkInProgress] and improving their flow[Flow]. Note that there is a difference between the WIP[WorkInProgress] metric and the policies a Scrum Team[ScrumTeam] uses to limit WIP[WorkInProgress].
-- Cycle Time[CycleTime]: The amount of elapsed time between when a work item[WorkItems] starts and when a work item[WorkItems] finishes.
+- Work in Progress[WorkInProgress] (WIP): The number of work items[WorkItems] started but not finished. The team[ScrumTeam] can use the WIP metric to provide transparency[EmpiricalScrumPillars,Transparency] about their progress towards reducing their WIP and improving their flow[Flow]. Note that there is a difference between the WIP metric and the policies a Scrum Team uses to limit WIP.
+- Cycle Time[CycleTime]: The amount of elapsed time between when a work item[WorkItems] starts and when a work item finishes.
 - Work Item Age[WorkItemAge]: The amount of time between when a work item[WorkItems] started and the current time. This applies only to items that are still in progress[WorkInProgress].
 - Throughput[Throughput]: The number of work items[WorkItems] finished per unit of time.
 
@@ -38,15 +38,15 @@ A key tenet governing flow[Flow] theory is Little's Law, which is a guideline th
 average cycle time[CycleTime] = average work in progress[WorkInProgress] / average throughput[Throughput]
 
 Little's Law reveals that in general, for a given process with a given throughput[Throughput], the more things that you work on at any given time (on average), the longer it is going to take to finish those things (on average).
-If cycle times[CycleTime] are too long, the first action Scrum Teams[ScrumTeam] should consider is lowering WIP[WorkInProgress]. Most of the other elements of Kanban[KanbanFramework] are built upon the relationship between WIP[WorkInProgress] and Cycle Time[CycleTime].
-Little's Law also shows us how flow[Flow] theory relies on empiricism[Empiricism] by using flow[Flow] metrics and data to gain transparency[EmpiricalScrumPillars,Transparency] into historical flow[Flow] and then using that data to inform flow[Flow] inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] experiments.
+If cycle times[CycleTime] are too long, the first action Scrum Teams[ScrumTeam] should consider is lowering WIP[WorkInProgress]. Most of the other elements of Kanban[KanbanFramework] are built upon the relationship between WIP and Cycle Time.
+Little's Law also shows us how flow[Flow] theory relies on empiricism[Empiricism] by using flow metrics and data to gain transparency[EmpiricalScrumPillars,Transparency] into historical flow and then using that data to inform flow inspection[Inspection] and adaptation[Adaptation] experiments.
 
 # Kanban Practices[KanbanPractices]
 Scrum Teams[ScrumTeam] can achieve flow[Flow] optimization by using the following four practices[KanbanPractices]:
 - Visualization of the Workflow[Workflow,EmpiricalScrumPillars,Transparency]
 - Limiting Work in Progress[WorkInProgress] (WIP)[WIPLimit]
 - Active management of work items[WorkItems] in progress[WorkInProgress]
-- Inspecting and adapting[EmpiricalScrumPillars,Inspection,EmpiricalScrumPillars,Adaptation] the team's Definition of Workflow[DefinitionOfWorkflow]
+- Inspecting and adapting[EmpiricalScrumPillars,Inspection,Adaptation] the team's Definition of Workflow[DefinitionOfWorkflow]
 
 ### Definition of Workflow[DefinitionOfWorkflow]
 The four Kanban[KanbanFramework] practices[KanbanPractices] are enabled by the Scrum Team's[ScrumTeam] Definition of Workflow[DefinitionOfWorkflow]. This
@@ -57,7 +57,7 @@ Note that the scope of the Definition of Workflow[DefinitionOfWorkflow] may span
 Backlog[ScrumArtifacts,SprintBacklog]. For instance, a Scrum Team's[ScrumTeam] Definition of Workflow[DefinitionOfWorkflow] may encompass flow[Flow] inside and/or
 outside of the Sprint[ScrumEvents,Sprint].
 Creating and adapting[EmpiricalScrumPillars,Adaptation] the Definition of Workflow[DefinitionOfWorkflow] is the accountability[Accountable] of the relevant roles on the
-Scrum Team[ScrumTeam] as described in the Scrum Guide. No one outside of the Scrum Team[ScrumTeam] should tell the
+Scrum Team[ScrumTeam] as described in the Scrum Guide. No one outside of the Scrum Team should tell the
 Scrum Team[ScrumTeam] how to define their Workflow[Workflow].
 
 ## Visualization of the Workflow[Workflow] – the Kanban Board[KanbanBoard]
@@ -67,13 +67,13 @@ suggest opportunities for improvement[EmpiricalScrumPillars,Adaptation].
 Visualization should include the following:
 - Defined points at which the Scrum Team[ScrumTeam] considers work to have started and to have
 finished.
-- A definition of the work items[WorkItems] - the individual units of value[Value] (stakeholder[Stakeholder] value[Value], knowledge
-value[Value], process improvement value[Value]) that are flowing through the Scrum Team's[ScrumTeam] system
+- A definition of the work items[WorkItems] - the individual units of value[Value] (stakeholder[Stakeholder] value, knowledge
+value[Value], process improvement value) that are flowing through the Scrum Team's[ScrumTeam] system
 (most likely Product Backlog items[ScrumArtifacts,ProductBacklog,ProductBacklogItem] (PBIs)).
 - A definition of the workflow[Workflow] states that the work items[WorkItems] flow[Flow] through from start to finish
 (of which there must be at least one active state).
 - Explicit policies about how work flows[Flow] through each state (which may include items from
-a Scrum Team's[ScrumTeam] Definition of Done[ScrumArtifacts,Increment,Commitment,DefinitionOfDone] and pull policies between stages).
+a Scrum Team's[ScrumTeam] Definition of Done[ScrumArtifacts,Increment,DefinitionOfDone] and pull policies between stages).
 - Policies for limiting Work in Progress[WorkInProgress,WIPLimit] (WIP).
 
 ## Limiting Work in Progress[WorkInProgress] (WIP)
@@ -82,12 +82,12 @@ finished.
 Scrum Teams[ScrumTeam] using Kanban[KanbanFramework] must explicitly limit[WIPLimit] the number of these work items[WorkItems] in progress[WorkInProgress]. A
 Scrum Team[ScrumTeam] can explicitly limit WIP[WorkInProgress,WIPLimit] however they see fit but should stick to that limit once
 established.
-The primary effect of limiting WIP[WorkInProgress] is that it creates a pull system[PullSystem]. It is called a pull system[PullSystem] because
+The primary effect of limiting WIP[WorkInProgress] is that it creates a pull system[PullSystem]. It is called a pull system because
 the team[ScrumTeam] starts work (i.e. pulls) on an item only when it is clear that it has the capacity[Capacity] to do so.
 When the WIP[WorkInProgress] drops below the defined limit[WIPLimit], that is the signal to start new work. Note this is
 different from a push system, which demands that work starts on an item whenever it is
 requested.
-Limiting WIP[WorkInProgress] helps flow[Flow] and improves the Scrum Team's[ScrumTeam] self-management[SelfManagement], focus[ScrumValues,Focus], commitment[ScrumValues,Commitment],
+Limiting WIP[WorkInProgress] helps flow[Flow] and improves the Scrum Team's[ScrumTeam] self-management[SelfManagement], focus[ScrumValues,Focus], commitment[Commitment],
 and collaboration.
 
 ## Active Management of Work Items[WorkItems] in Progress[WorkInProgress]
@@ -102,20 +102,20 @@ that they leave the Workflow[Workflow].
 team's expected Cycle Time[CycleTime] levels (See Service Level Expectation[ServiceLevelExpectation] - SLE).
 Service Level Expectation[ServiceLevelExpectation] (SLE)
 A service level expectation[ServiceLevelExpectation] (SLE) forecasts[Forecast] how long it should take a given item to flow[Flow] from start
-to finish within the Scrum Team's[ScrumTeam] Workflow[Workflow]. The Scrum Team[ScrumTeam] uses its SLE[ServiceLevelExpectation] to find active flow[Flow] issues
-and to inspect[EmpiricalScrumPillars,Inspection] and adapt[EmpiricalScrumPillars,Adaptation] in cases of falling below those expectations.
+to finish within the Scrum Team's[ScrumTeam] Workflow[Workflow]. The Scrum Team uses its SLE[ServiceLevelExpectation] to find active flow[Flow] issues
+and to inspect[EmpiricalScrumPillars,Inspection] and adapt[Adaptation] in cases of falling below those expectations.
 The SLE[ServiceLevelExpectation] itself has two parts: a range of elapsed days and a probability associated with that period
 (e.g., 85% of work items[WorkItems] should be finished in eight days or less). The SLE[ServiceLevelExpectation] should be based on the
-Scrum Team's[ScrumTeam] historical Cycle Time[CycleTime], and once calculated, the Scrum Team[ScrumTeam] should make it
+Scrum Team's[ScrumTeam] historical Cycle Time[CycleTime], and once calculated, the Scrum Team should make it
 transparent[EmpiricalScrumPillars,Transparency]. If no historical Cycle Time[CycleTime] data exists, the Scrum Team[ScrumTeam] should make its best guess
-and then inspect[EmpiricalScrumPillars,Inspection] and adapt[EmpiricalScrumPillars,Adaptation] once there is enough historical data to do a proper SLE[ServiceLevelExpectation] calculation.
+and then inspect[EmpiricalScrumPillars,Inspection] and adapt[Adaptation] once there is enough historical data to do a proper SLE[ServiceLevelExpectation] calculation.
 
-## Inspect and Adapt[EmpiricalScrumPillars,Inspection,EmpiricalScrumPillars,Adaptation] the Definition of Workflow[DefinitionOfWorkflow]
-The Scrum Team[ScrumTeam] uses the existing Scrum events[ScrumEvents] to inspect[EmpiricalScrumPillars,Inspection] and adapt[EmpiricalScrumPillars,Adaptation] its Definition of Workflow[DefinitionOfWorkflow],
+## Inspect and Adapt[EmpiricalScrumPillars,Inspection,Adaptation] the Definition of Workflow[DefinitionOfWorkflow]
+The Scrum Team[ScrumTeam] uses the existing Scrum events[ScrumEvents] to inspect[EmpiricalScrumPillars,Inspection] and adapt[Adaptation] its Definition of Workflow[DefinitionOfWorkflow],
 thereby helping to improve empiricism[Empiricism] and optimizing the value[Value] the Scrum Team[ScrumTeam] delivers.
 The following are aspects of the Definition of Workflow[DefinitionOfWorkflow] the Scrum Team[ScrumTeam] might adopt:
 - Visualization policies - for example, Workflow[Workflow] states - either changing the actual
-Workflow[Workflow] or bringing more transparency[EmpiricalScrumPillars,Transparency] to an area in which the team[ScrumTeam] wants to inspect[EmpiricalScrumPillars,Inspection]
+Workflow[Workflow] or bringing more transparency[EmpiricalScrumPillars,Transparency] to an area in which the team[ScrumTeam] wants to inspect[Inspection]
 and adapt[EmpiricalScrumPillars,Adaptation].
 - How-we-work policies - these can directly address an impediment[Impediments]. For example, adjusting
 WIP[WorkInProgress] limits[WIPLimit] and SLEs[ServiceLevelExpectation] or changing the batch size (how often items are pulled between
@@ -127,19 +127,19 @@ Guide. However, using a flow-based[Flow] perspective and metrics in Scrum's[Scru
 Scrum's[Scrum] empirical[Empiricism] approach.
 
 ## The Sprint[ScrumEvents,Sprint]
-The Kanban[KanbanFramework] complementary practices[KanbanPractices] don't invalidate the need for Scrum's[Scrum] Sprint[ScrumEvents,Sprint]. The Sprint[ScrumEvents,Sprint] and
-its events[ScrumEvents] provide opportunities for inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] of both product[Product] and process. It's a
+The Kanban[KanbanFramework] complementary practices[KanbanPractices] don't invalidate the need for Scrum's[Scrum] Sprint[ScrumEvents,Sprint]. The Sprint and
+its events[ScrumEvents] provide opportunities for inspection[EmpiricalScrumPillars,Inspection] and adaptation[Adaptation] of both product[Product] and process. It's a
 common misconception that teams[ScrumTeam] can only deliver value[Value,ValueDelivery] once per Sprint[ScrumEvents,Sprint]. In fact, they must
-deliver value[Value,ValueDelivery] at least once per Sprint[ScrumEvents,Sprint]. Teams[ScrumTeam] using Scrum[Scrum] with Kanban[KanbanFramework] use the Sprint[ScrumEvents,Sprint] and its events[ScrumEvents]
-as a feedback improvement loop by collaboratively inspecting[EmpiricalScrumPillars,Inspection] and adapting[EmpiricalScrumPillars,Adaptation] their Definition of
+deliver value[Value,ValueDelivery] at least once per Sprint[ScrumEvents,Sprint]. Teams[ScrumTeam] using Scrum[Scrum] with Kanban[KanbanFramework] use the Sprint and its events
+as a feedback improvement loop by collaboratively inspecting[EmpiricalScrumPillars,Inspection] and adapting[Adaptation] their Definition of
 Workflow[DefinitionOfWorkflow] and flow[Flow] metrics.
 Kanban[KanbanFramework] practices[KanbanPractices] can help Scrum Teams[ScrumTeam] improve flow[Flow] and create an environment where decisions
-are made just-in-time throughout the Sprint[ScrumEvents,Sprint] based on inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation]. In this
-environment, Scrum Teams[ScrumTeam] rely on the Sprint Goal[ScrumArtifacts,SprintBacklog,Commitment,SprintGoal] and close collaboration within the Scrum Team[ScrumTeam]
+are made just-in-time throughout the Sprint[ScrumEvents,Sprint] based on inspection[EmpiricalScrumPillars,Inspection] and adaptation[Adaptation]. In this
+environment, Scrum Teams[ScrumTeam] rely on the Sprint Goal[ScrumArtifacts,SprintBacklog,SprintGoal] and close collaboration within the Scrum Team
 to optimize the value[Value] delivered in the Sprint[ScrumEvents,Sprint]
 
 ## Sprint Planning[ScrumEvents,SprintPlanning]
-A flow-based[Flow] Sprint Planning[ScrumEvents,SprintPlanning] meeting uses flow[Flow] metrics as an aid for developing the Sprint
+A flow-based[Flow] Sprint Planning[ScrumEvents,SprintPlanning] meeting uses flow metrics as an aid for developing the Sprint
 Backlog[ScrumArtifacts,SprintBacklog]. Reviewing historical throughput[Throughput] can help a Scrum Team[ScrumTeam] understand their capacity[Capacity] for
 the next Sprint[ScrumEvents,Sprint].
 
@@ -155,7 +155,7 @@ progress[WorkInProgress]? What work items[WorkItems] have violated or are about 
 the Scrum Team[ScrumTeam] do to get that work completed?
 - Are there any factors not represented on the board that may impact our ability to
 complete work today?
-- Have we learned[Learn] anything new that might change what the Scrum Team[ScrumTeam] has planned to
+- Have we learned anything new that might change what the Scrum Team[ScrumTeam] has planned to
 work on next?
 - Have we broken our WIP[WorkInProgress] limit[WIPLimit]? And what can we do to ensure we can complete the work
 in progress[WorkInProgress]?
@@ -163,26 +163,26 @@ in progress[WorkInProgress]?
 ## Sprint Review[ScrumEvents,SprintReview]
 The Scrum Guide provides an outline of the Sprint Review[ScrumEvents,SprintReview]. Inspecting[EmpiricalScrumPillars,Inspection] Kanban[KanbanFramework] flow[Flow] metrics as part
 of the review can create opportunities for new conversations about monitoring progress towards
-the Product Goal[ScrumArtifacts,ProductBacklog,Commitment,ProductGoal]. Reviewing Throughput[Throughput] can provide additional information when the Product
+the Product Goal[ScrumArtifacts,ProductBacklog,ProductGoal]. Reviewing Throughput[Throughput] can provide additional information when the Product
 Owner[ScrumTeam,ProductOwner] discusses likely delivery dates[Forecast].
 
 ## Sprint Retrospective[ScrumEvents,SprintRetrospective]
-A flow-based[Flow] Sprint Retrospective[ScrumEvents,SprintRetrospective] adds the inspection[EmpiricalScrumPillars,Inspection] of flow[Flow] metrics and analytics to help
-determine what improvements the Scrum Team[ScrumTeam] can make to its processes. The Scrum Team[ScrumTeam] using
-Kanban[KanbanFramework] also inspects[EmpiricalScrumPillars,Inspection] and adapts[EmpiricalScrumPillars,Adaptation] the Definition of Workflow[DefinitionOfWorkflow] to optimize the flow[Flow] in the next
+A flow-based[Flow] Sprint Retrospective[ScrumEvents,SprintRetrospective] adds the inspection[EmpiricalScrumPillars,Inspection] of flow metrics and analytics to help
+determine what improvements the Scrum Team[ScrumTeam] can make to its processes. The Scrum Team using
+Kanban[KanbanFramework] also inspects[EmpiricalScrumPillars,Inspection] and adapts[Adaptation] the Definition of Workflow[DefinitionOfWorkflow] to optimize the flow[Flow] in the next
 Sprint[ScrumEvents,Sprint]. Using a cumulative flow[Flow] diagram to visualize a Scrum Team's[ScrumTeam] WIP[WorkInProgress], approximate average
 Cycle Time[CycleTime] and average Throughput[Throughput] can be valuable.
 In addition to the Sprint Retrospective[ScrumEvents,SprintRetrospective], the Scrum Team[ScrumTeam] should consider taking advantage of
-process inspection[EmpiricalScrumPillars,Inspection] and adaptation[EmpiricalScrumPillars,Adaptation] opportunities as they emerge throughout the Sprint[ScrumEvents,Sprint].
+process inspection[EmpiricalScrumPillars,Inspection] and adaptation[Adaptation] opportunities as they emerge throughout the Sprint[ScrumEvents,Sprint].
 Similarly, changes to a Scrum Team's[ScrumTeam] Definition of Workflow[DefinitionOfWorkflow] may happen at any time. Because
 these changes will have a material impact on how the Scrum Team[ScrumTeam] performs, changes made
 during the regular cadence[Cadence] provided by the Sprint Retrospective[ScrumEvents,SprintRetrospective] event will reduce complexity[ReduceComplexity] and
-improve focus[ScrumValues,Focus], commitment[ScrumValues,Commitment] and transparency[EmpiricalScrumPillars,Transparency].
+improve focus[ScrumValues,Focus], commitment[Commitment] and transparency[EmpiricalScrumPillars,Transparency].
 
 # Increment[ScrumArtifacts,Increment]
 Scrum[Scrum] requires the team[ScrumTeam] to create (at minimum) a valuable, useful Increment[ScrumArtifacts,Increment] every Sprint[ScrumEvents,Sprint].
 Scrum's[Scrum] empiricism[Empiricism] encourages the creation of multiple valuable increments[ScrumArtifacts,Increment] during the Sprint[ScrumEvents,Sprint] to
-enable fast inspect[EmpiricalScrumPillars,Inspection] and adapt[EmpiricalScrumPillars,Adaptation] feedback loops. Kanban[KanbanFramework] helps manage the flow[Flow] of these feedback
+enable fast inspect[EmpiricalScrumPillars,Inspection] and adapt[Adaptation] feedback loops. Kanban[KanbanFramework] helps manage the flow[Flow] of these feedback
 loops more explicitly and allows the Scrum Team[ScrumTeam] to identify bottlenecks, constraints, and
 impediments[Impediments] to enable this faster, more continuous delivery of value[Value,ValueDelivery].
 
@@ -192,7 +192,7 @@ adaptive problems while productively and creatively delivering products[Product]
 value[Value]. As The Scrum Guide points out, it functions well as a container for other techniques,
 methodologies, and practices[ExtendScrum].
 The flow[Flow] optimization practices[KanbanPractices] of Kanban[KanbanFramework] provide Scrum Teams[ScrumTeam] with additional opportunities to
-inspect[EmpiricalScrumPillars,Inspection] the right thing, at the right time, and then based on that inspection[EmpiricalScrumPillars,Inspection], adapt[EmpiricalScrumPillars,Adaptation] as needed.
+inspect[EmpiricalScrumPillars,Inspection] the right thing, at the right time, and then based on that inspection, adapt[Adaptation] as needed.
 Kanban's[KanbanFramework] hyperfocus on transparency[EmpiricalScrumPillars,Transparency], visualization, and flow[Flow] maximizes feedback, empiricism[Empiricism],
 and ultimately the delivery of value[Value,ValueDelivery].
 

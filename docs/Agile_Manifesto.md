@@ -25,7 +25,7 @@ We follow these principles:
 - Continuous attention to technical excellence and good design enhances agility.[AgilePrinciples,Quality]
 - Simplicity--the art of maximizing the amount of work not done--is essential.[AgilePrinciples,Lean,WasteReduction]
 - The best architectures, requirements, and designs emerge from self-organizing teams.[AgilePrinciples,SelfManagement,Emergence]
-- At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.[AgilePrinciples,EmpiricalScrumPillars,Inspection,EmpiricalScrumPillars,Adaptation,ContinuousImprovement]
+- At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.[AgilePrinciples,EmpiricalScrumPillars,Inspection,Adaptation,ContinuousImprovement]
 
 # Copyright
 

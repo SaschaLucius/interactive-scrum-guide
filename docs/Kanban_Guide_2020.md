@@ -27,13 +27,13 @@ Those who participate in the value delivery[ValueDelivery] of a Kanban system[Ka
 
 Central to the definition of Kanban[KanbanFramework] is the concept of flow[Flow].
 Flow[Flow] is the movement of potential value[Value] through a system.
-As most workflows[Workflow] exist to optimize value[Value], the strategy of Kanban[KanbanFramework] is to optimize value[Value] by optimizing flow[Flow].
+As most workflows[Workflow] exist to optimize value[Value], the strategy of Kanban[KanbanFramework] is to optimize value by optimizing flow[Flow].
 Optimization does not necessarily imply maximization.
 Rather, value optimization[ValueOptimization] means striving to find the right balance of effectiveness, efficiency, and predictability in how work gets done:
 
 - An effective workflow[Workflow] is one that delivers what customers want when they want it.
 - An efficient workflow[Workflow] allocates available economic resources as optimally as possible to deliver value[Value].
-- A predictable[Forecast] workflow[Workflow] means being able to accurately forecast[Forecast] value delivery[ValueDelivery] within an acceptable degree of uncertainty.
+- A predictable[Forecast] workflow[Workflow] means being able to accurately forecast value delivery[ValueDelivery] within an acceptable degree of uncertainty.
 
 The strategy of Kanban[KanbanFramework] is to get members to ask the right questions sooner as part of a continuous improvement[ContinuousImprovement] effort in pursuit of these goals.
 Only by finding a sustainable balance among these three elements can value optimization[ValueOptimization] be achieved.
@@ -43,7 +43,7 @@ Professional knowledge workers, such as those in finance, marketing, healthcare,
 
 # Kanban Theory
 
-Kanban[KanbanFramework] draws on established flow theory[FlowTheory], including but not limited to: systems thinking[SystemsThinking], lean principles[LeanPrinciples], queuing theory[QueuingTheory] (batch size and queue size), variability[Variability], and quality control[Quality].
+Kanban[KanbanFramework] draws on established flow theory[Flow], including but not limited to: systems thinking[SystemsThinking], lean principles[Lean], queuing theory[QueuingTheory] (batch size and queue size), variability[Variability], and quality control[Quality].
 Continually improving a Kanban system[KanbanSystem] over time based on these theories is one way that organizations[Organization] can attempt to optimize the delivery of value[Value].
 
 The theory upon which Kanban[KanbanFramework] is based is also shared by many existing value-oriented methodologies and frameworks.
@@ -53,16 +53,16 @@ Because of these similarities, Kanban[KanbanFramework] can and should be used to
 
 ## Defining and Visualizing the Workflow[Workflow]
 
-Optimizing flow[Flow] requires defining what flow[Flow] means in a given context.
+Optimizing flow[Flow] requires defining what flow means in a given context.
 The explicit shared understanding of flow[Flow] among Kanban system members[KanbanSystemMembers] within their context is called a Definition of Workflow[DefinitionOfWorkflow] (DoW).
 DoW[DefinitionOfWorkflow] is a fundamental concept of Kanban[KanbanFramework].
 All other elements of this guide depend heavily on how workflow[Workflow] is defined.
 
 _At minimum_, members must create their DoW[DefinitionOfWorkflow] using all of the following elements:
 
-- A definition of the individual units of value[Value] that are moving through the workflow[Workflow]. These units of value[Value] are referred to as work items[WorkItems] (or items).
-- A definition for when work items[WorkItems] are started and finished within the workflow[Workflow]. Your workflow[Workflow] may have more than one started or finished points depending on the work item[WorkItems].
-- One or more defined states that the work items[WorkItems] flow through from started to finished. Any work items[WorkItems] between a started point and a finished point are considered work in progress[WorkInProgress] (WIP).
+- A definition of the individual units of value[Value] that are moving through the workflow[Workflow]. These units of value are referred to as work items[WorkItems] (or items).
+- A definition for when work items[WorkItems] are started and finished within the workflow[Workflow]. Your workflow may have more than one started or finished points depending on the work item.
+- One or more defined states that the work items[WorkItems] flow through from started to finished. Any work items between a started point and a finished point are considered work in progress[WorkInProgress] (WIP).
 - A definition of how WIP[WorkInProgress] will be controlled from started to finished.
 - Explicit policies about how work items[WorkItems] can flow through each state from started to finished.
 - A service level expectation[ServiceLevelExpectation] (SLE), which is a forecast[Forecast] of how long it should take a work item[WorkItems] to flow from started to finished.
@@ -130,9 +130,9 @@ They are a reflection of the Kanban system's[KanbanSystem] current health and pe
 The four mandatory flow measures[FlowMeasures] to track are:
 
 - _WIP_[WorkInProgress]: The number of work items[WorkItems] started but not finished.
-- _Throughput_[Throughput]: The number of work items[WorkItems] finished per unit of time. Note the measurement of throughput[Throughput] is the exact count of work items[WorkItems].
+- _Throughput_[Throughput]: The number of work items[WorkItems] finished per unit of time. Note the measurement of throughput is the exact count of work items.
 - _Work Item Age_[WorkItemAge]: The amount of elapsed time between when a work item[WorkItems] started and the current time.
-- _Cycle Time_[CycleTime]: The amount of elapsed time between when a work item[WorkItems] started and when a work item[WorkItems] finished.
+- _Cycle Time_[CycleTime]: The amount of elapsed time between when a work item[WorkItems] started and when a work item finished.
 
 For these mandatory four flow measures[FlowMeasures], started and finished refer to how the Kanban system members[KanbanSystemMembers] have defined those terms in the DoW[DefinitionOfWorkflow].
 
@@ -147,8 +147,8 @@ Kanban system members[KanbanSystemMembers] may and often should use additional c
 
 # Endnote
 
-Kanban's[KanbanFramework] practices and measures are immutable[NoChangesAreAllowed].
-Although implementing only parts of Kanban[KanbanFramework] is possible, the result is not Kanban[KanbanFramework].
+Kanban's[KanbanFramework] practices and measures are immutable[Immutable].
+Although implementing only parts of Kanban[KanbanFramework] is possible, the result is not Kanban.
 One can and likely should add other principles, methodologies, and techniques to the Kanban system[KanbanSystem], but the minimum set of practices, measures, and the spirit of optimizing value[Value] must be preserved.
 
 # History of Kanban
